@@ -11,13 +11,18 @@ h1 {
 
 .column {
     float: left;
-    width: 50%;
+    width: 45%;
     padding: 10px;
     height: 250px;
   }
   
-.row::before {
+.row:after{
     content: "";
     display: table;
     clear: both;
   }
+
+#results {
+    width: 45%;
+
+}
