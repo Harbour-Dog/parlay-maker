@@ -3,45 +3,17 @@ h1{
     text-align: center;
 }
 
-div {
-    border-width: 1px;
-    border-style: dashed;
-    Border-color: white;
-    margin-top: 10px;
-}
-
-#static {
-    text-align: center;
-    color: white;
-    background-color: black;
-    width: 75%;
-}
-
-#picks {
-    text-align: center;
-    background-color: rgb(240, 80, 52);
-    width: 75%;
-}
-
-#results {
-    text-align: center;
-    background-color: rgb(67, 235, 26);
-    width: 50%;
-    
-}
-
-.columnleft {
+/* Create two equal columns that floats next to each other */
+.column {
     float: left;
     width: 50%;
-}
-
-.columnright {
-    float: right;
-    width: 50%;
-}
-
-.row:after {
+    padding: 10px;
+    height: 250px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row::before {
     content: "";
     display: table;
     clear: both;
-}
+  }
