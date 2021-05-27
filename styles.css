@@ -1,18 +1,22 @@
-h1{
-    color: tomato;
-    text-align: center;
+body {
+    background-color: rgb(85, 20, 20);
 }
 
-/* Create two equal columns that floats next to each other */
+h1 {
+    color: rgb(166, 207, 164);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color:rgb(10, 12, 10)
+}
+
 .column {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 250px; /* Should be removed. Only for demonstration */
+    height: 250px;
   }
   
-  /* Clear floats after the columns */
-  .row::before {
+.row::before {
     content: "";
     display: table;
     clear: both;
