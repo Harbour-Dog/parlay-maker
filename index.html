@@ -9,35 +9,48 @@
     
     <div class="row">
         <div class="column" style="background-color:rgb(218, 216, 216);">
-        <h2>Bankroll and Betting Strategy</h2>
-        <p><form action="/action_page.php">
-            <label for="bankroll">Bankroll: $</label>
-            <input type="number" id="bankroll" name="bankroll"><br><br>
-            <label for="kelly">Kelly Multiplier (<1):</label>
-            <input type="number" max="1" id="kelly" name="kelly"><br><br>
-            <label for="max">Maximum Bet:</label>
-            <input type="number" id="max" name="max"><br><br>
-            <label for="parlaysize">Picks/Parlay:</label>
-            <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
-            <input type="submit" value="Submit">
-          </form></p>
+            <h2>Bankroll and Betting Strategy</h2>
+            <p><form action="/action_page.php">
+                <label for="bankroll">Bankroll: $</label>
+                <input type="number" id="bankroll" name="bankroll"><br><br>
+                <label for="kelly">Kelly Multiplier (<1):</label>
+                <input type="number" max="1" id="kelly" name="kelly"><br><br>
+                <label for="max">Maximum Bet:</label>
+                <input type="number" id="max" name="max"><br><br>
+                <label for="parlaysize">Picks/Parlay:</label>
+                <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
+                <input type="submit" value="Submit">
+            </form></p>
         </div>
-    <div class="column" style="background-color:rgb(130, 166, 243);">
-        <h3>Selections Input Box</h3>
-        <p><form action="/action_page.php">
-            <label for="selection">Selection Name:</label>
-            <input type="text" id="selection" name="selection"><br><br>
-            <label for="probability">Winning Probability:</label>
-            <input type="number" id="probability" ame="probability"><br><br>
-            <label for="odds">Odds Offered:</label>
-            <input type="number" id="odds" name="odds"><br><br>
-            <input type="submit" value="Add">
-        </form></p>
+        <div class="column" id="picklist" style="background-color: rgb(130, 166, 243);">
+            <p><table id="table">
+                <tr><th>Selection</th>
+                    <th>Probability(%)</th>
+                    <th>Odds Offered</th>        
+                </tr>
+                <tr><td>40H</td>
+                    <td>25</td>
+                    <td>4.2</td>
+                </tr>
+            </table></p>
+    </div>
+    <div class="row">
+        <div class="column" id="results" style="background-color: antiquewhite;">
+            <h4>Results Box</h4>
+            <p>This is where the results will be displayed</p>
+        </div>
+        <div class="column" style="background-color:rgb(130, 166, 243);">
+            <h3>Selections Input Box</h3>
+            <p><form action="/action_page.php">
+                <label for="selection">Selection Name:</label>
+                <input type="text" id="selection" name="selection"><br><br>
+                <label for="probability">Winning Probability:</label>
+                <input type="number" id="probability" ame="probability"><br><br>
+                <label for="odds">Odds Offered:</label>
+                <input type="number" id="odds" name="odds"><br><br>
+                <input type="submit" value="Add">
+            </form></p>
         </div>
     </div>
-    <div id="results" style="background-color: antiquewhite;">
-        <h4>Results Box</h4>
-        <p>This is where the results will be displayed</p>
-        </div>
     </body>
 </html>

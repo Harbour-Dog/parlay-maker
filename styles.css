@@ -24,5 +24,10 @@ h1 {
 
 #results {
     width: 45%;
+}
 
+table, th, td {
+        border:rgb(10, 12, 10);
+        border: solid;
+        text-align: center;
 }
