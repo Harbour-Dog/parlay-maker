@@ -8,9 +8,9 @@
     <h1>Kelly Criterion Parlay Maker</h1>
     
     <div class="row">
-        <div class="column" style="background-color:rgb(218, 216, 216);">
+        <div class="column" style="background-color:rgb(218, 216, 216);" id="bankrolldiv">
             <h2>Bankroll and Betting Strategy</h2>
-            <p><form action="/action_page.php">
+            <p><form action="/action_page.php" id="form">
                 <label for="bankroll">Bankroll: $</label>
                 <input type="number" id="bankroll" name="bankroll"><br><br>
                 <label for="kelly">Kelly Multiplier (<1):</label>
@@ -19,10 +19,10 @@
                 <input type="number" id="max" name="max"><br><br>
                 <label for="parlaysize">Picks/Parlay:</label>
                 <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="CALCULATE">
             </form></p>
         </div>
-        <div class="column" id="picklist" style="background-color: rgb(130, 166, 243);">
+        <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
             <p><table id="table">
                     <tr><th>Selection</th>
                         <th>Probability(%)</th>
@@ -100,7 +100,7 @@
             <h4>Results Box</h4>
             <p>This is where the results will be displayed</p>
         </div>
-        <div class="column" style="background-color:rgb(130, 166, 243);">
+        <div class="column" id="picklist" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
             <p><table id="table">
                 <tr><td><form action="/action_page.php">
                             <input type="text" id="selection6" name="selection6"><br><br>
@@ -164,6 +164,19 @@
                     </td>
                     <td><form action="/action_page.php">
                             <input type="number" id="odds10" name="odds10" min="1.01" max="100"><br><br>
+                        </form>
+                    </td>
+                </tr>
+                <tr><td><form action="/action_page.php">
+                            <input type="text" id="selection11" name="selection11"><br><br>
+                        </form>
+                    </td>
+                    <td id="probcells"><form action="/action_page.php">
+                                        <input type="number" id="prob11" name="prob11" min="0.1" max="99.9"><br><br>
+                                        </form>
+                    </td>
+                    <td><form action="/action_page.php">
+                            <input type="number" id="odds11" name="odds11" min="1.01" max="100"><br><br>
                         </form>
                     </td>
                 </tr>
