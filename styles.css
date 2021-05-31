@@ -19,13 +19,13 @@ h2 {
     width: 45%;
     padding: 10px;
     height: 250px;
-  }
+}
   
 .row:after{
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 table, th, td {
     border:rgb(10, 12, 10);
@@ -44,16 +44,17 @@ table, th, td {
 #picklist {
     border-left: rgb(255, 89, 89);
     border-left: solid;
-    }
+}
 
 #picklist2 {
     border-left: rgb(255, 89, 89);
     border-left: solid;
-        }
+}
 
 #results {
     border-bottom-left-radius: 10px;
     height: 300px;
+    text-align: center;
 }
 
 #bankrolldiv {
@@ -62,5 +63,4 @@ table, th, td {
 
 #form {
     text-align-last: center;
-    
 }

@@ -4,15 +4,13 @@
         <meta charset="utf-8"/>
         <title>Parlay Maker</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="kellyCalc.js">
-        </script>
     </head>
     <body>
     <h1>Kelly Criterion Parlay Maker</h1>
     <div class="row">
         <div class="column" style="background-color:rgb(218, 216, 216);" id="bankrolldiv">
             <h2>Bankroll and Betting Strategy</h2>
-            <form action="/action_page.php" id="form">
+            <form action="/action_page.php" id="form" >
                 <label for="bankroll">Bankroll: $</label>
                 <input type="number" id="bankroll" name="bankroll"><br><br>
                 <label for="aggro">Kelly Multiplier :</label>
@@ -22,21 +20,16 @@
                 <label for="parlaysize">Picks/Parlay:</label>
                 <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
                 <input type="submit" value="CALCULATE" id="calc" onclick="kellyCalc()">
-                </form>          
+                         
         </div>
-                <script>
-                    "use strict"
+                <script type="text/javascript">
                     function kellyCalc() {
-                        var bankroll=document.getElementById(bankroll).value;
-                        bankroll=parseFloat(bankroll);
-                        var aggro=document.getElementById(aggro).value;
-                        aggro=parseFloat(aggro);
-                        var prob1=document.getElementById(prob1).value;
-                        prob1=parseFloat(prob1);
-                        varodds1=document.getElementById(odds1).value;
-                        odds1=parseFloat(odds1);
-                        var kelly1=((prob1*odds1)(bankroll*aggro))/(100*odds1-100);
-                        document.getElementById("parlays").innerHTML=kelly1;                               
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob1=parseFloat(document.getElementById("prob1").value);
+                        var odds1=parseFloat(document.getElementById("odds1").value);
+                        var kelly1=(((prob1*odds1-100)*bankroll*aggro)/(100*odds1-100));
+                        document.getElementById("parlays").value=kelly1;                               
                     }                                                    
                 </script>
         <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
@@ -45,162 +38,96 @@
                         <th>Probability(%)</th>
                         <th>Odds Offered</th>        
                     </tr>
-                    <tr><td><form action="/action_page.php">
-                                <input type="text" id="selection1" name="selection1"><br><br>
-                            </form>
+                    <tr><td><input type="text" id="selection1" name="selection1"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="prob1" name="prob1" min="0.1" max="99.9"><br><br>
-                            </form>
+                        <td><input type="number" id="prob1" name="prob1" min="0.1" max="99.9" step="0.1"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="odds1" name="odds1" min="1.01" max="100"><br><br>
-                            </form>
+                        <td><input type="number" id="odds1" name="odds1" min="1.01" max="100" step="0.01"><br><br>
                         </td>
                     </tr>
-                    <tr><td><form action="/action_page.php">
-                                <input type="text" id="selection2" name="selection2"><br><br>
-                            </form>
+                    <tr><td><input type="text" id="selection2" name="selection2"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="prob2" name="prob2" min="0.1" max="99.9"><br><br>
-                            </form>
+                        <td><input type="number" id="prob2" name="prob2" min="0.1" max="99.9" step="0.1"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="odds2" name="odds2" min="1.01" max="100"><br><br>
-                            </form>
+                        <td><input type="number" id="odds2" name="odds2" min="1.01" max="100" step="0.01"><br><br>
                         </td>
                     </tr>
-                    <tr><td><form action="/action_page.php">
-                        <input type="text" id="selection3" name="selection3"><br><br>
-                    </form>
+                    <tr><td><input type="text" id="selection3" name="selection3"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="prob3" name="prob3" min="0.1" max="99.9"><br><br>
-                            </form>
+                        <td><input type="number" id="prob3" name="prob3" min="0.1" max="99.9" step="0.1"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="odds3" name="odds3" min="1.01" max="100"><br><br>
-                            </form>
+                        <td><input type="number" id="odds3" name="odds3" min="1.01" max="100" step="0.01"><br><br>
                         </td>
                     </tr>
-                    <tr><td><form action="/action_page.php">
-                                <input type="text" id="selection4" name="selection4"><br><br>
-                            </form>
+                    <tr><td><input type="text" id="selection4" name="selection4"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="prob4" name="prob4" min="0.1" max="99.9"><br><br>
-                            </form>
+                        <td><input type="number" id="prob4" name="prob4" min="0.1" max="99.9" step="0.1"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="odds4" name="odds4" min="1.01" max="100"><br><br>
-                            </form>
+                        <td><input type="number" id="odds4" name="odds4" min="1.01" max="100" step="0.01"><br><br>
                         </td>
                     </tr>
-                    <tr><td><form action="/action_page.php">
-                                <input type="text" id="selection5" name="selection5"><br><br>
-                            </form>
+                    <tr><td><input type="text" id="selection5" name="selection5"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="prob5" name="prob5" min="0.1" max="99.9"><br><br>
-                            </form>
+                        <td><input type="number" id="prob5" name="prob5" min="0.1" max="99.9" step="0.1"><br><br>
                         </td>
-                        <td><form action="/action_page.php">
-                                <input type="number" id="odds5" name="odds5" min="1.01" max="100"><br><br>
-                            </form>
+                        <td><input type="number" id="odds5" name="odds5" min="1.01" max="100" step="0.01"><br><br>
                         </td>
                     </tr>
-                </table>
+            </table>
         </div>
     </div>
     <div class="row">
         <div class="column" id="results" style="background-color: antiquewhite;">
             <h4>Results Box</h4>
-            <p id="parlays"></p>
+            <input type="number" id="parlays" name="parlays" step="0.01"><br><br>
         </div>
         <div class="column" id="picklist2" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
             <table>
-                <tr><td><form action="/action_page.php">
-                            <input type="text" id="selection6" name="selection6"><br><br>
-                        </form>
+                <tr><td><input type="text" id="selection6" name="selection6"><br><br>
                     </td>
-                    <td class="probcells"><form action="/action_page.php">
-                                        <input type="number" id="prob6" name="prob6" min="0.1" max="99.9"><br><br>
-                                        </form>
+                    <td class="probcells"><input type="number" id="prob6" name="prob6" min="0.1" max="99.9" step="0.1"><br><br>
                     </td>
-                    <td><form action="/action_page.php">
-                            <input type="number" id="odds6" name="odds6" min="1.01" max="100"><br><br>
-                        </form>
+                    <td><input type="number" id="odds6" name="odds6" min="1.01" max="100" step="0.01"><br><br>
                     </td>
                 </tr>
-                <tr><td><form action="/action_page.php">
-                            <input type="text" id="selection7" name="selection7"><br><br>
-                        </form>
+                <tr><td><input type="text" id="selection7" name="selection7"><br><br>
                     </td>
-                    <td class="probcells"><form action="/action_page.php">
-                                        <input type="number" id="prob7" name="prob7" min="0.1" max="99.9"><br><br>
-                                        </form>
+                    <td class="probcells"><input type="number" id="prob7" name="prob7" min="0.1" max="99.9" step="0.1"><br><br>
                     </td>
-                    <td><form action="/action_page.php">
-                            <input type="number" id="odds7" name="odds7" min="1.01" max="100"><br><br>
-                        </form>
+                    <td><input type="number" id="odds7" name="odds7" min="1.01" max="100" step="0.01"><br><br>
                     </td>
                 </tr>
-                <tr><td><form action="/action_page.php">
-                            <input type="text" id="selection8" name="selection8"><br><br>
-                        </form>
+                <tr><td><input type="text" id="selection8" name="selection8"><br><br>
                     </td>
-                    <td class="probcells"><form action="/action_page.php">
-                                        <input type="number" id="prob8" name="prob8" min="0.1" max="99.9"><br><br>
-                                        </form>
+                    <td class="probcells"><input type="number" id="prob8" name="prob8" min="0.1" max="99.9" step="0.1"><br><br>
                     </td>
-                    <td><form action="/action_page.php">
-                            <input type="number" id="odds8" name="odds8" min="1.01" max="100"><br><br>
-                        </form>
+                    <td><input type="number" id="odds8" name="odds8" min="1.01" max="100" step="0.01"><br><br>
                     </td>
                 </tr>
-                <tr><td><form action="/action_page.php">
-                            <input type="text" id="selection9" name="selection9"><br><br>
-                        </form>
+                <tr><td><input type="text" id="selection9" name="selection9"><br><br>
                     </td>
-                    <td class="probcells"><form action="/action_page.php">
-                                        <input type="number" id="prob9" name="prob9" min="0.1" max="99.9"><br><br>
-                                        </form>
+                    <td class="probcells"><input type="number" id="prob9" name="prob9" min="0.1" max="99.9" step="0.1"><br><br>
                     </td>
-                    <td><form action="/action_page.php">
-                            <input type="number" id="odds9" name="odds9" min="1.01" max="100"><br><br>
-                        </form>
+                    <td><input type="number" id="odds9" name="odds9" min="1.01" max="100" step="0.01"><br><br>
                     </td>
                 </tr>
-                <tr><td><form action="/action_page.php">
-                            <input type="text" id="selection10" name="selection10"><br><br>
-                        </form>
+                <tr><td><input type="text" id="selection10" name="selection10"><br><br>
                     </td>
-                    <td class="probcells"><form action="/action_page.php">
-                                        <input type="number" id="prob10" name="prob10" min="0.1" max="99.9"><br><br>
-                                        </form>
+                    <td class="probcells"><input type="number" id="prob10" name="prob10" min="0.1" max="99.9" step="0.1"><br><br>
                     </td>
-                    <td><form action="/action_page.php">
-                            <input type="number" id="odds10" name="odds10" min="1.01" max="100"><br><br>
-                        </form>
+                    <td><input type="number" id="odds10" name="odds10" min="1.01" max="100" step="0.01"><br><br>
                     </td>
                 </tr>
-                <tr><td><form action="/action_page.php">
-                            <input type="text" id="selection11" name="selection11"><br><br>
-                        </form>
+                <tr><td><input type="text" id="selection11" name="selection11"><br><br>
                     </td>
-                    <td class="probcells"><form action="/action_page.php">
-                                        <input type="number" id="prob11" name="prob11" min="0.1" max="99.9"><br><br>
-                                        </form>
+                    <td class="probcells"><input type="number" id="prob11" name="prob11" min="0.1" max="99.9" step="0.1"><br><br>
                     </td>
-                    <td><form action="/action_page.php">
-                            <input type="number" id="odds11" name="odds11" min="1.01" max="100"><br><br>
-                        
-                        </form>
+                    <td><input type="number" id="odds11" name="odds11" min="1.01" max="100" step="0.01"><br><br>
                     </td>
                 </tr>
                </table>              
         </div>
     </div>
+    </form>
     </body>
 </html>
