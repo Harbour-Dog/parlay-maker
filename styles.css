@@ -37,7 +37,7 @@ table, th, td {
     margin: auto;
 }
 
-#probcells {
+.probcells {
     width: 110px;
 }
 
@@ -45,6 +45,11 @@ table, th, td {
     border-left: rgb(255, 89, 89);
     border-left: solid;
     }
+
+#picklist2 {
+    border-left: rgb(255, 89, 89);
+    border-left: solid;
+        }
 
 #results {
     border-bottom-left-radius: 10px;

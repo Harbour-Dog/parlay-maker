@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
+        <meta charset="utf-8"/>
         <title>Parlay Maker</title>
         <link rel="stylesheet" href="styles.css">
         <script src="kellyCalc.js">
@@ -11,17 +12,19 @@
     <div class="row">
         <div class="column" style="background-color:rgb(218, 216, 216);" id="bankrolldiv">
             <h2>Bankroll and Betting Strategy</h2>
-            <p><form action="/action_page.php" id="form">
+            <form action="/action_page.php" id="form">
                 <label for="bankroll">Bankroll: $</label>
                 <input type="number" id="bankroll" name="bankroll"><br><br>
-                <label for="aggro">Kelly Multiplier (<1):</label>
+                <label for="aggro">Kelly Multiplier :</label>
                 <input type="number" max="1" min="0.05" id="aggro" name="aggro" step="0.01"><br><br>
                 <label for="max">Maximum Bet:</label>
                 <input type="number" id="max" name="max" min="2"><br><br>
                 <label for="parlaysize">Picks/Parlay:</label>
                 <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
                 <input type="submit" value="CALCULATE" id="calc" onclick="kellyCalc()">
-                <script type="text/javascript">
+                </form>          
+        </div>
+                <script>
                     "use strict"
                     function kellyCalc() {
                         var bankroll=document.getElementById(bankroll).value;
@@ -36,10 +39,8 @@
                         document.getElementById("parlays").innerHTML=kelly1;                               
                     }                                                    
                 </script>
-            </p>
-        </div>
         <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
-            <p><table id="table">
+            <table>
                     <tr><th>Selection</th>
                         <th>Probability(%)</th>
                         <th>Odds Offered</th>        
@@ -109,20 +110,21 @@
                             </form>
                         </td>
                     </tr>
-                </table></p>
+                </table>
+        </div>
     </div>
     <div class="row">
         <div class="column" id="results" style="background-color: antiquewhite;">
             <h4>Results Box</h4>
             <p id="parlays"></p>
         </div>
-        <div class="column" id="picklist" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
-            <p><table id="table">
+        <div class="column" id="picklist2" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
+            <table>
                 <tr><td><form action="/action_page.php">
                             <input type="text" id="selection6" name="selection6"><br><br>
                         </form>
                     </td>
-                    <td id="probcells"><form action="/action_page.php">
+                    <td class="probcells"><form action="/action_page.php">
                                         <input type="number" id="prob6" name="prob6" min="0.1" max="99.9"><br><br>
                                         </form>
                     </td>
@@ -135,7 +137,7 @@
                             <input type="text" id="selection7" name="selection7"><br><br>
                         </form>
                     </td>
-                    <td id="probcells"><form action="/action_page.php">
+                    <td class="probcells"><form action="/action_page.php">
                                         <input type="number" id="prob7" name="prob7" min="0.1" max="99.9"><br><br>
                                         </form>
                     </td>
@@ -148,7 +150,7 @@
                             <input type="text" id="selection8" name="selection8"><br><br>
                         </form>
                     </td>
-                    <td id="probcells"><form action="/action_page.php">
+                    <td class="probcells"><form action="/action_page.php">
                                         <input type="number" id="prob8" name="prob8" min="0.1" max="99.9"><br><br>
                                         </form>
                     </td>
@@ -161,7 +163,7 @@
                             <input type="text" id="selection9" name="selection9"><br><br>
                         </form>
                     </td>
-                    <td id="probcells"><form action="/action_page.php">
+                    <td class="probcells"><form action="/action_page.php">
                                         <input type="number" id="prob9" name="prob9" min="0.1" max="99.9"><br><br>
                                         </form>
                     </td>
@@ -174,7 +176,7 @@
                             <input type="text" id="selection10" name="selection10"><br><br>
                         </form>
                     </td>
-                    <td id="probcells"><form action="/action_page.php">
+                    <td class="probcells"><form action="/action_page.php">
                                         <input type="number" id="prob10" name="prob10" min="0.1" max="99.9"><br><br>
                                         </form>
                     </td>
@@ -187,7 +189,7 @@
                             <input type="text" id="selection11" name="selection11"><br><br>
                         </form>
                     </td>
-                    <td id="probcells"><form action="/action_page.php">
+                    <td class="probcells"><form action="/action_page.php">
                                         <input type="number" id="prob11" name="prob11" min="0.1" max="99.9"><br><br>
                                         </form>
                     </td>
@@ -197,9 +199,8 @@
                         </form>
                     </td>
                 </tr>
-               </table>    
-            </p>   
+               </table>              
         </div>
-    </div></form>
+    </div>
     </body>
 </html>
