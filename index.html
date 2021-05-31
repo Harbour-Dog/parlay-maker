@@ -3,24 +3,34 @@
     <head>
         <title>Parlay Maker</title>
         <link rel="stylesheet" href="styles.css">
+        
     </head>
     <body>
     <h1>Kelly Criterion Parlay Maker</h1>
-    
     <div class="row">
         <div class="column" style="background-color:rgb(218, 216, 216);" id="bankrolldiv">
             <h2>Bankroll and Betting Strategy</h2>
             <p><form action="/action_page.php" id="form">
                 <label for="bankroll">Bankroll: $</label>
                 <input type="number" id="bankroll" name="bankroll"><br><br>
-                <label for="kelly">Kelly Multiplier (<1):</label>
-                <input type="number" max="1" id="kelly" name="kelly"><br><br>
+                <label for="aggro">Kelly Multiplier (<1):</label>
+                <input type="number" max="1" min="0.05" id="aggro" name="aggro" step="0.01"><br><br>
                 <label for="max">Maximum Bet:</label>
-                <input type="number" id="max" name="max"><br><br>
+                <input type="number" id="max" name="max" min="2"><br><br>
                 <label for="parlaysize">Picks/Parlay:</label>
                 <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
-                <input type="submit" value="CALCULATE">
-            </form></p>
+                <input type="submit" value="CALCULATE" id="calc" onclick="kellyCalc()">
+                <script>
+                    function kellyCalc() {
+                        var bankroll=document.getElementById(bankroll).value;
+                        var aggro=document.getElementById(aggro).value;
+                        var prob1=document.getElementById(prob1).value;
+                        var odds1=document.getElementById(odds1).value;
+                        var kelly1=((prob1*odds1)(bankroll*aggro))/(100*odds1-100);
+                        document.getElementById("parlays").innerHTML=kelly1;                               
+                    }                                                    
+                </script>
+            </p>
         </div>
         <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
             <p><table id="table">
@@ -98,7 +108,7 @@
     <div class="row">
         <div class="column" id="results" style="background-color: antiquewhite;">
             <h4>Results Box</h4>
-            <p>This is where the results will be displayed</p>
+            <p id="parlays"></p>
         </div>
         <div class="column" id="picklist" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
             <p><table id="table">
@@ -177,12 +187,13 @@
                     </td>
                     <td><form action="/action_page.php">
                             <input type="number" id="odds11" name="odds11" min="1.01" max="100"><br><br>
+                        
                         </form>
                     </td>
                 </tr>
                </table>    
             </p>   
         </div>
-    </div>
+    </div></form>
     </body>
 </html>
