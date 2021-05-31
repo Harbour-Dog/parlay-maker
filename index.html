@@ -3,7 +3,8 @@
     <head>
         <title>Parlay Maker</title>
         <link rel="stylesheet" href="styles.css">
-        
+        <script src="kellyCalc.js">
+        </script>
     </head>
     <body>
     <h1>Kelly Criterion Parlay Maker</h1>
@@ -20,12 +21,17 @@
                 <label for="parlaysize">Picks/Parlay:</label>
                 <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
                 <input type="submit" value="CALCULATE" id="calc" onclick="kellyCalc()">
-                <script>
+                <script type="text/javascript">
+                    "use strict"
                     function kellyCalc() {
                         var bankroll=document.getElementById(bankroll).value;
+                        bankroll=parseFloat(bankroll);
                         var aggro=document.getElementById(aggro).value;
+                        aggro=parseFloat(aggro);
                         var prob1=document.getElementById(prob1).value;
-                        var odds1=document.getElementById(odds1).value;
+                        prob1=parseFloat(prob1);
+                        varodds1=document.getElementById(odds1).value;
+                        odds1=parseFloat(odds1);
                         var kelly1=((prob1*odds1)(bankroll*aggro))/(100*odds1-100);
                         document.getElementById("parlays").innerHTML=kelly1;                               
                     }                                                    
