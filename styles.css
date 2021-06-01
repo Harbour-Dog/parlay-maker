@@ -53,14 +53,24 @@ table, th, td {
 
 #results {
     border-bottom-left-radius: 10px;
-    height: 300px;
+    height: 900px;
     text-align: center;
 }
 
 #bankrolldiv {
     border-top-left-radius: 10px;
+    height: auto;
 }
 
 #form {
     text-align-last: center;
+}
+
+#singlestable {
+    float: left;
+    column-width: auto;
+}
+
+.resultcells {
+    width: 15px;
 }

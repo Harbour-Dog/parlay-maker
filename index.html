@@ -15,20 +15,140 @@
                 <input type="number" id="bankroll" name="bankroll"><br><br>
                 <label for="aggro">Kelly Multiplier :</label>
                 <input type="number" max="1" min="0.05" id="aggro" name="aggro" step="0.01"><br><br>
-                <label for="max">Maximum Bet:</label>
-                <input type="number" id="max" name="max" min="2"><br><br>
                 <label for="parlaysize">Picks/Parlay:</label>
                 <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
-                <input type="submit" value="CALCULATE" id="calc" onclick="kellyCalc()">                         
+                <input type="submit" value="CALCULATE" id="calc" onclick="kellyCalc1(); kellyCalc2(); kellyCalc3(); kellyCalc4(); kellyCalc5(); kellyCalc6(); kellyCalc7(); kellyCalc8(); kellyCalc9(); kellyCalc10(); kellyCalc11();">                                    
         </div>
                 <script type="text/javascript">
-                    function kellyCalc() {
+                    function kellyCalc1() {
                         var bankroll=parseFloat(document.getElementById("bankroll").value);
                         var aggro=parseFloat(document.getElementById("aggro").value);
                         var prob1=parseFloat(document.getElementById("prob1").value);
                         var odds1=parseFloat(document.getElementById("odds1").value);
+                        var sel1=document.getElementById("selection1").value;
                         var kelly1=(((prob1*odds1-100)*bankroll*aggro)/(100*odds1-100));
-                        document.getElementById("parlays").value=kelly1;                               
+                        document.getElementById("indbet1").value=kelly1;
+                        document.getElementById("sel1").value=sel1;                                                       
+                    }
+                </script>      
+                <script type="text/javascript">
+                    function kellyCalc2() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob2=parseFloat(document.getElementById("prob2").value);
+                        var odds2=parseFloat(document.getElementById("odds2").value);
+                        var sel2=document.getElementById("selection2").value;
+                        var kelly2=(((prob2*odds2-100)*bankroll*aggro)/(100*odds2-100));
+                        document.getElementById("indbet2").value=kelly2;
+                        document.getElementById("sel2").value=sel2;
+                    }                                                    
+                </script>
+                <script type="text/javascript">
+                    function kellyCalc3() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob3=parseFloat(document.getElementById("prob3").value);
+                        var odds3=parseFloat(document.getElementById("odds3").value);
+                        var sel3=document.getElementById("selection3").value;
+                        var kelly3=(((prob3*odds3-100)*bankroll*aggro)/(100*odds3-100));
+                        document.getElementById("indbet3").value=kelly3;
+                        document.getElementById("sel3").value=sel3;                                                       
+                    }
+                </script>      
+                <script type="text/javascript">
+                    function kellyCalc4() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob4=parseFloat(document.getElementById("prob4").value);
+                        var odds4=parseFloat(document.getElementById("odds4").value);
+                        var sel4=document.getElementById("selection4").value;
+                        var kelly4=(((prob4*odds4-100)*bankroll*aggro)/(100*odds4-100));
+                        document.getElementById("indbet4").value=kelly4;
+                        document.getElementById("sel4").value=sel4;
+                    }                                                    
+                </script>
+                <script type="text/javascript">
+                    function kellyCalc5() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob5=parseFloat(document.getElementById("prob5").value);
+                        var odds5=parseFloat(document.getElementById("odds5").value);
+                        var sel5=document.getElementById("selection5").value;
+                        var kelly5=(((prob5*odds5-100)*bankroll*aggro)/(100*odds5-100));
+                        document.getElementById("indbet5").value=kelly5;
+                        document.getElementById("sel5").value=sel5;                                                       
+                    }
+                </script>      
+                <script type="text/javascript">
+                    function kellyCalc6() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob6=parseFloat(document.getElementById("prob6").value);
+                        var odds6=parseFloat(document.getElementById("odds6").value);
+                        var sel6=document.getElementById("selection6").value;
+                        var kelly6=(((prob6*odds6-100)*bankroll*aggro)/(100*odds6-100));
+                        document.getElementById("indbet6").value=kelly6;
+                        document.getElementById("sel6").value=sel6;
+                    }                                                    
+                </script>
+                <script type="text/javascript">
+                    function kellyCalc7() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob7=parseFloat(document.getElementById("prob7").value);
+                        var odds7=parseFloat(document.getElementById("odds7").value);
+                        var sel7=document.getElementById("selection7").value;
+                        var kelly7=(((prob7*odds7-100)*bankroll*aggro)/(100*odds7-100));
+                        document.getElementById("indbet7").value=kelly7;
+                        document.getElementById("sel7").value=sel7;                                                       
+                    }
+                </script>      
+                <script type="text/javascript">
+                    function kellyCalc8() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob8=parseFloat(document.getElementById("prob8").value);
+                        var odds8=parseFloat(document.getElementById("odds8").value);
+                        var sel8=document.getElementById("selection8").value;
+                        var kelly8=(((prob8*odds8-100)*bankroll*aggro)/(100*odds8-100));
+                        document.getElementById("indbet8").value=kelly8;
+                        document.getElementById("sel8").value=sel8;
+                    }                                                    
+                </script>
+                <script type="text/javascript">
+                    function kellyCalc9() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob9=parseFloat(document.getElementById("prob9").value);
+                        var odds9=parseFloat(document.getElementById("odds9").value);
+                        var sel9=document.getElementById("selection9").value;
+                        var kelly9=(((prob9*odds9-100)*bankroll*aggro)/(100*odds9-100));
+                        document.getElementById("indbet9").value=kelly9;
+                        document.getElementById("sel9").value=sel9;
+                    }                                                    
+                </script>
+                <script type="text/javascript">
+                    function kellyCalc10() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob10=parseFloat(document.getElementById("prob10").value);
+                        var odds10=parseFloat(document.getElementById("odds10").value);
+                        var sel10=document.getElementById("selection10").value;
+                        var kelly10=(((prob10*odds10-100)*bankroll*aggro)/(100*odds10-100));
+                        document.getElementById("indbet10").value=kelly10;
+                        document.getElementById("sel10").value=sel10;                                                       
+                    }
+                </script>      
+                <script type="text/javascript">
+                    function kellyCalc11() {
+                        var bankroll=parseFloat(document.getElementById("bankroll").value);
+                        var aggro=parseFloat(document.getElementById("aggro").value);
+                        var prob11=parseFloat(document.getElementById("prob11").value);
+                        var odds11=parseFloat(document.getElementById("odds11").value);
+                        var sel11=document.getElementById("selection11").value;
+                        var kelly11=(((prob11*odds11-100)*bankroll*aggro)/(100*odds11-100));
+                        document.getElementById("indbet11").value=kelly11;
+                        document.getElementById("sel11").value=sel11;
                     }                                                    
                 </script>
         <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
@@ -78,8 +198,68 @@
     <div class="row">
         <div class="column" id="results" style="background-color: antiquewhite;">
             <h4>Results Box</h4>
-            <input type="number" id="parlays" name="parlays" step="0.01"><br><br>
-        </div>
+            <table id="singlestable">
+                <tr>
+                    <th>Selection</th>
+                    <th>Bet Size</th>
+                </tr>
+                <tr><td><input type="text" id="sel1" name="sel1" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet1" name="indbet1" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel2" name="sel2" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet2" name="indbet2" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel3" name="sel3" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet3" name="indbet3" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel4" name="sel4" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet4" name="indbet4" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel5" name="sel5" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet5" name="indbet5" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel6" name="sel6" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet6" name="indbet6" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel7" name="sel7" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet7" name="indbet7" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel8" name="sel8" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet8" name="indbet8" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel9" name="sel9" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet9" name="indbet9" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel10" name="sel10" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet10" name="indbet10" class="resultcells"><br><br>
+                </td>
+                </tr>
+                <tr><td><input type="text" id="sel11" name="sel11" class="resultcells"><br><br>
+                </td>
+                <td><input type="text" id="indbet11" name="indbet11" class="resultcells"><br><br>
+                </td>
+                </tr>
+            </table>          
+        </div>           
         <div class="column" id="picklist2" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
             <table>
                 <tr><td><input type="text" id="selection6" name="selection6"><br><br>
@@ -127,6 +307,6 @@
                </table>              
         </div>
     </div>
-    </form>
+    </form> 
     </body>
 </html>
