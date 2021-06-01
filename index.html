@@ -16,8 +16,11 @@
                 <label for="aggro">Kelly Multiplier :</label>
                 <input type="number" max="1" min="0.05" id="aggro" name="aggro" step="0.01"><br><br>
                 <label for="parlaysize">Picks/Parlay:</label>
-                <input type="number" min="2" id="parlaysize" name="parlaysize"><br><br>
-                <input type="submit" value="CALCULATE" id="calc" onclick="kellyCalc1(); kellyCalc2(); kellyCalc3(); kellyCalc4(); kellyCalc5(); kellyCalc6(); kellyCalc7(); kellyCalc8(); kellyCalc9(); kellyCalc10(); kellyCalc11();">                                    
+                <input type="number" min="2" max="5" id="parlaysize" name="parlaysize"><br><br>
+                <label for="calc">First :</label>
+                <input type="submit" value="CALCULATE KELLY VALUES" id="calc" onclick="kellyCalc1(); kellyCalc2(); kellyCalc3(); kellyCalc4(); kellyCalc5(); kellyCalc6(); kellyCalc7(); kellyCalc8(); kellyCalc9(); kellyCalc10(); kellyCalc11();"><br><br>                                    
+                <label for="parlay button">Second :</label>
+                <input type="submit" value="MAKE YOUR PARLAYS" id="parlaybutton" onclick="parlayCalc();">
         </div>
                 <script type="text/javascript">
                     function kellyCalc1() {
@@ -151,6 +154,28 @@
                         document.getElementById("sel11").value=sel11;
                     }                                                    
                 </script>
+                <script type="text/javascript">
+                    function parlayCalc() {
+                        var parlaysize=parseFloat(document.getElementById("parlaysize").value);
+                        if (parlaysize=2) {
+                            function parlayCalc2()
+                        }
+                        else if (parlaysize=3) {
+                            function parlayCalc3()
+                        }
+                        else if (parlaysize=4) {
+                            function parlayCalc4()
+                        }    
+                        else {
+                            function parlayCalc5()
+                        }
+                    }
+                </script>
+                <script type="type/javascript">
+                    function parlayCalc2() {
+                        
+                    }    
+                </script>
         <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
             <table>
                     <tr><th>Selection</th>
@@ -258,7 +283,8 @@
                 <td><input type="text" id="indbet11" name="indbet11" class="resultcells"><br><br>
                 </td>
                 </tr>
-            </table>          
+            </table>
+            <p id="parlay1"></p>          
         </div>           
         <div class="column" id="picklist2" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
             <table>
