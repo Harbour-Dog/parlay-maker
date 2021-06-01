@@ -19,7 +19,7 @@
                 <input type="number" min="2" max="5" id="parlaysize" name="parlaysize"><br><br>
                 <label for="calc">First :</label>
                 <input type="submit" value="CALCULATE KELLY VALUES" id="calc" onclick="kellyCalc1(); kellyCalc2(); kellyCalc3(); kellyCalc4(); kellyCalc5(); kellyCalc6(); kellyCalc7(); kellyCalc8(); kellyCalc9(); kellyCalc10(); kellyCalc11();"><br><br>                                    
-                <label for="parlay button">Second :</label>
+                <label for="parlaybutton">Second :</label>
                 <input type="submit" value="MAKE YOUR PARLAYS" id="parlaybutton" onclick="parlayCalc();">
         </div>
                 <script type="text/javascript">
@@ -157,8 +157,13 @@
                 <script type="text/javascript">
                     function parlayCalc() {
                         var parlaysize=parseFloat(document.getElementById("parlaysize").value);
+
                         if (parlaysize=2) {
-                            function parlayCalc2()
+                            function parlayCalc2() {
+                                var sel1=document.getElementById("sel1").value;
+                                var sel2=document.getElementById("sel2").value;
+                                //THIS IS WHERE I LEFT OFF//
+                            }
                         }
                         else if (parlaysize=3) {
                             function parlayCalc3()
@@ -171,11 +176,7 @@
                         }
                     }
                 </script>
-                <script type="type/javascript">
-                    function parlayCalc2() {
-                        
-                    }    
-                </script>
+                
         <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
             <table>
                     <tr><th>Selection</th>
@@ -228,63 +229,73 @@
                     <th>Selection</th>
                     <th>Bet Size</th>
                 </tr>
-                <tr><td><input type="text" id="sel1" name="sel1" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel1" name="sel1" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet1" name="indbet1" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel2" name="sel2" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel2" name="sel2" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet2" name="indbet2" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel3" name="sel3" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel3" name="sel3" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet3" name="indbet3" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel4" name="sel4" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel4" name="sel4" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet4" name="indbet4" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel5" name="sel5" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel5" name="sel5" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet5" name="indbet5" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel6" name="sel6" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel6" name="sel6" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet6" name="indbet6" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel7" name="sel7" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel7" name="sel7" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet7" name="indbet7" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel8" name="sel8" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel8" name="sel8" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet8" name="indbet8" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel9" name="sel9" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel9" name="sel9" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet9" name="indbet9" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel10" name="sel10" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel10" name="sel10" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet10" name="indbet10" class="resultcells"><br><br>
                 </td>
                 </tr>
-                <tr><td><input type="text" id="sel11" name="sel11" class="resultcells"><br><br>
+                <tr><td><input type="text" id="sel11" name="sel11" class="resultcells" value="-"><br><br>
                 </td>
                 <td><input type="text" id="indbet11" name="indbet11" class="resultcells"><br><br>
                 </td>
                 </tr>
             </table>
-            <p id="parlay1"></p>          
+            <table id="parlaytable">
+                <tr>
+                    <th>Parlay</th>
+                    <th>Bet Size</th>    
+                </tr>
+                <tr><td><input type="text" id="par1" name="par1" class="parcells"><br><br>
+                    </td>
+                    <td><input type="text" id="parbet1" name="parbet1" class="parcells"><br><br>
+                    </td>
+                </tr>
+            </table>                      
         </div>           
         <div class="column" id="picklist2" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
             <table>
