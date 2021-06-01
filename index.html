@@ -10,9 +10,9 @@
     <div class="row">
         <div class="column" style="background-color:rgb(218, 216, 216);" id="bankrolldiv">
             <h2>Bankroll and Betting Strategy</h2>
-            <form action="/action_page.php" id="form" >
+            <form id="form" onsubmit="return false;" >
                 <label for="bankroll">Bankroll: $</label>
-                <input type="number" id="bankroll" name="bankroll"><br><br>
+                <input type="number" id="bankroll" value="5" name="bankroll"><br><br>
                 <label for="aggro">Kelly Multiplier :</label>
                 <input type="number" max="1" min="0.05" id="aggro" name="aggro" step="0.01"><br><br>
                 <label for="parlaysize">Picks/Parlay:</label>
@@ -20,7 +20,8 @@
                 <label for="calc">First :</label>
                 <input type="submit" value="CALCULATE KELLY VALUES" id="calc" onclick="kellyCalc1(); kellyCalc2(); kellyCalc3(); kellyCalc4(); kellyCalc5(); kellyCalc6(); kellyCalc7(); kellyCalc8(); kellyCalc9(); kellyCalc10(); kellyCalc11();"><br><br>                                    
                 <label for="parlaybutton">Second :</label>
-                <input type="submit" value="MAKE YOUR PARLAYS" id="parlaybutton" onclick="parlayCalc();">
+                <input type="submit" value="MAKE YOUR PARLAYS" id="parlaybutton">
+            </form>
         </div>
                 <script type="text/javascript">
                     function kellyCalc1() {
@@ -175,7 +176,7 @@
                             function parlayCalc5()
                         }
                     }
-                </script>
+                </script>//SCRIPT NOT REGISTERING PROPERLY??//
                 
         <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
             <table>
@@ -345,5 +346,6 @@
         </div>
     </div>
     </form> 
+    <script src="index.js"></script>
     </body>
 </html>
