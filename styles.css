@@ -10,8 +10,9 @@ h1 {
     text-decoration-color:rgb(255, 89, 89);
 }
 
-h2 {
+h2, h3, h4 {
     text-align: center;
+    font-size: 150%;
 }
 
 .column {
@@ -39,20 +40,27 @@ table, th, td {
 
 #bankrolldiv {
     text-align: center;
-}
-
-#picklist {
-    height: 600px;
+    padding-top: 0px;
+    
 }
 
 #resultsdiv {
+    height: 380px;
+    text-align: center;
+    padding-top: 0px;
+}
+
+#picklist {
     width: 45%;
     height: 600px;
+    text-align: center;
+    padding-top: 0px;
 }
 
 #singlestable {
     float: left;
     column-width: auto;
+    margin-top: 0px;
 }
 
 .resultcells {
