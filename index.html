@@ -8,7 +8,7 @@
     <body>
     <h1>Kelly Criterion Parlay Maker</h1>
     <div class="row">
-        <div class="column" style="background-color:rgb(218, 216, 216);" id="bankrolldiv"></div>
+        <div class="column" id="bankrolldiv" style="background-color:rgb(218, 216, 216);"></div>
             <h2>Bankroll and Betting Strategy</h2>
             <label for="bankroll">Bankroll: $</label>
             <input type="text" id="bankroll" name="bankroll">
@@ -22,79 +22,98 @@
             <input type="submit" value="CALCULATE KELLY VALUES" id="calc" onclick="kellyCalc1(); kellyCalc2(); kellyCalc3(); kellyCalc4(); kellyCalc5(); kellyCalc6(); kellyCalc7(); kellyCalc8(); kellyCalc9(); kellyCalc10(); kellyCalc11();"><br><br>                                    
             <label for="parlaybutton">Second :</label>
             <input type="submit" value="MAKE YOUR PARLAYS" id="parlaybutton">
-    </div>
-    
-                
-                <script type="text/javascript">
-                    function parlayCalc() {
-                        var parlaysize=parseFloat(document.getElementById("parlaysize").value);
-
-                        if (parlaysize=2) {
-                            function parlayCalc2() {
-                                var sel1=document.getElementById("sel1").value;
-                                var sel2=document.getElementById("sel2").value;
-                                //THIS IS WHERE I LEFT OFF//
-                            }
-                        }
-                        else if (parlaysize=3) {
-                            function parlayCalc3()
-                        }
-                        else if (parlaysize=4) {
-                            function parlayCalc4()
-                        }    
-                        else {
-                            function parlayCalc5()
-                        }
-                    }
-                </script>//SCRIPT NOT REGISTERING PROPERLY??//
-                
-        <div class="column" id="picklist" style="background-color: rgb(130, 166, 243); border-top-right-radius: 10px;">
+        </div>
+        <div class="column" id="picklist" style="background-color:rgb(130, 166, 243);"></div>
+            <h2>Your Advantage Picks</h2>
             <table>
-                    <tr><th>Selection</th>
-                        <th>Probability(%)</th>
-                        <th>Odds Offered</th>        
-                    </tr>
-                    <tr><td><input type="text" id="selection1" name="selection1"><br><br>
-                        </td>
-                        <td><input type="number" id="prob1" name="prob1" min="0.1" max="99.9" step="0.1"><br><br>
-                        </td>
-                        <td><input type="number" id="odds1" name="odds1" min="1.01" max="100" step="0.01"><br><br>
-                        </td>
-                    </tr>
-                    <tr><td><input type="text" id="selection2" name="selection2"><br><br>
-                        </td>
-                        <td><input type="number" id="prob2" name="prob2" min="0.1" max="99.9" step="0.1"><br><br>
-                        </td>
-                        <td><input type="number" id="odds2" name="odds2" min="1.01" max="100" step="0.01"><br><br>
-                        </td>
-                    </tr>
-                    <tr><td><input type="text" id="selection3" name="selection3"><br><br>
-                        </td>
-                        <td><input type="number" id="prob3" name="prob3" min="0.1" max="99.9" step="0.1"><br><br>
-                        </td>
-                        <td><input type="number" id="odds3" name="odds3" min="1.01" max="100" step="0.01"><br><br>
-                        </td>
-                    </tr>
-                    <tr><td><input type="text" id="selection4" name="selection4"><br><br>
-                        </td>
-                        <td><input type="number" id="prob4" name="prob4" min="0.1" max="99.9" step="0.1"><br><br>
-                        </td>
-                        <td><input type="number" id="odds4" name="odds4" min="1.01" max="100" step="0.01"><br><br>
-                        </td>
-                    </tr>
-                    <tr><td><input type="text" id="selection5" name="selection5"><br><br>
-                        </td>
-                        <td><input type="number" id="prob5" name="prob5" min="0.1" max="99.9" step="0.1"><br><br>
-                        </td>
-                        <td><input type="number" id="odds5" name="odds5" min="1.01" max="100" step="0.01"><br><br>
-                        </td>
-                    </tr>
+                <tr><th>Selection</th>
+                    <th>Probability(%)</th>
+                    <th>Odds Offered</th>        
+                </tr>
+                <tr><td><input type="text" id="selection1" name="selection1"><br><br>
+                    </td>
+                    <td><input type="number" id="prob1" name="prob1" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds1" name="odds1" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection2" name="selection2"><br><br>
+                    </td>
+                    <td><input type="number" id="prob2" name="prob2" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds2" name="odds2" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection3" name="selection3"><br><br>
+                    </td>
+                    <td><input type="number" id="prob3" name="prob3" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds3" name="odds3" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection4" name="selection4"><br><br>
+                    </td>
+                    <td><input type="number" id="prob4" name="prob4" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds4" name="odds4" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection5" name="selection5"><br><br>
+                    </td>
+                    <td><input type="number" id="prob5" name="prob5" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds5" name="odds5" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection6" name="selection6"><br><br>
+                    </td>
+                    <td><input type="number" id="prob6" name="prob6" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds6" name="odds6" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection7" name="selection7"><br><br>
+                    </td>
+                    <td><input type="number" id="prob7" name="prob7" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds7" name="odds7" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection8" name="selection8"><br><br>
+                    </td>
+                    <td><input type="number" id="prob8" name="prob8" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds8" name="odds8" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection9" name="selection9"><br><br>
+                    </td>
+                    <td><input type="number" id="prob9" name="prob9" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds9" name="odds9" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection10" name="selection10"><br><br>
+                    </td>
+                    <td><input type="number" id="prob10" name="prob10" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds10" name="odds10" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="selection11" name="selection11"><br><br>
+                    </td>
+                    <td><input type="number" id="prob11" name="prob11" min="0.1" max="99.9" step="0.1"><br><br>
+                    </td>
+                    <td><input type="number" id="odds11" name="odds11" min="1.01" max="100" step="0.01"><br><br>
+                    </td>
+                </tr>
             </table>
         </div>
-    </div>
-    <div class="row">
-        <div class="column" id="results" style="background-color: antiquewhite;">
+    </div>          
+        <div id="results" style="background-color:rgb(218, 216, 216);">
             <h4>Results Box</h4>
+        </div>
+            
             <table id="singlestable">
                 <tr>
                     <th>Selection</th>
@@ -170,49 +189,7 @@
         </div>           
         <div class="column" id="picklist2" style="background-color:rgb(130, 166, 243); border-bottom-right-radius: 10px; height: 300px;">
             <table>
-                <tr><td><input type="text" id="selection6" name="selection6"><br><br>
-                    </td>
-                    <td class="probcells"><input type="number" id="prob6" name="prob6" min="0.1" max="99.9" step="0.1"><br><br>
-                    </td>
-                    <td><input type="number" id="odds6" name="odds6" min="1.01" max="100" step="0.01"><br><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="selection7" name="selection7"><br><br>
-                    </td>
-                    <td class="probcells"><input type="number" id="prob7" name="prob7" min="0.1" max="99.9" step="0.1"><br><br>
-                    </td>
-                    <td><input type="number" id="odds7" name="odds7" min="1.01" max="100" step="0.01"><br><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="selection8" name="selection8"><br><br>
-                    </td>
-                    <td class="probcells"><input type="number" id="prob8" name="prob8" min="0.1" max="99.9" step="0.1"><br><br>
-                    </td>
-                    <td><input type="number" id="odds8" name="odds8" min="1.01" max="100" step="0.01"><br><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="selection9" name="selection9"><br><br>
-                    </td>
-                    <td class="probcells"><input type="number" id="prob9" name="prob9" min="0.1" max="99.9" step="0.1"><br><br>
-                    </td>
-                    <td><input type="number" id="odds9" name="odds9" min="1.01" max="100" step="0.01"><br><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="selection10" name="selection10"><br><br>
-                    </td>
-                    <td class="probcells"><input type="number" id="prob10" name="prob10" min="0.1" max="99.9" step="0.1"><br><br>
-                    </td>
-                    <td><input type="number" id="odds10" name="odds10" min="1.01" max="100" step="0.01"><br><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="selection11" name="selection11"><br><br>
-                    </td>
-                    <td class="probcells"><input type="number" id="prob11" name="prob11" min="0.1" max="99.9" step="0.1"><br><br>
-                    </td>
-                    <td><input type="number" id="odds11" name="odds11" min="1.01" max="100" step="0.01"><br><br>
-                    </td>
-                </tr>
-               </table>              
+                              
         </div>
     </div>
     </form> 

@@ -100,3 +100,5 @@ function kellyCalc11() {
     document.getElementById("indbet11").value=kelly11;
     document.getElementById("sel11").value=sel11;
 }                                                    
+
+
