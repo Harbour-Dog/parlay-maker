@@ -37,33 +37,17 @@ table, th, td {
     margin: auto;
 }
 
-.probcells {
-    width: 110px;
-}
-
-#picklist {
-    border-left: rgb(255, 89, 89);
-    border-left: solid;
-}
-
-#picklist2 {
-    border-left: rgb(255, 89, 89);
-    border-left: solid;
-}
-
-#results {
-    border-bottom-left-radius: 10px;
-    height: 900px;
+#bankrolldiv {
     text-align: center;
 }
 
-#bankrolldiv {
-    border-top-left-radius: 10px;
-    height: auto;
+#picklist {
+    height: 600px;
 }
 
-#form {
-    text-align-last: center;
+#resultsdiv {
+    width: 45%;
+    height: 600px;
 }
 
 #singlestable {
@@ -72,5 +56,5 @@ table, th, td {
 }
 
 .resultcells {
-    width: 45px;    
+    width: 45px;
 }
