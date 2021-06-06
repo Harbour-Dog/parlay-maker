@@ -7,23 +7,22 @@
     </head>
     <body>
     <h1>Kelly Criterion Parlay Maker</h1>
-    <div class="row">
-        <div class="column" id="bankrolldiv" style="background-color:rgb(218, 216, 216);">
+    <div id="bankrolldiv" class="float" style="background-color:rgb(218, 216, 216);">
             <h2>Bankroll and Betting Strategy</h2>
             <label for="bankroll">Bankroll: $</label>
-            <input type="text" id="bankroll" name="bankroll"><br>
+            <input type="text" id="bankroll" name="bankroll" min="100" step="0.01"><br>
             <label for="aggro">Kelly Multiplier:</label>
-            <input type="text" id="aggro" name="aggro"><br>
+            <input type="text" id="aggro" name="aggro" min="0.1" max="1" step="0.01"><br>
             <label for="parlaysize">Picks/Parlay:</label>
             <input type="text" id="parlaysize" name="parlaysize"><br>
             <label for="maxbet">Maximum Wager:</label>
             <input type="text" id="maxbet" name="maxbet"><br>
             <label for="calc">First :</label>
-            <input type="submit" value="CALCULATE KELLY VALUES" id="calc" onclick="kellyCalc1(); kellyCalc2(); kellyCalc3(); kellyCalc4(); kellyCalc5(); kellyCalc6(); kellyCalc7(); kellyCalc8(); kellyCalc9(); kellyCalc10(); kellyCalc11();"><br>                                    
+            <input type="submit" value="CALCULATE KELLY VALUES" id="calc"><br>                                    
             <label for="parlaybutton">Second :</label>
             <input type="submit" value="MAKE YOUR PARLAYS" id="parlaybutton">
         </div>
-        <div class="column" id="resultsdiv" style="background-color:rgb(130, 166, 243);">
+        <div id="resultsdiv" style="background-color:rgb(130, 166, 243); float:right;">
             <h3>Results Box</h3>
             <table id="singlestable">
                 <tr>
@@ -97,9 +96,8 @@
                     </td>
                 </tr>
             </table>
-        </div>    
-    </div>          
-        <div id="picklist" style="background-color:rgb(218, 216, 216);">
+        </div>              
+        <div id="picklist" class="float" style="background-color:rgb(179, 243, 141);">
             <h4>Your Advantage Picks</h4>
             <table>
                 <tr><th>Selection</th>
