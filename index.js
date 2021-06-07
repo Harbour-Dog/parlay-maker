@@ -268,60 +268,77 @@ function parlayCalc2() {
     let parprob911=((prob9*prob11)/100);
     let parodds1011=(odds10*odds11);
     let parprob1011=((prob10*prob11)/100);
-    let parkelly12=(((parprob12*parodds12-100)*bankroll*aggro)/(100*parodds12-100));
-    let parkelly13=(((parprob13*parodds13-100)*bankroll*aggro)/(100*parodds13-100));
-    let parkelly23=(((parprob23*parodds23-100)*bankroll*aggro)/(100*parodds23-100));
-    let parkelly14=(((parprob14*parodds14-100)*bankroll*aggro)/(100*parodds14-100));
-    let parkelly24=(((parprob24*parodds24-100)*bankroll*aggro)/(100*parodds24-100));
-    let parkelly34=(((parprob34*parodds34-100)*bankroll*aggro)/(100*parodds34-100));
-    let parkelly15=(((parprob15*parodds15-100)*bankroll*aggro)/(100*parodds15-100));
-    let parkelly25=(((parprob25*parodds25-100)*bankroll*aggro)/(100*parodds25-100));
-    let parkelly35=(((parprob35*parodds35-100)*bankroll*aggro)/(100*parodds35-100));
-    let parkelly45=(((parprob45*parodds45-100)*bankroll*aggro)/(100*parodds45-100));
-    let parkelly16=(((parprob16*parodds16-100)*bankroll*aggro)/(100*parodds16-100));
-    let parkelly26=(((parprob26*parodds26-100)*bankroll*aggro)/(100*parodds26-100));
-    let parkelly36=(((parprob36*parodds36-100)*bankroll*aggro)/(100*parodds36-100));
-    let parkelly46=(((parprob46*parodds46-100)*bankroll*aggro)/(100*parodds46-100));
-    let parkelly56=(((parprob56*parodds56-100)*bankroll*aggro)/(100*parodds56-100));
-    let parkelly17=(((parprob17*parodds17-100)*bankroll*aggro)/(100*parodds17-100));
-    let parkelly27=(((parprob27*parodds27-100)*bankroll*aggro)/(100*parodds27-100));
-    let parkelly37=(((parprob37*parodds37-100)*bankroll*aggro)/(100*parodds37-100));
-    let parkelly47=(((parprob47*parodds47-100)*bankroll*aggro)/(100*parodds47-100));
-    let parkelly57=(((parprob57*parodds57-100)*bankroll*aggro)/(100*parodds57-100));
-    let parkelly67=(((parprob67*parodds67-100)*bankroll*aggro)/(100*parodds67-100));
-    let parkelly18=(((parprob18*parodds18-100)*bankroll*aggro)/(100*parodds18-100));
-    let parkelly28=(((parprob28*parodds28-100)*bankroll*aggro)/(100*parodds28-100));
-    let parkelly38=(((parprob38*parodds38-100)*bankroll*aggro)/(100*parodds38-100));
-    let parkelly48=(((parprob48*parodds48-100)*bankroll*aggro)/(100*parodds48-100));
-    let parkelly58=(((parprob58*parodds58-100)*bankroll*aggro)/(100*parodds58-100));
-    let parkelly68=(((parprob68*parodds68-100)*bankroll*aggro)/(100*parodds68-100));
-    let parkelly78=(((parprob78*parodds78-100)*bankroll*aggro)/(100*parodds78-100));
-    let parkelly19=(((parprob19*parodds19-100)*bankroll*aggro)/(100*parodds19-100));
-    let parkelly29=(((parprob29*parodds29-100)*bankroll*aggro)/(100*parodds29-100));
-    let parkelly39=(((parprob39*parodds39-100)*bankroll*aggro)/(100*parodds39-100));
-    let parkelly49=(((parprob49*parodds49-100)*bankroll*aggro)/(100*parodds49-100));
-    let parkelly59=(((parprob59*parodds59-100)*bankroll*aggro)/(100*parodds59-100));
-    let parkelly69=(((parprob69*parodds69-100)*bankroll*aggro)/(100*parodds69-100));
-    let parkelly79=(((parprob79*parodds79-100)*bankroll*aggro)/(100*parodds79-100));
-    let parkelly89=(((parprob89*parodds89-100)*bankroll*aggro)/(100*parodds89-100));
-    let parkelly110=(((parprob110*parodds110-100)*bankroll*aggro)/(100*parodds110-100));
-    let parkelly210=(((parprob210*parodds210-100)*bankroll*aggro)/(100*parodds210-100));
-    let parkelly310=(((parprob310*parodds310-100)*bankroll*aggro)/(100*parodds310-100));
-    let parkelly410=(((parprob410*parodds410-100)*bankroll*aggro)/(100*parodds410-100));
-    let parkelly510=(((parprob510*parodds510-100)*bankroll*aggro)/(100*parodds510-100));
-    let parkelly610=(((parprob610*parodds610-100)*bankroll*aggro)/(100*parodds610-100));
-    let parkelly710=(((parprob710*parodds710-100)*bankroll*aggro)/(100*parodds710-100));
-    let parkelly810=(((parprob810*parodds810-100)*bankroll*aggro)/(100*parodds810-100));
-    let parkelly910=(((parprob910*parodds910-100)*bankroll*aggro)/(100*parodds910-100));
-    let parkelly111=(((parprob111*parodds111-100)*bankroll*aggro)/(100*parodds111-100));
-    let parkelly211=(((parprob211*parodds211-100)*bankroll*aggro)/(100*parodds211-100));
-    let parkelly311=(((parprob311*parodds311-100)*bankroll*aggro)/(100*parodds311-100));
-    let parkelly411=(((parprob411*parodds411-100)*bankroll*aggro)/(100*parodds411-100));
-    let parkelly511=(((parprob511*parodds511-100)*bankroll*aggro)/(100*parodds511-100));
-    let parkelly611=(((parprob611*parodds611-100)*bankroll*aggro)/(100*parodds611-100));
-    let parkelly711=(((parprob711*parodds711-100)*bankroll*aggro)/(100*parodds711-100));
-    let parkelly811=(((parprob811*parodds811-100)*bankroll*aggro)/(100*parodds811-100));
-    let parkelly911=(((parprob911*parodds911-100)*bankroll*aggro)/(100*parodds911-100));
-    let parkelly1011=(((parprob1011*parodds1011-100)*bankroll*aggro)/(100*parodds1011-100));
-    document.getElementById("parlays").innerHTML=(sel1 + "-" + sel2 + "=" + parkelly12 + "----" + sel1 + "-" + sel3 + "=" + parkelly13 + "---" + sel2 + "-" + sel3 + "=" + parkelly23);
+    let parkelly12=Math.floor(((parprob12*parodds12-100)*bankroll*aggro)/(100*parodds12-100));
+    let parkelly13=Math.floor(((parprob13*parodds13-100)*bankroll*aggro)/(100*parodds13-100));
+    let parkelly23=Math.floor(((parprob23*parodds23-100)*bankroll*aggro)/(100*parodds23-100));
+    let parkelly14=Math.floor(((parprob14*parodds14-100)*bankroll*aggro)/(100*parodds14-100));
+    let parkelly24=Math.floor(((parprob24*parodds24-100)*bankroll*aggro)/(100*parodds24-100));
+    let parkelly34=Math.floor(((parprob34*parodds34-100)*bankroll*aggro)/(100*parodds34-100));
+    let parkelly15=Math.floor(((parprob15*parodds15-100)*bankroll*aggro)/(100*parodds15-100));
+    let parkelly25=Math.floor(((parprob25*parodds25-100)*bankroll*aggro)/(100*parodds25-100));
+    let parkelly35=Math.floor(((parprob35*parodds35-100)*bankroll*aggro)/(100*parodds35-100));
+    let parkelly45=Math.floor(((parprob45*parodds45-100)*bankroll*aggro)/(100*parodds45-100));
+    let parkelly16=Math.floor(((parprob16*parodds16-100)*bankroll*aggro)/(100*parodds16-100));
+    let parkelly26=Math.floor(((parprob26*parodds26-100)*bankroll*aggro)/(100*parodds26-100));
+    let parkelly36=Math.floor(((parprob36*parodds36-100)*bankroll*aggro)/(100*parodds36-100));
+    let parkelly46=Math.floor(((parprob46*parodds46-100)*bankroll*aggro)/(100*parodds46-100));
+    let parkelly56=Math.floor(((parprob56*parodds56-100)*bankroll*aggro)/(100*parodds56-100));
+    let parkelly17=Math.floor(((parprob17*parodds17-100)*bankroll*aggro)/(100*parodds17-100));
+    let parkelly27=Math.floor(((parprob27*parodds27-100)*bankroll*aggro)/(100*parodds27-100));
+    let parkelly37=Math.floor(((parprob37*parodds37-100)*bankroll*aggro)/(100*parodds37-100));
+    let parkelly47=Math.floor(((parprob47*parodds47-100)*bankroll*aggro)/(100*parodds47-100));
+    let parkelly57=Math.floor(((parprob57*parodds57-100)*bankroll*aggro)/(100*parodds57-100));
+    let parkelly67=Math.floor(((parprob67*parodds67-100)*bankroll*aggro)/(100*parodds67-100));
+    let parkelly18=Math.floor(((parprob18*parodds18-100)*bankroll*aggro)/(100*parodds18-100));
+    let parkelly28=Math.floor(((parprob28*parodds28-100)*bankroll*aggro)/(100*parodds28-100));
+    let parkelly38=Math.floor(((parprob38*parodds38-100)*bankroll*aggro)/(100*parodds38-100));
+    let parkelly48=Math.floor(((parprob48*parodds48-100)*bankroll*aggro)/(100*parodds48-100));
+    let parkelly58=Math.floor(((parprob58*parodds58-100)*bankroll*aggro)/(100*parodds58-100));
+    let parkelly68=Math.floor(((parprob68*parodds68-100)*bankroll*aggro)/(100*parodds68-100));
+    let parkelly78=Math.floor(((parprob78*parodds78-100)*bankroll*aggro)/(100*parodds78-100));
+    let parkelly19=Math.floor(((parprob19*parodds19-100)*bankroll*aggro)/(100*parodds19-100));
+    let parkelly29=Math.floor(((parprob29*parodds29-100)*bankroll*aggro)/(100*parodds29-100));
+    let parkelly39=Math.floor(((parprob39*parodds39-100)*bankroll*aggro)/(100*parodds39-100));
+    let parkelly49=Math.floor(((parprob49*parodds49-100)*bankroll*aggro)/(100*parodds49-100));
+    let parkelly59=Math.floor(((parprob59*parodds59-100)*bankroll*aggro)/(100*parodds59-100));
+    let parkelly69=Math.floor(((parprob69*parodds69-100)*bankroll*aggro)/(100*parodds69-100));
+    let parkelly79=Math.floor(((parprob79*parodds79-100)*bankroll*aggro)/(100*parodds79-100));
+    let parkelly89=Math.floor(((parprob89*parodds89-100)*bankroll*aggro)/(100*parodds89-100));
+    let parkelly110=Math.floor(((parprob110*parodds110-100)*bankroll*aggro)/(100*parodds110-100));
+    let parkelly210=Math.floor(((parprob210*parodds210-100)*bankroll*aggro)/(100*parodds210-100));
+    let parkelly310=Math.floor(((parprob310*parodds310-100)*bankroll*aggro)/(100*parodds310-100));
+    let parkelly410=Math.floor(((parprob410*parodds410-100)*bankroll*aggro)/(100*parodds410-100));
+    let parkelly510=Math.floor(((parprob510*parodds510-100)*bankroll*aggro)/(100*parodds510-100));
+    let parkelly610=Math.floor(((parprob610*parodds610-100)*bankroll*aggro)/(100*parodds610-100));
+    let parkelly710=Math.floor(((parprob710*parodds710-100)*bankroll*aggro)/(100*parodds710-100));
+    let parkelly810=Math.floor(((parprob810*parodds810-100)*bankroll*aggro)/(100*parodds810-100));
+    let parkelly910=Math.floor(((parprob910*parodds910-100)*bankroll*aggro)/(100*parodds910-100));
+    let parkelly111=Math.floor(((parprob111*parodds111-100)*bankroll*aggro)/(100*parodds111-100));
+    let parkelly211=Math.floor(((parprob211*parodds211-100)*bankroll*aggro)/(100*parodds211-100));
+    let parkelly311=Math.floor(((parprob311*parodds311-100)*bankroll*aggro)/(100*parodds311-100));
+    let parkelly411=Math.floor(((parprob411*parodds411-100)*bankroll*aggro)/(100*parodds411-100));
+    let parkelly511=Math.floor(((parprob511*parodds511-100)*bankroll*aggro)/(100*parodds511-100));
+    let parkelly611=Math.floor(((parprob611*parodds611-100)*bankroll*aggro)/(100*parodds611-100));
+    let parkelly711=Math.floor(((parprob711*parodds711-100)*bankroll*aggro)/(100*parodds711-100));
+    let parkelly811=Math.floor(((parprob811*parodds811-100)*bankroll*aggro)/(100*parodds811-100));
+    let parkelly911=Math.floor(((parprob911*parodds911-100)*bankroll*aggro)/(100*parodds911-100));
+    let parkelly1011=Math.floor(((parprob1011*parodds1011-100)*bankroll*aggro)/(100*parodds1011-100));
+    document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " = " + parkelly12 + "<br>" + sel1 + " - " + sel3 + " = " + parkelly13 + "<br>" + sel2 + " - " + sel3 + " = " + parkelly23 + "<br>" + 
+        sel1 + " - " + sel4 + " = " + parkelly14 + "<br>" + sel2 + " - " + sel4 + " = " + parkelly24 + "<br>" + sel3 + " - " + sel4 + " = " + parkelly34 + "<br>" +
+        sel1 + " - " + sel5 + " = " + parkelly15 + "<br>" + sel2 + " - " + sel5 + " = " + parkelly25 + "<br>" + sel3 + " - " + sel5 + " = " + parkelly35 + "<br>" +
+        sel4 + " - " + sel5 + " = " + parkelly45 + "<br>" + sel1 + " - " + sel6 + " = " + parkelly16 + "<br>" + sel2 + " - " + sel6 + " = " + parkelly26 + "<br>" +
+        sel3 + " - " + sel6 + " = " + parkelly36 + "<br>" + sel4 + " - " + sel6 + " = " + parkelly46 + "<br>" + sel5 + " - " + sel6 + " = " + parkelly56 + "<br>" +
+        sel1 + " - " + sel7 + " = " + parkelly17 + "<br>" + sel2 + " - " + sel7 + " = " + parkelly27 + "<br>" + sel3 + " - " + sel7 + " = " + parkelly37 + "<br>" + sel4 + " - " + sel7 + " = " + parkelly47 + "<br>" + sel5 + " - " + sel7 + " = " + parkelly57 + "<br>" + sel6 + " - " + sel7 + " = " + parkelly67 + "<br>" +
+        sel1 + " - " + sel8 + " = " + parkelly18 + "<br>" + sel2 + " - " + sel8 + " = " + parkelly28 + "<br>" + sel3 + " - " + sel8 + " = " + parkelly38 + "<br>" +
+        sel4 + " - " + sel8 + " = " + parkelly48 + "<br>" + sel5 + " - " + sel8 + " = " + parkelly58 + "<br>" + sel6 + " - " + sel8 + " = " + parkelly68 + "<br>" +
+        sel7 + " - " + sel8 + " = " + parkelly78 + "<br>" + sel1 + " - " + sel9 + " = " + parkelly19 + "<br>" + sel2 + " - " + sel9 + " = " + parkelly29 + "<br>" +
+        sel3 + " - " + sel9 + " = " + parkelly39 + "<br>" + sel4 + " - " + sel9 + " = " + parkelly49 + "<br>" + sel5 + " - " + sel9 + " = " + parkelly59 + "<br>" +
+        sel6 + " - " + sel9 + " = " + parkelly69 + "<br>" + sel7 + " - " + sel9 + " = " + parkelly79 + "<br>" + sel8 + " - " + sel9 + " = " + parkelly89 + "<br>" +
+        sel1 + " - " + sel10 + " = " + parkelly110 + "<br>" + sel2 + " - " + sel10 + " = " + parkelly210 + "<br>" + sel3 + " - " + sel10 + " = " + parkelly310 + "<br>" +
+        sel4 + " - " + sel10 + " = " + parkelly410 + "<br>" + sel5 + " - " + sel10 + " = " + parkelly510 + "<br>" + sel6 + " - " + sel10 + " = " + parkelly610 + "<br>" +
+        sel7 + " - " + sel10 + " = " + parkelly710 + "<br>" + sel8 + " - " + sel10 + " = " + parkelly810 + "<br>" + sel9 + " - " + sel10 + " = " + parkelly910 + "<br>" +
+        sel1 + " - " + sel11 + " = " + parkelly111 + "<br>" + sel2 + " - " + sel11 + " = " + parkelly211 + "<br>" + sel3 + " - " + sel11 + " = " + parkelly311 + "<br>" +
+        sel4 + " - " + sel11 + " = " + parkelly411 + "<br>" + sel5 + " - " + sel11 + " = " + parkelly511 + "<br>" + sel6 + " - " + sel11 + " = " + parkelly611 + "<br>" +
+        sel7 + " - " + sel11 + " = " + parkelly711 + "<br>" + sel8 + " - " + sel11 + " = " + parkelly811 + "<br>" + sel9 + " - " + sel11 + " = " + parkelly911 + "<br>" +
+        sel10 + " - " + sel11 + " = " + parkelly1011)
 }
