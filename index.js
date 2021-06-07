@@ -15,14 +15,7 @@ function kellyCalc1() {
     let sel1=document.getElementById("selection1").value;
     let kelly1=(((prob1*odds1-100)*bankroll*aggro)/(100*odds1-100));
     document.getElementById("indbet1").value=kelly1;
-    document.getElementById("sel1").value=sel1;
-    
-    if (kelly1 = bankroll*0.5) {
-        document.getElementById("indbet1").value=0
-    } else {
-        document.getElementById("indbet1").value=kelly1;
-        document.getElementById("sel1").value=sel1;
-    }
+    document.getElementById("test").innerHTML=sel1;
 }
              
 function kellyCalc2() {
@@ -34,13 +27,6 @@ function kellyCalc2() {
     let kelly2=(((prob2*odds2-100)*bankroll*aggro)/(100*odds2-100));
     document.getElementById("indbet2").value=kelly2;
     document.getElementById("sel2").value=sel2;
-
-    if (kelly2 = bankroll*0.5) {
-        document.getElementById("indbet2").value=0
-    } else {
-        document.getElementById("indbet2").value=kelly2;
-        document.getElementById("sel2").value=sel2;
-    }
 }                                                    
                 
 function kellyCalc3() {
@@ -50,13 +36,8 @@ function kellyCalc3() {
     let odds3=document.getElementById("odds3").value;
     let sel3=document.getElementById("selection3").value;
     let kelly3=(((prob3*odds3-100)*bankroll*aggro)/(100*odds3-100));
-
-    if (kelly3 = bankroll*0.5) {
-        document.getElementById("indbet3").value=0
-    } else {
-        document.getElementById("indbet3").value=kelly3;
-        document.getElementById("sel3").value=sel3;
-    }                                                       
+    document.getElementById("indbet3").value=kelly2;
+    document.getElementById("sel3").value=sel2;                                                 
 }
                 
 function kellyCalc4() {
@@ -68,13 +49,6 @@ function kellyCalc4() {
     let kelly4=(((prob4*odds4-100)*bankroll*aggro)/(100*odds4-100));
     document.getElementById("indbet4").value=kelly4;
     document.getElementById("sel4").value=sel4;
-
-    if (kelly4 = bankroll*0.5) {
-        document.getElementById("indbet4").value=0
-    } else {
-        document.getElementById("indbet4").value=kelly4;
-        document.getElementById("sel4").value=sel4;
-    }
 }                                                    
                
 function kellyCalc5() {
@@ -86,14 +60,7 @@ function kellyCalc5() {
     let kelly5=(((prob5*odds5-100)*bankroll*aggro)/(100*odds5-100));
     document.getElementById("indbet5").value=kelly5;
     document.getElementById("sel5").value=sel5;
-    
-    if (kelly5 = bankroll*0.5) {
-        document.getElementById("indbet5").value=0
-    } else {
-        document.getElementById("indbet5").value=kelly5;
-        document.getElementById("sel5").value=sel5;
     }
-}
                 
 function kellyCalc6() {
     let bankroll=document.getElementById("bankroll").value;
@@ -104,13 +71,6 @@ function kellyCalc6() {
     let kelly6=(((prob6*odds6-100)*bankroll*aggro)/(100*odds6-100));
     document.getElementById("indbet6").value=kelly6;
     document.getElementById("sel6").value=sel6;
-
-    if (kelly6 = bankroll*0.5) {
-        document.getElementById("indbet6").value=0
-    } else {
-        document.getElementById("indbet6").value=kelly6;
-        document.getElementById("sel6").value=sel6;
-    }
 }                                                    
                 
 function kellyCalc7() {
@@ -122,14 +82,7 @@ function kellyCalc7() {
     let kelly7=(((prob7*odds7-100)*bankroll*aggro)/(100*odds7-100));
     document.getElementById("indbet7").value=kelly7;
     document.getElementById("sel7").value=sel7;
-    
-    if (kelly7 = bankroll*0.5) {
-        document.getElementById("indbet7").value=0
-    } else {
-        document.getElementById("indbet7").value=kelly7;
-        document.getElementById("sel7").value=sel7;
     }
-}
                
 function kellyCalc8() {
     let bankroll=document.getElementById("bankroll").value;
@@ -140,13 +93,6 @@ function kellyCalc8() {
     let kelly8=(((prob8*odds8-100)*bankroll*aggro)/(100*odds8-100));
     document.getElementById("indbet8").value=kelly8;
     document.getElementById("sel8").value=sel8;
-
-    if (kelly8 = bankroll*0.5) {
-        document.getElementById("indbet8").value=0
-    } else {
-        document.getElementById("indbet8").value=kelly8;
-        document.getElementById("sel8").value=sel8;
-    }
 }                                                    
                 
 function kellyCalc9() {
@@ -158,13 +104,6 @@ function kellyCalc9() {
     let kelly9=(((prob9*odds9-100)*bankroll*aggro)/(100*odds9-100));
     document.getElementById("indbet9").value=kelly9;
     document.getElementById("sel9").value=sel9;
-
-    if (kelly9 = bankroll*0.5) {
-        document.getElementById("indbet9").value=0
-    } else {
-        document.getElementById("indbet9").value=kelly9;
-        document.getElementById("sel9").value=sel9;
-    }
 }                                                    
                 
 function kellyCalc10() {
@@ -176,13 +115,6 @@ function kellyCalc10() {
     let kelly10=(((prob10*odds10-100)*bankroll*aggro)/(100*odds10-100));
     document.getElementById("indbet10").value=kelly10;
     document.getElementById("sel10").value=sel10;
-    
-    if (kelly10 = bankroll*0.5) {
-        document.getElementById("indbet10").value=0
-    } else {
-        document.getElementById("indbet10").value=kelly10;
-        document.getElementById("sel10").value=sel10;
-    }
 }
                 
 function kellyCalc11() {
@@ -194,15 +126,8 @@ function kellyCalc11() {
     let kelly11=(((prob11*odds11-100)*bankroll*aggro)/(100*odds11-100));
     document.getElementById("indbet11").value=kelly11;
     document.getElementById("sel11").value=sel11;
-
-    if (kelly11 = bankroll*0.5) {
-        document.getElementById("indbet11").value=0
-    } else {
-        document.getElementById("indbet11").value=kelly11;
-        document.getElementById("sel11").value=sel11;
-    }
 }
 
-
-
-
+function parlayCalc2() {
+    
+}
