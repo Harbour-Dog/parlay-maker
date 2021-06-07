@@ -1,11 +1,5 @@
-let bankroll=document.getElementById("bankroll").value;
-let aggro=document.getElementById("aggro").value;
-let parlaysize=document.getElementById("parlaysize").value;
-
-console.log(bankroll + "and" + aggro);
-console.log(prob1 + "and" + odds1);
-
 document.getElementById("calc").addEventListener("click", ()=>{kellyCalc1(), kellyCalc2(), kellyCalc3(), kellyCalc4(), kellyCalc5(), kellyCalc6(), kellyCalc7(), kellyCalc8(), kellyCalc9(), kellyCalc10(), kellyCalc11()});
+document.getElementById("parlaybutton").addEventListener("click", parlayCalc2)
 
 function kellyCalc1() {
     let bankroll=document.getElementById("bankroll").value;
@@ -15,7 +9,7 @@ function kellyCalc1() {
     let sel1=document.getElementById("selection1").value;
     let kelly1=(((prob1*odds1-100)*bankroll*aggro)/(100*odds1-100));
     document.getElementById("indbet1").value=kelly1;
-    document.getElementById("test").innerHTML=sel1;
+    document.getElementById("sel1").value=sel1;
 }
              
 function kellyCalc2() {
@@ -36,8 +30,8 @@ function kellyCalc3() {
     let odds3=document.getElementById("odds3").value;
     let sel3=document.getElementById("selection3").value;
     let kelly3=(((prob3*odds3-100)*bankroll*aggro)/(100*odds3-100));
-    document.getElementById("indbet3").value=kelly2;
-    document.getElementById("sel3").value=sel2;                                                 
+    document.getElementById("indbet3").value=kelly3;
+    document.getElementById("sel3").value=sel3;                                                 
 }
                 
 function kellyCalc4() {
@@ -129,5 +123,16 @@ function kellyCalc11() {
 }
 
 function parlayCalc2() {
-    
+    let bankroll=document.getElementById("bankroll").value;
+    let aggro=document.getElementById("aggro").value;
+    let sel1=document.getElementById("sel1").value;
+    let sel2=document.getElementById("sel2").value;
+    let prob1=document.getElementById("prob1").value;
+    let odds1=document.getElementById("odds1").value;
+    let prob2=document.getElementById("prob2").value;
+    let odds2=document.getElementById("odds2").value;
+    let parodds12=(odds1*odds2);
+    let parprob12=((prob1*prob2)/100);
+    let parkelly12=(((parprob12*parodds12-100)*bankroll*aggro)/(100*parodds12-100));
+    document.getElementById("parlays").innerHTML=(sel1 + "-" + sel2 + "=" + parkelly12);
 }
