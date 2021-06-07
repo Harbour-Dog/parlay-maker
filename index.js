@@ -30,7 +30,8 @@ function kellyCalc2() {
     } else {
     document.getElementById("indbet2").value=kelly2;
     document.getElementById("sel2").value=sel2;
-}           }                                         
+    }           
+}                                         
                 
 function kellyCalc3() {
     let bankroll=document.getElementById("bankroll").value;
@@ -45,7 +46,8 @@ function kellyCalc3() {
     } else {
     document.getElementById("indbet3").value=kelly3;
     document.getElementById("sel3").value=sel3;                                                 
-}}
+    }   
+}
                 
 function kellyCalc4() {
     let bankroll=document.getElementById("bankroll").value;
@@ -60,7 +62,8 @@ function kellyCalc4() {
     } else {
     document.getElementById("indbet4").value=kelly4;
     document.getElementById("sel4").value=sel4;
-}           }                                         
+    }           
+}                                         
                
 function kellyCalc5() {
     let bankroll=document.getElementById("bankroll").value;
@@ -75,7 +78,8 @@ function kellyCalc5() {
     } else {
     document.getElementById("indbet5").value=kelly5;
     document.getElementById("sel5").value=sel5;
-    }}
+    }
+}
                 
 function kellyCalc6() {
     let bankroll=document.getElementById("bankroll").value;
@@ -90,7 +94,8 @@ function kellyCalc6() {
     } else {
     document.getElementById("indbet6").value=kelly6;
     document.getElementById("sel6").value=sel6;
-}           }                                         
+}           
+}                                         
                 
 function kellyCalc7() {
     let bankroll=document.getElementById("bankroll").value;
@@ -105,7 +110,8 @@ function kellyCalc7() {
     } else {
     document.getElementById("indbet7").value=kelly7;
     document.getElementById("sel7").value=sel7;
-    }}
+    }
+}
                
 function kellyCalc8() {
     let bankroll=document.getElementById("bankroll").value;
@@ -120,7 +126,8 @@ function kellyCalc8() {
     } else {
     document.getElementById("indbet8").value=kelly8;
     document.getElementById("sel8").value=sel8;
-}           }                                         
+}           
+}                                         
                 
 function kellyCalc9() {
     let bankroll=document.getElementById("bankroll").value;
@@ -135,7 +142,8 @@ function kellyCalc9() {
     } else {
     document.getElementById("indbet9").value=kelly9;
     document.getElementById("sel9").value=sel9;
-}           }                                         
+}           
+}                                         
                 
 function kellyCalc10() {
     let bankroll=document.getElementById("bankroll").value;
@@ -150,7 +158,8 @@ function kellyCalc10() {
     } else {
     document.getElementById("indbet10").value=kelly10;
     document.getElementById("sel10").value=sel10;
-}}
+}
+}
                 
 function kellyCalc11() {
     let bankroll=document.getElementById("bankroll").value;
@@ -165,7 +174,8 @@ function kellyCalc11() {
     } else {
     document.getElementById("indbet11").value=kelly11;
     document.getElementById("sel11").value=sel11;
-}}
+}
+}
 
 function parlayCalc2() {
     let bankroll=document.getElementById("bankroll").value;
