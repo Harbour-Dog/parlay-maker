@@ -19,6 +19,10 @@ h2, h3, h4 {
     font-size: 150%;
 }
 
+h3 {
+    color:rgb(241, 248, 149);
+}
+
 table, th, td {
     border:rgb(10, 12, 10);
     border: solid;
@@ -27,7 +31,6 @@ table, th, td {
     height: 20px;
     box-sizing: border-box;
     margin: auto;
-    background-color: moccasin;
 }
 
 #bankrolldiv {
@@ -48,15 +51,21 @@ table, th, td {
     padding-top: 0px;
 }
 
+#picktable {
+    background-color: rgb(247, 165, 23);
+}
+
 #singlestable {
     float: left;
     column-width: auto;
     margin-top: 0px;
-    background-color: moccasin;
+    color:rgb(0, 0, 0);
+    background-color: rgb(247, 165, 23);
 }    
 
 .resultcells {
     width: 45px;
+    text-align: center;
 }
 
 .float {
