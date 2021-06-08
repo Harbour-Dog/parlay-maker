@@ -27,6 +27,7 @@ table, th, td {
     height: 20px;
     box-sizing: border-box;
     margin: auto;
+    background-color: moccasin;
 }
 
 #bankrolldiv {
@@ -51,7 +52,8 @@ table, th, td {
     float: left;
     column-width: auto;
     margin-top: 0px;
-}
+    background-color: moccasin;
+}    
 
 .resultcells {
     width: 45px;
@@ -59,4 +61,12 @@ table, th, td {
 
 .float {
     float: left;
+}
+
+.scrollbox {
+    width: 250px;
+    height: 500px;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    color: rgb(241, 248, 149)
 }

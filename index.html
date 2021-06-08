@@ -11,16 +11,16 @@
             <h2>Bankroll and Betting Strategy</h2>
                 <label for="bankroll">Bankroll: $</label>
                 <input type="number" id="bankroll" name="bankroll" min="100" step="0.01"><br>
-                <label for="aggro">Kelly Multiplier:</label>
+                <label for="aggro"><a href=https://en.wikipedia.org/wiki/Kelly_criterion target="_blank">Kelly Criterion</a> Multiplier:</label>
                 <input type="number" id="aggro" name="aggro" min="0.1" max="1" step="0.01"><br>
-                <label for="parlaysize">Picks/Parlay:</label>
+                <label for="parlaysize">Picks per Parlay (2 or 3):</label>
                 <input type="number" id="parlaysize" name="parlaysize" min="2" max="3" step="1"><br>
                 <label for="maxbet">Maximum Wager:</label>
-                <input type="text" id="maxbet" name="maxbet"><br>
+                <input type="text" id="maxbet" name="maxbet" value="not yet functional"><br>
                 <label for="calc">First :</label>
-                <input type="submit" value="CALCULATE KELLY VALUES" id="calc"><br>                                    
+                <input type="submit" value="INDIVIDUAL KELLY VALUES" id="calc"><br>                                    
                 <label for="parlaybutton">Second :</label>
-                <input type="submit" value="MAKE YOUR PARLAYS" id="parlaybutton">            
+                <input type="submit" value="PARLAYS with KELLY VALUES" id="parlaybutton">            
         </div>
         <div id="resultsdiv" style="background-color:rgb(130, 166, 243); float:right;">
             <h3>Results Box</h3>
@@ -29,63 +29,63 @@
                     <th>Selection</th>
                     <th>Bet Size</th>
                 </tr>
-                <tr><td><input type="text" id="sel1" name="sel1" class="resultcells" value="-"><br>
+                <tr><td><input type="text" id="sel1" name="sel1" class="resultcells" value="-" disabled><br>
                     </td>
-                    <td><input type="text" id="indbet1" name="indbet1" class="resultcells"><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="sel2" name="sel2" class="resultcells" value="-"><br>
-                    </td>
-                    <td><input type="text" id="indbet2" name="indbet2" class="resultcells"><br>
+                    <td><input type="text" id="indbet1" name="indbet1" class="resultcells" disabled><br>
                     </td>
                 </tr>
-                <tr><td><input type="text" id="sel3" name="sel3" class="resultcells" value="-"><br>
+                <tr><td><input type="text" id="sel2" name="sel2" class="resultcells" value="-" disabled><br>
                     </td>
-                    <td><input type="text" id="indbet3" name="indbet3" class="resultcells"><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="sel4" name="sel4" class="resultcells" value="-"><br>
-                    </td>
-                    <td><input type="text" id="indbet4" name="indbet4" class="resultcells"><br>
+                    <td><input type="text" id="indbet2" name="indbet2" class="resultcells" disabled><br>
                     </td>
                 </tr>
-                <tr><td><input type="text" id="sel5" name="sel5" class="resultcells" value="-"><br>
+                <tr><td><input type="text" id="sel3" name="sel3" class="resultcells" value="-" disabled><br>
                     </td>
-                    <td><input type="text" id="indbet5" name="indbet5" class="resultcells"><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="sel6" name="sel6" class="resultcells" value="-"><br>
-                    </td>
-                    <td><input type="text" id="indbet6" name="indbet6" class="resultcells"><br>
+                    <td><input type="text" id="indbet3" name="indbet3" class="resultcells" disabled><br>
                     </td>
                 </tr>
-                <tr><td><input type="text" id="sel7" name="sel7" class="resultcells" value="-"><br>
+                <tr><td><input type="text" id="sel4" name="sel4" class="resultcells" value="-" disabled><br>
                     </td>
-                    <td><input type="text" id="indbet7" name="indbet7" class="resultcells"><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="sel8" name="sel8" class="resultcells" value="-"><br>
-                    </td>
-                    <td><input type="text" id="indbet8" name="indbet8" class="resultcells"><br>
+                    <td><input type="text" id="indbet4" name="indbet4" class="resultcells" disabled><br>
                     </td>
                 </tr>
-                <tr><td><input type="text" id="sel9" name="sel9" class="resultcells" value="-"><br>
+                <tr><td><input type="text" id="sel5" name="sel5" class="resultcells" value="-" disabled><br>
                     </td>
-                    <td><input type="text" id="indbet9" name="indbet9" class="resultcells"><br>
-                    </td>
-                </tr>
-                <tr><td><input type="text" id="sel10" name="sel10" class="resultcells" value="-"><br>
-                    </td>
-                    <td><input type="text" id="indbet10" name="indbet10" class="resultcells"><br>
+                    <td><input type="text" id="indbet5" name="indbet5" class="resultcells" disabled><br>
                     </td>
                 </tr>
-                <tr><td><input type="text" id="sel11" name="sel11" class="resultcells" value="-"><br>
+                <tr><td><input type="text" id="sel6" name="sel6" class="resultcells" value="-" disabled><br>
                     </td>
-                    <td><input type="text" id="indbet11" name="indbet11" class="resultcells"><br>
+                    <td><input type="text" id="indbet6" name="indbet6" class="resultcells" disabled><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="sel7" name="sel7" class="resultcells" value="-" disabled><br>
+                    </td>
+                    <td><input type="text" id="indbet7" name="indbet7" class="resultcells" disabled><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="sel8" name="sel8" class="resultcells" value="-" disabled><br>
+                    </td>
+                    <td><input type="text" id="indbet8" name="indbet8" class="resultcells" disabled><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="sel9" name="sel9" class="resultcells" value="-" disabled><br>
+                    </td>
+                    <td><input type="text" id="indbet9" name="indbet9" class="resultcells" disabled><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="sel10" name="sel10" class="resultcells" value="-" disabled><br>
+                    </td>
+                    <td><input type="text" id="indbet10" name="indbet10" class="resultcells" disabled><br>
+                    </td>
+                </tr>
+                <tr><td><input type="text" id="sel11" name="sel11" class="resultcells" value="-" disabled><br>
+                    </td>
+                    <td><input type="text" id="indbet11" name="indbet11" class="resultcells" disabled><br>
                     </td>
                 </tr>
             </table>
-            <p id="parlays">words</p>            
+            <p id="parlays" class="scrollbox" style="overflow:scroll;">YOUR PARLAYS HERE</p>            
         </div>              
         <div id="picklist" class="float" style="background-color:rgb(179, 243, 141);">
             <h4>Your Advantage Picks</h4>
