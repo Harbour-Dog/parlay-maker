@@ -14,13 +14,16 @@ h1 {
     text-decoration-color:rgb(255, 89, 89);
 }
 
-h2, h3, h4 {
+h2, h4 {
     text-align: center;
     font-size: 150%;
 }
 
-h3 {
-    color:rgb(241, 248, 149);
+h3, h5, h6 {
+    text-align: center;
+    font-size: 150%;
+    color: rgb(255, 89, 89);
+    text-decoration: underline;
 }
 
 table, th, td {
@@ -45,6 +48,10 @@ table, th, td {
     padding-top: 0px;
 }
 
+#indbetdiv {
+    margin-top: 15px;
+}
+
 #picklist {
     height: 600px;
     text-align: center;
@@ -56,11 +63,11 @@ table, th, td {
 }
 
 #singlestable {
-    float: left;
     column-width: auto;
-    margin-top: 0px;
+    margin-left: 10px;
     color:rgb(0, 0, 0);
     background-color: rgb(247, 165, 23);
+    margin: auto;
 }    
 
 .resultcells {
@@ -75,7 +82,18 @@ table, th, td {
 .scrollbox {
     width: 250px;
     height: 500px;
-    margin: auto;
+    margin: auto;    
     background-color: rgb(0, 0, 0);
-    color: rgb(241, 248, 149)
+    color: rgb(241, 248, 149);
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
