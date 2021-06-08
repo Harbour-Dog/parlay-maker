@@ -1000,14 +1000,17 @@ function parlayCalc3() {
 
     if (prob4 == 0) {
         document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123)
+
     } else if (prob5 == 0) {
         document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123 + "<br>" + sel1 + " - " + sel2 + " - " + sel4 + " = " + parkelly124 + "<br>" +
             sel2 + " - " + sel3 + " - " + sel4 + " = " + parkelly234)
+
     } else if (prob6 == 0) {
         document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123 + "<br>" + sel1 + " - " + sel2 + " - " + sel4 + " = " + parkelly124 + "<br>" +
             sel2 + " - " + sel3 + " - " + sel4 + " = " + parkelly234 + "<br>" + sel1 + " - " + sel2 + " - " + sel5 + " = " + parkelly125 + "<br>" + sel1 + " - " + sel3 + " - " + sel5 + " = " + parkelly135 + "<br>" +
             sel1 + " - " + sel4 + " - " + sel5 + " = " + parkelly145 + "<br>" + sel2 + " - " + sel3 + " - " + sel5 + " = " + parkelly235 + "<br>" + sel2 + " - " + sel4 + " - " + sel5 + " = " + parkelly245 + "<br>" +
             sel3 + " - " + sel4 + " - " + sel5 + " = " + parkelly345)
+
     } else if (prob7 == 0) {
         document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123 + "<br>" + sel1 + " - " + sel2 + " - " + sel4 + " = " + parkelly124 + "<br>" +
             sel2 + " - " + sel3 + " - " + sel4 + " = " + parkelly234 + "<br>" + sel1 + " - " + sel2 + " - " + sel5 + " = " + parkelly125 + "<br>" + sel1 + " - " + sel3 + " - " + sel5 + " = " + parkelly135 + "<br>" +
@@ -1016,6 +1019,7 @@ function parlayCalc3() {
             sel1 + " - " + sel4 + " - " + sel6 + " = " + parkelly146 + "<br>" + sel1 + " - " + sel5 + " - " + sel6 + " = " + parkelly156 + "<br>" + sel2 + " - " + sel3 + " - " + sel6 + " = " + parkelly236 + "<br>" +
             sel2 + " - " + sel4 + " - " + sel6 + " = " + parkelly246 + "<br>" + sel2 + " - " + sel5 + " - " + sel6 + " = " + parkelly256 + "<br>" + sel3 + " - " + sel4 + " - " + sel6 + " = " + parkelly346 + "<br>" +
             sel3 + " - " + sel5 + " - " + sel6 + " = " + parkelly356 + "<br>" + sel4 + " - " + sel5 + " - " + sel6 + " = " + parkelly456)
+    
     } else if (prob8 == 0) {
         document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123 + "<br>" + sel1 + " - " + sel2 + " - " + sel4 + " = " + parkelly124 + "<br>" +
         sel2 + " - " + sel3 + " - " + sel4 + " = " + parkelly234 + "<br>" + sel1 + " - " + sel2 + " - " + sel5 + " = " + parkelly125 + "<br>" + sel1 + " - " + sel3 + " - " + sel5 + " = " + parkelly135 + "<br>" +
@@ -1028,55 +1032,101 @@ function parlayCalc3() {
         sel1 + " - " + sel6 + " - " + sel7 + " = " + parkelly167 + "<br>" + sel2 + " - " + sel3 + " - " + sel7 + " = " + parkelly237 + "<br>" + sel2 + " - " + sel4 + " - " + sel7 + " = " + parkelly247 + "<br>" +
         sel2 + " - " + sel5 + " - " + sel7 + " = " + parkelly257 + "<br>" + sel2 + " - " + sel6 + " - " + sel7 + " = " + parkelly267 + "<br>" + sel3 + " - " + sel4 + " - " + sel7 + " = " + parkelly347 + "<br>" +
         sel3 + " - " + sel5 + " - " + sel7 + " = " + parkelly357 + "<br>" + sel3 + " - " + sel6 + " - " + sel7 + " = " + parkelly367 + "<br>" + sel4 + " - " + sel5 + " - " + sel7 + " = " + parkelly457 + "<br>" +
-        sel4 + " - " + sel6 + " - " + sel7 + " = " + parkelly467 + "<br>" + sel5 + " - " + sel6 + " - " + sel7 + " = " + parkelly567)// done to here //
-    } else if (prob8 == 0) {
-        document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " = " + parkelly12 + "<br>" + sel1 + " - " + sel3 + " = " + parkelly13 + "<br>" + sel2 + " - " + sel3 + " = " + parkelly23 + "<br>" +
-        sel1 + " - " + sel4 + " = " + parkelly14 + "<br>" + sel2 + " - " + sel4 + " = " + parkelly24 + "<br>" + sel3 + " - " + sel4 + " = " + parkelly34 + "<br>" +
-        sel1 + " - " + sel5 + " = " + parkelly15 + "<br>" + sel2 + " - " + sel5 + " = " + parkelly25 + "<br>" + sel3 + " - " + sel5 + " = " + parkelly35 + "<br>" +
-        sel4 + " - " + sel5 + " = " + parkelly45 + "<br>" + sel1 + " - " + sel6 + " = " + parkelly16 + "<br>" + sel2 + " - " + sel6 + " = " + parkelly26 + "<br>" +
-        sel3 + " - " + sel6 + " = " + parkelly36 + "<br>" + sel4 + " - " + sel6 + " = " + parkelly46 + "<br>" + sel5 + " - " + sel6 + " = " + parkelly56 + "<br>" +
-        sel1 + " - " + sel7 + " = " + parkelly17 + "<br>" + sel2 + " - " + sel7 + " = " + parkelly27 + "<br>" + sel3 + " - " + sel7 + " = " + parkelly37 + "<br>" + 
-        sel4 + " - " + sel7 + " = " + parkelly47 + "<br>" + sel5 + " - " + sel7 + " = " + parkelly57 + "<br>" + sel6 + " - " + sel7 + " = " + parkelly67)
+        sel4 + " - " + sel6 + " - " + sel7 + " = " + parkelly467 + "<br>" + sel5 + " - " + sel6 + " - " + sel7 + " = " + parkelly567)
+
     } else if (prob9 == 0) {
-        document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " = " + parkelly12 + "<br>" + sel1 + " - " + sel3 + " = " + parkelly13 + "<br>" + sel2 + " - " + sel3 + " = " + parkelly23 + "<br>" +
-        sel1 + " - " + sel4 + " = " + parkelly14 + "<br>" + sel2 + " - " + sel4 + " = " + parkelly24 + "<br>" + sel3 + " - " + sel4 + " = " + parkelly34 + "<br>" +
-        sel1 + " - " + sel5 + " = " + parkelly15 + "<br>" + sel2 + " - " + sel5 + " = " + parkelly25 + "<br>" + sel3 + " - " + sel5 + " = " + parkelly35 + "<br>" +
-        sel4 + " - " + sel5 + " = " + parkelly45 + "<br>" + sel1 + " - " + sel6 + " = " + parkelly16 + "<br>" + sel2 + " - " + sel6 + " = " + parkelly26 + "<br>" +
-        sel3 + " - " + sel6 + " = " + parkelly36 + "<br>" + sel4 + " - " + sel6 + " = " + parkelly46 + "<br>" + sel5 + " - " + sel6 + " = " + parkelly56 + "<br>" +
-        sel1 + " - " + sel7 + " = " + parkelly17 + "<br>" + sel2 + " - " + sel7 + " = " + parkelly27 + "<br>" + sel3 + " - " + sel7 + " = " + parkelly37 + "<br>" + 
-        sel4 + " - " + sel7 + " = " + parkelly47 + "<br>" + sel5 + " - " + sel7 + " = " + parkelly57 + "<br>" + sel6 + " - " + sel7 + " = " + parkelly67 + "<br>" +
-        sel1 + " - " + sel8 + " = " + parkelly18 + "<br>" + sel2 + " - " + sel8 + " = " + parkelly28 + "<br>" + sel3 + " - " + sel8 + " = " + parkelly38 + "<br>" +
-        sel4 + " - " + sel8 + " = " + parkelly48 + "<br>" + sel5 + " - " + sel8 + " = " + parkelly58 + "<br>" + sel6 + " - " + sel8 + " = " + parkelly68 + "<br>" +
-        sel7 + " - " + sel8 + " = " + parkelly78)
+        document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123 + "<br>" + sel1 + " - " + sel2 + " - " + sel4 + " = " + parkelly124 + "<br>" +
+        sel2 + " - " + sel3 + " - " + sel4 + " = " + parkelly234 + "<br>" + sel1 + " - " + sel2 + " - " + sel5 + " = " + parkelly125 + "<br>" + sel1 + " - " + sel3 + " - " + sel5 + " = " + parkelly135 + "<br>" +
+        sel1 + " - " + sel4 + " - " + sel5 + " = " + parkelly145 + "<br>" + sel2 + " - " + sel3 + " - " + sel5 + " = " + parkelly235 + "<br>" + sel2 + " - " + sel4 + " - " + sel5 + " = " + parkelly245 + "<br>" +
+        sel3 + " - " + sel4 + " - " + sel5 + " = " + parkelly345 + "<br>" + sel1 + " - " + sel2 + " - " + sel6 + " = " + parkelly126 + "<br>" + sel1 + " - " + sel3 + " - " + sel6 + " = " + parkelly136 + "<br>" +
+        sel1 + " - " + sel4 + " - " + sel6 + " = " + parkelly146 + "<br>" + sel1 + " - " + sel5 + " - " + sel6 + " = " + parkelly156 + "<br>" + sel2 + " - " + sel3 + " - " + sel6 + " = " + parkelly236 + "<br>" +
+        sel2 + " - " + sel4 + " - " + sel6 + " = " + parkelly246 + "<br>" + sel2 + " - " + sel5 + " - " + sel6 + " = " + parkelly256 + "<br>" + sel3 + " - " + sel4 + " - " + sel6 + " = " + parkelly346 + "<br>" +
+        sel3 + " - " + sel5 + " - " + sel6 + " = " + parkelly356 + "<br>" + sel4 + " - " + sel5 + " - " + sel6 + " = " + parkelly456 + "<br>" + sel1 + " - " + sel2 + " - " + sel7 + " = " + parkelly127 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel7 + " = " + parkelly137 + "<br>" + sel1 + " - " + sel4 + " - " + sel7 + " = " + parkelly147 + "<br>" + sel1 + " - " + sel5 + " - " + sel7 + " = " + parkelly157 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel7 + " = " + parkelly167 + "<br>" + sel2 + " - " + sel3 + " - " + sel7 + " = " + parkelly237 + "<br>" + sel2 + " - " + sel4 + " - " + sel7 + " = " + parkelly247 + "<br>" +
+        sel2 + " - " + sel5 + " - " + sel7 + " = " + parkelly257 + "<br>" + sel2 + " - " + sel6 + " - " + sel7 + " = " + parkelly267 + "<br>" + sel3 + " - " + sel4 + " - " + sel7 + " = " + parkelly347 + "<br>" +
+        sel3 + " - " + sel5 + " - " + sel7 + " = " + parkelly357 + "<br>" + sel3 + " - " + sel6 + " - " + sel7 + " = " + parkelly367 + "<br>" + sel4 + " - " + sel5 + " - " + sel7 + " = " + parkelly457 + "<br>" +
+        sel4 + " - " + sel6 + " - " + sel7 + " = " + parkelly467 + "<br>" + sel5 + " - " + sel6 + " - " + sel7 + " = " + parkelly567 + "<br>" + sel1 + " - " + sel2 + " - " + sel8 + " = " + parkelly128 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel8 + " = " + parkelly138 + "<br>" + sel1 + " - " + sel4 + " - " + sel8 + " = " + parkelly148 + "<br>" + sel1 + " - " + sel5 + " - " + sel8 + " = " + parkelly158 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel8 + " = " + parkelly168 + "<br>" + sel1 + " - " + sel7 + " - " + sel8 + " = " + parkelly178 + "<br>" + sel2 + " - " + sel3 + " - " + sel8 + " = " + parkelly238 + "<br>" + 
+        sel2 + " - " + sel4 + " - " + sel8 + " = " + parkelly248 + "<br>" + sel2 + " - " + sel5 + " - " + sel8 + " = " + parkelly258 + "<br>" + sel2 + " - " + sel6 + " - " + sel8 + " = " + parkelly268 + "<br>" + 
+        sel2 + " - " + sel7 + " - " + sel8 + " = " + parkelly278 + "<br>" + sel3 + " - " + sel4 + " - " + sel8 + " = " + parkelly348 + "<br>" + sel3 + " - " + sel5 + " - " + sel8 + " = " + parkelly357 + "<br>" + 
+        sel3 + " - " + sel6 + " - " + sel8 + " = " + parkelly368 + "<br>" + sel3 + " - " + sel7 + " - " + sel8 + " = " + parkelly378 + "<br>" + sel4 + " - " + sel5 + " - " + sel8 + " = " + parkelly458 + "<br>" + 
+        sel4 + " - " + sel6 + " - " + sel8 + " = " + parkelly567 + "<br>" + sel4 + " - " + sel7 + " - " + sel8 + " = " + parkelly478 + "<br>" + sel5 + " - " + sel6 + " - " + sel8 + " = " + parkelly568 + "<br>" + 
+        sel5 + " - " + sel7 + " - " + sel8 + " = " + parkelly578 + "<br>" + sel6 + " - " + sel7 + " - " + sel8 + " = " + parkelly678)
+
     } else if (prob10 == 0) {
-        document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " = " + parkelly12 + "<br>" + sel1 + " - " + sel3 + " = " + parkelly13 + "<br>" + sel2 + " - " + sel3 + " = " + parkelly23 + "<br>" +
-        sel1 + " - " + sel4 + " = " + parkelly14 + "<br>" + sel2 + " - " + sel4 + " = " + parkelly24 + "<br>" + sel3 + " - " + sel4 + " = " + parkelly34 + "<br>" +
-        sel1 + " - " + sel5 + " = " + parkelly15 + "<br>" + sel2 + " - " + sel5 + " = " + parkelly25 + "<br>" + sel3 + " - " + sel5 + " = " + parkelly35 + "<br>" +
-        sel4 + " - " + sel5 + " = " + parkelly45 + "<br>" + sel1 + " - " + sel6 + " = " + parkelly16 + "<br>" + sel2 + " - " + sel6 + " = " + parkelly26 + "<br>" +
-        sel3 + " - " + sel6 + " = " + parkelly36 + "<br>" + sel4 + " - " + sel6 + " = " + parkelly46 + "<br>" + sel5 + " - " + sel6 + " = " + parkelly56 + "<br>" +
-        sel1 + " - " + sel7 + " = " + parkelly17 + "<br>" + sel2 + " - " + sel7 + " = " + parkelly27 + "<br>" + sel3 + " - " + sel7 + " = " + parkelly37 + "<br>" + 
-        sel4 + " - " + sel7 + " = " + parkelly47 + "<br>" + sel5 + " - " + sel7 + " = " + parkelly57 + "<br>" + sel6 + " - " + sel7 + " = " + parkelly67 + "<br>" +
-        sel1 + " - " + sel8 + " = " + parkelly18 + "<br>" + sel2 + " - " + sel8 + " = " + parkelly28 + "<br>" + sel3 + " - " + sel8 + " = " + parkelly38 + "<br>" +
-        sel4 + " - " + sel8 + " = " + parkelly48 + "<br>" + sel5 + " - " + sel8 + " = " + parkelly58 + "<br>" + sel6 + " - " + sel8 + " = " + parkelly68 + "<br>" +
-        sel7 + " - " + sel8 + " = " + parkelly78 + "<br>" + sel1 + " - " + sel9 + " = " + parkelly19 + "<br>" + sel2 + " - " + sel9 + " = " + parkelly29 + "<br>" +
-        sel3 + " - " + sel9 + " = " + parkelly39 + "<br>" + sel4 + " - " + sel9 + " = " + parkelly49 + "<br>" + sel5 + " - " + sel9 + " = " + parkelly59 + "<br>" +
-        sel6 + " - " + sel9 + " = " + parkelly69 + "<br>" + sel7 + " - " + sel9 + " = " + parkelly79 + "<br>" + sel8 + " - " + sel9 + " = " + parkelly89)
+        document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123 + "<br>" + sel1 + " - " + sel2 + " - " + sel4 + " = " + parkelly124 + "<br>" +
+        sel2 + " - " + sel3 + " - " + sel4 + " = " + parkelly234 + "<br>" + sel1 + " - " + sel2 + " - " + sel5 + " = " + parkelly125 + "<br>" + sel1 + " - " + sel3 + " - " + sel5 + " = " + parkelly135 + "<br>" +
+        sel1 + " - " + sel4 + " - " + sel5 + " = " + parkelly145 + "<br>" + sel2 + " - " + sel3 + " - " + sel5 + " = " + parkelly235 + "<br>" + sel2 + " - " + sel4 + " - " + sel5 + " = " + parkelly245 + "<br>" +
+        sel3 + " - " + sel4 + " - " + sel5 + " = " + parkelly345 + "<br>" + sel1 + " - " + sel2 + " - " + sel6 + " = " + parkelly126 + "<br>" + sel1 + " - " + sel3 + " - " + sel6 + " = " + parkelly136 + "<br>" +
+        sel1 + " - " + sel4 + " - " + sel6 + " = " + parkelly146 + "<br>" + sel1 + " - " + sel5 + " - " + sel6 + " = " + parkelly156 + "<br>" + sel2 + " - " + sel3 + " - " + sel6 + " = " + parkelly236 + "<br>" +
+        sel2 + " - " + sel4 + " - " + sel6 + " = " + parkelly246 + "<br>" + sel2 + " - " + sel5 + " - " + sel6 + " = " + parkelly256 + "<br>" + sel3 + " - " + sel4 + " - " + sel6 + " = " + parkelly346 + "<br>" +
+        sel3 + " - " + sel5 + " - " + sel6 + " = " + parkelly356 + "<br>" + sel4 + " - " + sel5 + " - " + sel6 + " = " + parkelly456 + "<br>" + sel1 + " - " + sel2 + " - " + sel7 + " = " + parkelly127 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel7 + " = " + parkelly137 + "<br>" + sel1 + " - " + sel4 + " - " + sel7 + " = " + parkelly147 + "<br>" + sel1 + " - " + sel5 + " - " + sel7 + " = " + parkelly157 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel7 + " = " + parkelly167 + "<br>" + sel2 + " - " + sel3 + " - " + sel7 + " = " + parkelly237 + "<br>" + sel2 + " - " + sel4 + " - " + sel7 + " = " + parkelly247 + "<br>" +
+        sel2 + " - " + sel5 + " - " + sel7 + " = " + parkelly257 + "<br>" + sel2 + " - " + sel6 + " - " + sel7 + " = " + parkelly267 + "<br>" + sel3 + " - " + sel4 + " - " + sel7 + " = " + parkelly347 + "<br>" +
+        sel3 + " - " + sel5 + " - " + sel7 + " = " + parkelly357 + "<br>" + sel3 + " - " + sel6 + " - " + sel7 + " = " + parkelly367 + "<br>" + sel4 + " - " + sel5 + " - " + sel7 + " = " + parkelly457 + "<br>" +
+        sel4 + " - " + sel6 + " - " + sel7 + " = " + parkelly467 + "<br>" + sel5 + " - " + sel6 + " - " + sel7 + " = " + parkelly567 + "<br>" + sel1 + " - " + sel2 + " - " + sel8 + " = " + parkelly128 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel8 + " = " + parkelly138 + "<br>" + sel1 + " - " + sel4 + " - " + sel8 + " = " + parkelly148 + "<br>" + sel1 + " - " + sel5 + " - " + sel8 + " = " + parkelly158 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel8 + " = " + parkelly168 + "<br>" + sel1 + " - " + sel7 + " - " + sel8 + " = " + parkelly178 + "<br>" + sel2 + " - " + sel3 + " - " + sel8 + " = " + parkelly238 + "<br>" + 
+        sel2 + " - " + sel4 + " - " + sel8 + " = " + parkelly248 + "<br>" + sel2 + " - " + sel5 + " - " + sel8 + " = " + parkelly258 + "<br>" + sel2 + " - " + sel6 + " - " + sel8 + " = " + parkelly268 + "<br>" + 
+        sel2 + " - " + sel7 + " - " + sel8 + " = " + parkelly278 + "<br>" + sel3 + " - " + sel4 + " - " + sel8 + " = " + parkelly348 + "<br>" + sel3 + " - " + sel5 + " - " + sel8 + " = " + parkelly357 + "<br>" + 
+        sel3 + " - " + sel6 + " - " + sel8 + " = " + parkelly368 + "<br>" + sel3 + " - " + sel7 + " - " + sel8 + " = " + parkelly378 + "<br>" + sel4 + " - " + sel5 + " - " + sel8 + " = " + parkelly458 + "<br>" + 
+        sel4 + " - " + sel6 + " - " + sel8 + " = " + parkelly468 + "<br>" + sel4 + " - " + sel7 + " - " + sel8 + " = " + parkelly478 + "<br>" + sel5 + " - " + sel6 + " - " + sel8 + " = " + parkelly568 + "<br>" + 
+        sel5 + " - " + sel7 + " - " + sel8 + " = " + parkelly578 + "<br>" + sel6 + " - " + sel7 + " - " + sel8 + " = " + parkelly678 + "<br>" + sel1 + " - " + sel2 + " - " + sel9 + " = " + parkelly129 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel9 + " = " + parkelly139 + "<br>" + sel1 + " - " + sel4 + " - " + sel9 + " = " + parkelly149 + "<br>" + sel1 + " - " + sel5 + " - " + sel9 + " = " + parkelly159 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel9 + " = " + parkelly169 + "<br>" + sel1 + " - " + sel7 + " - " + sel9 + " = " + parkelly179 + "<br>" + sel1 + " - " + sel8 + " - " + sel9 + " = " + parkelly189 + "<br>" + 
+        sel2 + " - " + sel3 + " - " + sel9 + " = " + parkelly239 + "<br>" + sel2 + " - " + sel4 + " - " + sel9 + " = " + parkelly249 + "<br>" + sel2 + " - " + sel5 + " - " + sel9 + " = " + parkelly259 + "<br>" + 
+        sel2 + " - " + sel6 + " - " + sel9 + " = " + parkelly269 + "<br>" + sel2 + " - " + sel7 + " - " + sel9 + " = " + parkelly279 + "<br>" + sel2 + " - " + sel8 + " - " + sel9 + " = " + parkelly289 + "<br>" + 
+        sel3 + " - " + sel4 + " - " + sel9 + " = " + parkelly349 + "<br>" + sel3 + " - " + sel5 + " - " + sel9 + " = " + parkelly359 + "<br>" + sel3 + " - " + sel6 + " - " + sel9 + " = " + parkelly369 + "<br>" + 
+        sel3 + " - " + sel7 + " - " + sel9 + " = " + parkelly379 + "<br>" + sel3 + " - " + sel8 + " - " + sel9 + " = " + parkelly389 + "<br>" + sel4 + " - " + sel5 + " - " + sel9 + " = " + parkelly459 + "<br>" + 
+        sel4 + " - " + sel6 + " - " + sel9 + " = " + parkelly469 + "<br>" + sel4 + " - " + sel7 + " - " + sel9 + " = " + parkelly479 + "<br>" + sel4 + " - " + sel8 + " - " + sel9 + " = " + parkelly489 + "<br>" + 
+        sel5 + " - " + sel6 + " - " + sel9 + " = " + parkelly569 + "<br>" + sel5 + " - " + sel7 + " - " + sel9 + " = " + parkelly579 + "<br>" + sel5 + " - " + sel8 + " - " + sel9 + " = " + parkelly589 + "<br>" + 
+        sel6 + " - " + sel7 + " - " + sel9 + " = " + parkelly679 + "<br>" + sel6 + " - " + sel8 + " - " + sel9 + " = " + parkelly689 + "<br>" + sel7 + " - " + sel8 + " - " + sel9 + " = " + parkelly789)
+
     } else if (prob11 == 0) {
-        document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " = " + parkelly12 + "<br>" + sel1 + " - " + sel3 + " = " + parkelly13 + "<br>" + sel2 + " - " + sel3 + " = " + parkelly23 + "<br>" +
-        sel1 + " - " + sel4 + " = " + parkelly14 + "<br>" + sel2 + " - " + sel4 + " = " + parkelly24 + "<br>" + sel3 + " - " + sel4 + " = " + parkelly34 + "<br>" +
-        sel1 + " - " + sel5 + " = " + parkelly15 + "<br>" + sel2 + " - " + sel5 + " = " + parkelly25 + "<br>" + sel3 + " - " + sel5 + " = " + parkelly35 + "<br>" +
-        sel4 + " - " + sel5 + " = " + parkelly45 + "<br>" + sel1 + " - " + sel6 + " = " + parkelly16 + "<br>" + sel2 + " - " + sel6 + " = " + parkelly26 + "<br>" +
-        sel3 + " - " + sel6 + " = " + parkelly36 + "<br>" + sel4 + " - " + sel6 + " = " + parkelly46 + "<br>" + sel5 + " - " + sel6 + " = " + parkelly56 + "<br>" +
-        sel1 + " - " + sel7 + " = " + parkelly17 + "<br>" + sel2 + " - " + sel7 + " = " + parkelly27 + "<br>" + sel3 + " - " + sel7 + " = " + parkelly37 + "<br>" + 
-        sel4 + " - " + sel7 + " = " + parkelly47 + "<br>" + sel5 + " - " + sel7 + " = " + parkelly57 + "<br>" + sel6 + " - " + sel7 + " = " + parkelly67 + "<br>" +
-        sel1 + " - " + sel8 + " = " + parkelly18 + "<br>" + sel2 + " - " + sel8 + " = " + parkelly28 + "<br>" + sel3 + " - " + sel8 + " = " + parkelly38 + "<br>" +
-        sel4 + " - " + sel8 + " = " + parkelly48 + "<br>" + sel5 + " - " + sel8 + " = " + parkelly58 + "<br>" + sel6 + " - " + sel8 + " = " + parkelly68 + "<br>" +
-        sel7 + " - " + sel8 + " = " + parkelly78 + "<br>" + sel1 + " - " + sel9 + " = " + parkelly19 + "<br>" + sel2 + " - " + sel9 + " = " + parkelly29 + "<br>" +
-        sel3 + " - " + sel9 + " = " + parkelly39 + "<br>" + sel4 + " - " + sel9 + " = " + parkelly49 + "<br>" + sel5 + " - " + sel9 + " = " + parkelly59 + "<br>" +
-        sel6 + " - " + sel9 + " = " + parkelly69 + "<br>" + sel7 + " - " + sel9 + " = " + parkelly79 + "<br>" + sel8 + " - " + sel9 + " = " + parkelly89 + "<br>" +
-        sel1 + " - " + sel10 + " = " + parkelly110 + "<br>" + sel2 + " - " + sel10 + " = " + parkelly210 + "<br>" + sel3 + " - " + sel10 + " = " + parkelly310 + "<br>" +
-        sel4 + " - " + sel10 + " = " + parkelly410 + "<br>" + sel5 + " - " + sel10 + " = " + parkelly510 + "<br>" + sel6 + " - " + sel10 + " = " + parkelly610 + "<br>" +
-        sel7 + " - " + sel10 + " = " + parkelly710 + "<br>" + sel8 + " - " + sel10 + " = " + parkelly810 + "<br>" + sel9 + " - " + sel10 + " = " + parkelly910)
+        document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " - " + sel3 + " = " + parkelly123 + "<br>" + sel1 + " - " + sel2 + " - " + sel4 + " = " + parkelly124 + "<br>" +
+        sel2 + " - " + sel3 + " - " + sel4 + " = " + parkelly234 + "<br>" + sel1 + " - " + sel2 + " - " + sel5 + " = " + parkelly125 + "<br>" + sel1 + " - " + sel3 + " - " + sel5 + " = " + parkelly135 + "<br>" +
+        sel1 + " - " + sel4 + " - " + sel5 + " = " + parkelly145 + "<br>" + sel2 + " - " + sel3 + " - " + sel5 + " = " + parkelly235 + "<br>" + sel2 + " - " + sel4 + " - " + sel5 + " = " + parkelly245 + "<br>" +
+        sel3 + " - " + sel4 + " - " + sel5 + " = " + parkelly345 + "<br>" + sel1 + " - " + sel2 + " - " + sel6 + " = " + parkelly126 + "<br>" + sel1 + " - " + sel3 + " - " + sel6 + " = " + parkelly136 + "<br>" +
+        sel1 + " - " + sel4 + " - " + sel6 + " = " + parkelly146 + "<br>" + sel1 + " - " + sel5 + " - " + sel6 + " = " + parkelly156 + "<br>" + sel2 + " - " + sel3 + " - " + sel6 + " = " + parkelly236 + "<br>" +
+        sel2 + " - " + sel4 + " - " + sel6 + " = " + parkelly246 + "<br>" + sel2 + " - " + sel5 + " - " + sel6 + " = " + parkelly256 + "<br>" + sel3 + " - " + sel4 + " - " + sel6 + " = " + parkelly346 + "<br>" +
+        sel3 + " - " + sel5 + " - " + sel6 + " = " + parkelly356 + "<br>" + sel4 + " - " + sel5 + " - " + sel6 + " = " + parkelly456 + "<br>" + sel1 + " - " + sel2 + " - " + sel7 + " = " + parkelly127 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel7 + " = " + parkelly137 + "<br>" + sel1 + " - " + sel4 + " - " + sel7 + " = " + parkelly147 + "<br>" + sel1 + " - " + sel5 + " - " + sel7 + " = " + parkelly157 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel7 + " = " + parkelly167 + "<br>" + sel2 + " - " + sel3 + " - " + sel7 + " = " + parkelly237 + "<br>" + sel2 + " - " + sel4 + " - " + sel7 + " = " + parkelly247 + "<br>" +
+        sel2 + " - " + sel5 + " - " + sel7 + " = " + parkelly257 + "<br>" + sel2 + " - " + sel6 + " - " + sel7 + " = " + parkelly267 + "<br>" + sel3 + " - " + sel4 + " - " + sel7 + " = " + parkelly347 + "<br>" +
+        sel3 + " - " + sel5 + " - " + sel7 + " = " + parkelly357 + "<br>" + sel3 + " - " + sel6 + " - " + sel7 + " = " + parkelly367 + "<br>" + sel4 + " - " + sel5 + " - " + sel7 + " = " + parkelly457 + "<br>" +
+        sel4 + " - " + sel6 + " - " + sel7 + " = " + parkelly467 + "<br>" + sel5 + " - " + sel6 + " - " + sel7 + " = " + parkelly567 + "<br>" + sel1 + " - " + sel2 + " - " + sel8 + " = " + parkelly128 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel8 + " = " + parkelly138 + "<br>" + sel1 + " - " + sel4 + " - " + sel8 + " = " + parkelly148 + "<br>" + sel1 + " - " + sel5 + " - " + sel8 + " = " + parkelly158 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel8 + " = " + parkelly168 + "<br>" + sel1 + " - " + sel7 + " - " + sel8 + " = " + parkelly178 + "<br>" + sel2 + " - " + sel3 + " - " + sel8 + " = " + parkelly238 + "<br>" + 
+        sel2 + " - " + sel4 + " - " + sel8 + " = " + parkelly248 + "<br>" + sel2 + " - " + sel5 + " - " + sel8 + " = " + parkelly258 + "<br>" + sel2 + " - " + sel6 + " - " + sel8 + " = " + parkelly268 + "<br>" + 
+        sel2 + " - " + sel7 + " - " + sel8 + " = " + parkelly278 + "<br>" + sel3 + " - " + sel4 + " - " + sel8 + " = " + parkelly348 + "<br>" + sel3 + " - " + sel5 + " - " + sel8 + " = " + parkelly357 + "<br>" + 
+        sel3 + " - " + sel6 + " - " + sel8 + " = " + parkelly368 + "<br>" + sel3 + " - " + sel7 + " - " + sel8 + " = " + parkelly378 + "<br>" + sel4 + " - " + sel5 + " - " + sel8 + " = " + parkelly458 + "<br>" + 
+        sel4 + " - " + sel6 + " - " + sel8 + " = " + parkelly468 + "<br>" + sel4 + " - " + sel7 + " - " + sel8 + " = " + parkelly478 + "<br>" + sel5 + " - " + sel6 + " - " + sel8 + " = " + parkelly568 + "<br>" + 
+        sel5 + " - " + sel7 + " - " + sel8 + " = " + parkelly578 + "<br>" + sel6 + " - " + sel7 + " - " + sel8 + " = " + parkelly678 + "<br>" + sel1 + " - " + sel2 + " - " + sel9 + " = " + parkelly129 + "<br>" + 
+        sel1 + " - " + sel3 + " - " + sel9 + " = " + parkelly139 + "<br>" + sel1 + " - " + sel4 + " - " + sel9 + " = " + parkelly149 + "<br>" + sel1 + " - " + sel5 + " - " + sel9 + " = " + parkelly159 + "<br>" +
+        sel1 + " - " + sel6 + " - " + sel9 + " = " + parkelly169 + "<br>" + sel1 + " - " + sel7 + " - " + sel9 + " = " + parkelly179 + "<br>" + sel1 + " - " + sel8 + " - " + sel9 + " = " + parkelly189 + "<br>" + 
+        sel2 + " - " + sel3 + " - " + sel9 + " = " + parkelly239 + "<br>" + sel2 + " - " + sel4 + " - " + sel9 + " = " + parkelly249 + "<br>" + sel2 + " - " + sel5 + " - " + sel9 + " = " + parkelly259 + "<br>" + 
+        sel2 + " - " + sel6 + " - " + sel9 + " = " + parkelly269 + "<br>" + sel2 + " - " + sel7 + " - " + sel9 + " = " + parkelly279 + "<br>" + sel2 + " - " + sel8 + " - " + sel9 + " = " + parkelly289 + "<br>" + 
+        sel3 + " - " + sel4 + " - " + sel9 + " = " + parkelly349 + "<br>" + sel3 + " - " + sel5 + " - " + sel9 + " = " + parkelly359 + "<br>" + sel3 + " - " + sel6 + " - " + sel9 + " = " + parkelly369 + "<br>" + 
+        sel3 + " - " + sel7 + " - " + sel9 + " = " + parkelly379 + "<br>" + sel3 + " - " + sel8 + " - " + sel9 + " = " + parkelly389 + "<br>" + sel4 + " - " + sel5 + " - " + sel9 + " = " + parkelly459 + "<br>" + 
+        sel4 + " - " + sel6 + " - " + sel9 + " = " + parkelly469 + "<br>" + sel4 + " - " + sel7 + " - " + sel9 + " = " + parkelly479 + "<br>" + sel4 + " - " + sel8 + " - " + sel9 + " = " + parkelly489 + "<br>" + 
+        sel5 + " - " + sel6 + " - " + sel9 + " = " + parkelly569 + "<br>" + sel5 + " - " + sel7 + " - " + sel9 + " = " + parkelly579 + "<br>" + sel5 + " - " + sel8 + " - " + sel9 + " = " + parkelly589 + "<br>" + 
+        sel6 + " - " + sel7 + " - " + sel9 + " = " + parkelly679 + "<br>" + sel6 + " - " + sel8 + " - " + sel9 + " = " + parkelly689 + "<br>" + sel7 + " - " + sel8 + " - " + sel9 + " = " + parkelly789 + "<br>" +
+        sel1 + " - " + sel2 + " - " + sel10 + " = " + parkelly1210 + "<br>" + sel1 + " - " + sel3 + " - " + sel10 + " = " + parkelly1310 + "<br>" + sel1 + " - " + sel4 + " - " + sel10 + " = " + parkelly1410 + "<br>" +
+        sel1 + " - " + sel5 + " - " + sel10 + " = " + parkelly1510 + "<br>" + sel1 + " - " + sel6 + " - " + sel10 + " = " + parkelly1610 + "<br>" + sel1 + " - " + sel7 + " - " + sel10 + " = " + parkelly1710 + "<br>" +
+        sel1 + " - " + sel8 + " - " + sel10 + " = " + parkelly1810 + "<br>" + sel1 + " - " + sel9 + " - " + sel10 + " = " + parkelly1910 + "<br>" + sel2 + " - " + sel3 + " - " + sel10 + " = " + parkelly2310 + "<br>" +
+        sel2 + " - " + sel4 + " - " + sel10 + " = " + parkelly2410 + "<br>" + sel2 + " - " + sel5 + " - " + sel10 + " = " + parkelly2510 + "<br>" + sel2 + " - " + sel6 + " - " + sel10 + " = " + parkelly2610 + "<br>" +
+        sel2 + " - " + sel7 + " - " + sel10 + " = " + parkelly2710 + "<br>" + sel2 + " - " + sel8 + " - " + sel10 + " = " + parkelly2810 + "<br>" + sel2 + " - " + sel9 + " - " + sel10 + " = " + parkelly2910 + "<br>" +
+        sel3 + " - " + sel4 + " - " + sel10 + " = " + parkelly3410 + "<br>" + sel3 + " - " + sel5 + " - " + sel10 + " = " + parkelly3510 + "<br>" + sel3 + " - " + sel6 + " - " + sel10 + " = " + parkelly3610 + "<br>" + 
+        sel3 + " - " + sel7 + " - " + sel10 + " = " + parkelly3710 + "<br>" + sel3 + " - " + sel8 + " - " + sel10 + " = " + parkelly3810 + "<br>" + sel3 + " - " + sel9 + " - " + sel10 + " = " + parkelly3910 + "<br>" +
+        sel4 + " - " + sel5 + " - " + sel10 + " = " + parkelly4510 + "<br>" + sel4 + " - " + sel6 + " - " + sel10 + " = " + parkelly4610 + "<br>" + sel4 + " - " + sel7 + " - " + sel10 + " = " + parkelly4710 + "<br>" +
+        sel4 + " - " + sel8 + " - " + sel10 + " = " + parkelly4810 + "<br>" + sel4 + " - " + sel9 + " - " + sel10 + " = " + parkelly4910 + "<br>" + sel5 + " - " + sel6 + " - " + sel10 + " = " + parkelly5610 + "<br>" +
+        sel5 + " - " + sel7 + " - " + sel10 + " = " + parkelly5710 + "<br>" + sel5 + " - " + sel8 + " - " + sel10 + " = " + parkelly5810 + "<br>" + sel5 + " - " + sel9 + " - " + sel10 + " = " + parkelly5910 + "<br>" +
+        sel6 + " - " + sel7 + " - " + sel10 + " = " + parkelly6710 + "<br>" + sel6 + " - " + sel8 + " - " + sel10 + " = " + parkelly6810 + "<br>" + sel6 + " - " + sel9 + " - " + sel10 + " = " + parkelly6910 + "<br>" + 
+        sel7 + " - " + sel8 + " - " + sel10 + " = " + parkelly7810 + "<br>" + sel7 + " - " + sel9 + " - " + sel10 + " = " + parkelly7910 + "<br>" + sel8 + " - " + sel9 + " - " + sel10 + " = " + parkelly8910)// done to here //
+
     } else {
         document.getElementById("parlays").innerHTML=(sel1 + " - " + sel2 + " = " + parkelly12 + "<br>" + sel1 + " - " + sel3 + " = " + parkelly13 + "<br>" + sel2 + " - " + sel3 + " = " + parkelly23 + "<br>" +
         sel1 + " - " + sel4 + " = " + parkelly14 + "<br>" + sel2 + " - " + sel4 + " = " + parkelly24 + "<br>" + sel3 + " - " + sel4 + " = " + parkelly34 + "<br>" +
@@ -1092,10 +1142,6 @@ function parlayCalc3() {
         sel6 + " - " + sel9 + " = " + parkelly69 + "<br>" + sel7 + " - " + sel9 + " = " + parkelly79 + "<br>" + sel8 + " - " + sel9 + " = " + parkelly89 + "<br>" +
         sel1 + " - " + sel10 + " = " + parkelly110 + "<br>" + sel2 + " - " + sel10 + " = " + parkelly210 + "<br>" + sel3 + " - " + sel10 + " = " + parkelly310 + "<br>" +
         sel4 + " - " + sel10 + " = " + parkelly410 + "<br>" + sel5 + " - " + sel10 + " = " + parkelly510 + "<br>" + sel6 + " - " + sel10 + " = " + parkelly610 + "<br>" +
-        sel7 + " - " + sel10 + " = " + parkelly710 + "<br>" + sel8 + " - " + sel10 + " = " + parkelly810 + "<br>" + sel9 + " - " + sel10 + " = " + parkelly910 + "<br>" +
-        sel1 + " - " + sel11 + " = " + parkelly111 + "<br>" + sel2 + " - " + sel11 + " = " + parkelly211 + "<br>" + sel3 + " - " + sel11 + " = " + parkelly311 + "<br>" +
-        sel4 + " - " + sel11 + " = " + parkelly411 + "<br>" + sel5 + " - " + sel11 + " = " + parkelly511 + "<br>" + sel6 + " - " + sel11 + " = " + parkelly611 + "<br>" +
-        sel7 + " - " + sel11 + " = " + parkelly711 + "<br>" + sel8 + " - " + sel11 + " = " + parkelly811 + "<br>" + sel9 + " - " + sel11 + " = " + parkelly911 + "<br>" +
-        sel10 + " - " + sel11 + " = " + parkelly1011)
+        sel7 + " - " + sel10 + " = " + parkelly710 + "<br>" + sel8 + " - " + sel10 + " = " + parkelly810 + "<br>" + sel9 + " - " + sel10 + " = " + parkelly910)
     }
 }
