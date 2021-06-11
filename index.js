@@ -1,24 +1,41 @@
-document.getElementById("calc").addEventListener("click", ()=>{kellyCalc1(), kellyCalc2(), kellyCalc3(), kellyCalc4(), kellyCalc5(), kellyCalc6(), kellyCalc7(), kellyCalc8(), kellyCalc9(), kellyCalc10(), kellyCalc11()});
-document.getElementById("parlaybutton").addEventListener("click", parlaySelector)
-
-let cars = ["bmw", "ferrari", "pagani", "lamborghini"];
-let wheels = ["big", "small", "medium", "large"];
 let bankroll;
 let aggro;
 
+document.getElementById("calc").addEventListener("click", ()=>{kellyCalc1(), kellyCalc2(), kellyCalc3(), kellyCalc4(), kellyCalc5(), kellyCalc6(), kellyCalc7(), kellyCalc8(), kellyCalc9(), kellyCalc10(), kellyCalc11()});
+document.getElementById("parlaybutton").addEventListener("click", parlaySelector);
+document.getElementById("calc").addEventListener("click", dispArray);
 
-for(let i=0; i < cars.length; i++){
-    for(let x=0; x < wheels.length; x++ ){
-        console.log(cars[i] + " is " + wheels[x]);
+function dispArray() {
+    let bankroll = document.getElementById("bankroll").value;
+    let aggro = document.getElementById("aggro").value;
+    let odds1 = document.getElementById("odds1").value;
+    let odds2 = document.getElementById("odds2").value;
+    let odds3 = document.getElementById("odds3").value;
+    let prob1 = document.getElementById("prob1").value;
+    let prob2 = document.getElementById("prob2").value;
+    let prob3 = document.getElementById("prob3").value;
+    let oddslist = [odds1, odds2, odds3];
+    let probabilities = [prob1, prob2, prob3];
+    let selections = [sel1, sel2, sel3]
+
+    let indarray = probabilities.map(function(x, index){
+        return Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100))
+       });
+
+       document.getElementById("parlays").innerHTML = indarray;
+       
+    for (i = 0; i < selections.length; i++){
+        for ()
     }
-}
+};
 
 function kellyCalc() {
 
 }
 
 function kellyCalc1() {
-    
+    let bankroll = document.getElementById("bankroll").value;
+    let aggro = document.getElementById("aggro").value;
     let prob1=document.getElementById("prob1").value;
     let odds1=document.getElementById("odds1").value;
     let sel1=document.getElementById("selection1").value;
