@@ -4,36 +4,36 @@ let prob1, prob2, prob3;
 let sel1, sel2, sel3;
 let odds1, odds2, odds3;
 let indarray;
+let probarray, oddsarray;
+let probabilities2;
+let counter = 0;
 
-document.getElementById("parlaybutton").addEventListener("click", parlaySelector);
+document.getElementById("parlaybutton").addEventListener("click", parlayCalc);
 document.getElementById("calc").addEventListener("click", dispArray);
+document.getElementById("addpick").addEventListener("click", addForm);
 
-// example of how to extract values into a string //
-var mammals = new Array("cat","dog","human","whale","seal");
-var animalString = "";
-for (var i = 0; i < mammals. length; i++) {
-   animalString += mammals[i] + " ";
+function addForm() {
+
 }
-console.log(mammals);// end of example //
 
-
+ 
 function dispArray() {
-    let bankroll = document.getElementById("bankroll").value;
-    let aggro = document.getElementById("aggro").value;
-    let sel1 = document.getElementById("selection1").value;
-    let sel2 = document.getElementById("selection2").value;
-    let sel3 = document.getElementById("selection3").value;
-    let odds1 = document.getElementById("odds1").value;
-    let odds2 = document.getElementById("odds2").value;
-    let odds3 = document.getElementById("odds3").value;
-    let prob1 = document.getElementById("prob1").value;
-    let prob2 = document.getElementById("prob2").value;
-    let prob3 = document.getElementById("prob3").value;
-    let selections = [sel1, sel2, sel3];
-    let oddslist = [odds1, odds2, odds3];
-    let probabilities = [prob1, prob2, prob3];
+    bankroll = document.getElementById("bankroll").value;
+    aggro = document.getElementById("aggro").value;
+    sel1 = document.getElementById("selection1").value;
+    sel2 = document.getElementById("selection2").value;
+    sel3 = document.getElementById("selection3").value;
+    odds1 = document.getElementById("odds1").value;
+    odds2 = document.getElementById("odds2").value;
+    odds3 = document.getElementById("odds3").value;
+    prob1 = document.getElementById("prob1").value;
+    prob2 = document.getElementById("prob2").value;
+    prob3 = document.getElementById("prob3").value;
+    selections = [sel1, sel2, sel3];
+    oddslist = [odds1, odds2, odds3];
+    probabilities = [prob1, prob2, prob3];
 
-    let indarray = probabilities.map(function(x, index){
+    indarray = probabilities.map(function(x, index){
         return Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100))
        });
 
@@ -42,7 +42,6 @@ function dispArray() {
             document.getElementById("indbets").innerHTML += (selections[i] + " - " + indarray[i] + "<br>")
         }
     }
-        
 }
 
 function parlaySelector() {
@@ -1065,3 +1064,11 @@ function parlayCalc3() {
         sel8 + " - " + sel9 + " - " + sel11 + " = " + parkelly8911 + "<br>" + sel8 + " - " + sel10 + " - " + sel11 + " = " + parkelly81011)
     }
 }
+
+// example of how to extract values into a string //
+let mammals = new Array("cat","dog","human","whale","seal");
+let animalString = "";
+for (let i = 0; i < mammals. length; i++) {
+   animalString += mammals[i] + " ";
+}
+console.log(mammals);// end of example //
