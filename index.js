@@ -13,7 +13,13 @@ document.getElementById("calc").addEventListener("click", dispArray);
 document.getElementById("addpick").addEventListener("click", addForm);
 
 function addForm() {
+    counter++;
+    let newForm = document.getElementById('readroot').cloneNode(true);
+}
 
+function parlayCalc() {
+    probabilities.push(prob1);
+    document.getElementById("indbets").innerHTML = probabilities2;
 }
 
  
@@ -1065,10 +1071,3 @@ function parlayCalc3() {
     }
 }
 
-// example of how to extract values into a string //
-let mammals = new Array("cat","dog","human","whale","seal");
-let animalString = "";
-for (let i = 0; i < mammals. length; i++) {
-   animalString += mammals[i] + " ";
-}
-console.log(mammals);// end of example //
