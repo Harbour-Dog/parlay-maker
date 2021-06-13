@@ -18,8 +18,9 @@ function addForm() {
 }
 
 function parlayCalc() {
-    probabilities.push(prob1);
-    document.getElementById("indbets").innerHTML = probabilities2;
+    probabilities.push(prob1)
+   
+    console.log(probabilities);
 }
 
  
@@ -38,7 +39,8 @@ function dispArray() {
     selections = [sel1, sel2, sel3];
     oddslist = [odds1, odds2, odds3];
     probabilities = [prob1, prob2, prob3];
-
+    probabilities2 = [prob1, prob2, prob3];
+    
     indarray = probabilities.map(function(x, index){
         return Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100))
        });
