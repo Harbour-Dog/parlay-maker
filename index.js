@@ -3,26 +3,43 @@ let probabilities, oddslist, selections;
 let prob1, prob2, prob3;
 let sel1, sel2, sel3;
 let odds1, odds2, odds3;
-let indarray;
-let probarray, oddsarray;
-let probabilities2;
-let counter = 0;
+let indarray, resultsarray;
+let probarray, oddsarray, selarray;
+let probabilities2, oddslist2, selections2;
+let count = 2;
 
 document.getElementById("parlaybutton").addEventListener("click", parlayCalc);
 document.getElementById("calc").addEventListener("click", dispArray);
-document.getElementById("addpick").addEventListener("click", addForm);
+document.getElementById("addpick").addEventListener("click", addForm, count++);
 
 function addForm() {
-    counter++;
-    let newForm = document.getElementById('readroot').cloneNode(true);
+    console.log(count);
 }
+    
 
 function parlayCalc() {
-    probabilities.push(prob1)
-   
-    console.log(probabilities);
-}
+    probabilities.push(probabilities.shift());
+    oddslist.push(oddslist.shift());
+    selections.push(selections.shift());
+    
+    probarray = probabilities2.map(function(x, index){
+        return (x * probabilities[index])/100});
 
+    oddsarray = oddslist2.map(function(x, index){
+        return Math.round(100*(x * oddslist[index]))/100});
+
+    resultsarray = probarray.map(function(x, index){
+        return Math.floor(((x*oddsarray[index]-100)*bankroll*aggro)/(100*oddsarray[index]-100))
+    });
+
+    for (i = 0; i < selections2.length; i++){
+        for (i = 0; i < selections.length; i++){
+            for (i = 0; i < resultsarray.length; i++) {
+                document.getElementById("parlays").innerHTML += (selections2[i] + " - " + selections[i] + " => " + resultsarray[i] + "<br>")
+            }    
+        }
+    }
+}    
  
 function dispArray() {
     bankroll = document.getElementById("bankroll").value;
@@ -37,7 +54,9 @@ function dispArray() {
     prob2 = document.getElementById("prob2").value;
     prob3 = document.getElementById("prob3").value;
     selections = [sel1, sel2, sel3];
+    selections2 = [sel1, sel2, sel3];
     oddslist = [odds1, odds2, odds3];
+    oddslist2 = [odds1, odds2, odds3];
     probabilities = [prob1, prob2, prob3];
     probabilities2 = [prob1, prob2, prob3];
     
@@ -1072,4 +1091,3 @@ function parlayCalc3() {
         sel8 + " - " + sel9 + " - " + sel11 + " = " + parkelly8911 + "<br>" + sel8 + " - " + sel10 + " - " + sel11 + " = " + parkelly81011)
     }
 }
-
