@@ -19,11 +19,11 @@ function addRow() {
 }
 
 function addPick() {
-    let newrow = '<input id="selection' +count+ '" placeholder="Selection"/>' +
-        '<input id="prob' +count+ '" placeholder="Win %"/>' +
+    let newrow = '<input id="selection' +count+ '" placeholder="Selection"/>'+
+        '<input id="prob' +count+ '" placeholder="Win %"/>'+
         '<input id="odds' +count+ '" placeholder="Odds Offered"/><br>';
     return newrow;              
-    }  
+}  
 
 function parlayCalc() {
     probabilities.push(probabilities.shift());
