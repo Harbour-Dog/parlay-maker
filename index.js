@@ -15,25 +15,15 @@ document.getElementById("addpick").addEventListener("click", addRow);
 function addRow() {
     count++;
     let pickform = document.getElementById("pickform");
-    
-    for (i = 0; i < count; i++){
-        pickform.appendChild(document.createTextNode(count));
-        let newrow = '<input id="selection' +i+ '" placeholder="Selection"/>' +
-            '<input id="prob' +i+ '" placeholder="Win 5"/>' +
-            '<input id="odds' +i+ '" placeholder="Odds Offered"/><br>';
-        pickform.appendChild(newrow);            
-        pickform.appendChild(document.createElement("br"));               
-    }
+    pickform.append(addPick(count));
 }
 
-function addPick(count) {
-    let newrow= '<input type="button" id="addpick" value="Add Selection">' +       
-        '<input name="selection" placeholder="Selection"' +count+ '/>' +
-        '<input name="prob" placeholder="Win %"' +count+ '/>' +
-        '<input name="odds" placeholder="Odds Offered"' +count+ '/><br>'  
-    document.getElementById("parlays").innerHTML = newrow;
-}
-    
+function addPick() {
+    let newrow = '<input id="selection' +count+ '" placeholder="Selection"/>' +
+        '<input id="prob' +count+ '" placeholder="Win %"/>' +
+        '<input id="odds' +count+ '" placeholder="Odds Offered"/><br>';
+    return newrow;              
+    }  
 
 function parlayCalc() {
     probabilities.push(probabilities.shift());
