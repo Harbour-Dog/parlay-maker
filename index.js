@@ -14,16 +14,34 @@ document.getElementById("addpick").addEventListener("click", addRow);
 
 function addRow() {
     count++;
-    let pickform = document.getElementById("pickform");
-    pickform.append(addPick(count));
+    selRow();
+    probRow();
+    oddsRow();
 }
 
-function addPick() {
-    let newrow = '<input id="selection' +count+ '" placeholder="Selection"/>'+
-        '<input id="prob' +count+ '" placeholder="Win %"/>'+
-        '<input id="odds' +count+ '" placeholder="Odds Offered"/><br>';
-    return newrow;              
-}  
+function selRow() {
+    let input = document.createElement("input");
+    input.setAttribute("id", "selection"+count);
+    input.setAttribute("placeholder", "Selection"+count);
+    let pickform = document.getElementById("pickform");
+    pickform.append(input);
+}
+
+function probRow() {
+    let input = document.createElement("input");
+    input.setAttribute("id", "prob"+count);
+    input.setAttribute("placeholder", "Win %");
+    let pickform = document.getElementById("pickform");
+    pickform.append(input);
+}
+
+function oddsRow() {
+    let input = document.createElement("input");
+    input.setAttribute("id", "odds"+count);
+    input.setAttribute("placeholder", "Odds Offered");
+    let pickform = document.getElementById("pickform");
+    pickform.append(input);
+}
 
 function parlayCalc() {
     probabilities.push(probabilities.shift());
@@ -1098,4 +1116,12 @@ function parlayCalc3() {
         sel7 + " - " + sel8 + " - " + sel11 + " = " + parkelly7811 + "<br>" + sel7 + " - " + sel9 + " - " + sel11 + " = " + parkelly7911 + "<br>" + sel7 + " - " + sel10 + " - " + sel11 + " = " + parkelly71011 + "<br>" +
         sel8 + " - " + sel9 + " - " + sel11 + " = " + parkelly8911 + "<br>" + sel8 + " - " + sel10 + " - " + sel11 + " = " + parkelly81011)
     }
+}
+
+function Null() {
+    count++;
+    let newrow = '<input id="selection' +count+ '" placeholder="Selection"/>' +
+          '<input id="prob' +count+ '" placeholder="Win %"/>' +
+          '<input id="odds' +count+ '" placeholder="Odds Offered"/><br>';
+    document.getElementById("pickform").append(newrow);
 }

@@ -52,27 +52,10 @@ table, th, td {
     margin-top: 15px;
 }
 
-#picklist {
+#pickform {
     height: 600px;
     text-align: center;
     padding-top: 0px;
-}
-
-#picktable {
-    background-color: rgb(247, 165, 23);
-}
-
-#singlestable {
-    column-width: auto;
-    margin-left: 10px;
-    color:rgb(0, 0, 0);
-    background-color: rgb(247, 165, 23);
-    margin: auto;
-}    
-
-.resultcells {
-    width: 45px;
-    text-align: center;
 }
 
 .float {
