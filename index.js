@@ -6,14 +6,14 @@ let odds1, odds2, odds3;
 let indarray, resultsarray;
 let probarray, oddsarray, selarray;
 let probabilities2, oddslist2, selections2;
-let count = 2;
+let count = 1;
 
 document.getElementById("parlaybutton").addEventListener("click", parlayCalc);
 document.getElementById("calc").addEventListener("click", dispArray);
-document.getElementById("addpick").addEventListener("click", addForm, count++);
+document.getElementById("addpick").addEventListener("click", ()=> {count++; addForm()});
 
 function addForm() {
-    console.log(count);
+    document.getElementById("parlays").innerHTML = count;
 }
     
 
