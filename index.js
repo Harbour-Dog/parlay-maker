@@ -7,7 +7,7 @@ let probarray, oddsarray, selarray;
 let probabilities2, oddslist2, selections2;
 let count = 1;
 
-document.getElementById("parlaybutton").addEventListener("click", parlayCalc);
+document.getElementById("parlaybutton").addEventListener("click", Test);
 document.getElementById("calc").addEventListener("click", kellyCalc);
 document.getElementById("addpick").addEventListener("click", addRow);
 
@@ -45,10 +45,16 @@ function oddsRow() {
     pickform.append(input);
 }
 
+function Test() {
+    for (i = 0, i < (selection.length-2); i++)
+        if (i = (selection.length-1)) {break;}
+        
+}
+
 function parlayCalc() {
-    probabilities2 = probabilities.push(probabilities.shift());
-    oddslist2 = oddslist.push(oddslist.shift());
-    selections2 = selections.push(selections.shift());
+    probabilities.push(probabilities.shift());
+    oddslist.push(oddslist.shift());
+    selections.push(selections.shift());
     
     probarray = probabilities.map(function(x, index){
         return (x * probabilities2[index])/100});
