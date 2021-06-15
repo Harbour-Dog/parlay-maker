@@ -6,7 +6,6 @@ let indarray, resultsarray;
 let probarray, oddsarray, selarray;
 let probabilities2, oddslist2, selections2;
 let count = 1;
-let tempselba = [];
 
 document.getElementById("parlaybutton").addEventListener("click", parlayCalc);
 document.getElementById("calc").addEventListener("click", kellyCalc);
@@ -46,38 +45,11 @@ function oddsRow() {
     pickform.append(input);
 }
 
-function Test() {
+function Test() { // not targetted //
     for (i = 0, i < selections.length; i++;){
         newselarray 
     }
     
-}
-
-function parlayCalc() {
-    probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());
-    selections.push(selections.shift());
-    
-    probarray = probabilities.map(function(x, index){
-        return (x * probabilities2[index])/100});
-
-    oddsarray = oddslist.map(function(x, index){
-        return Math.round(100*(x * oddslist2[index]))/100});
-
-    resultsarray = probarray.map(function(x, index){
-        return Math.floor(((x*oddsarray[index]-100)*bankroll*aggro)/(100*oddsarray[index]-100))
-    });
-
-    for (i = 0; i < selections.length; i++){
-        for (i = 0; i < selections.length; i++){
-            for (i = 0; i < resultsarray.length; i++) {
-                document.getElementById("parlays").innerHTML += (selections2[i] + " - " + selections[i] + " => " + resultsarray[i] + "<br>");
-            }    
-        }
-    }
-    console.log(probarray);
-    console.log(oddsarray);
-    console.log(resultsarray);
 }
 
 function kellyCalc() {
@@ -112,18 +84,39 @@ function kellyCalc() {
     }   
     
     for (i = 0; i < (selections.length-1); i++){
-        if (i == selections.length){break;}
-            selections2 = selections.slice();
+        selections2 = selections.slice();
     }
     for (i = 0; i < (probabilities.length-1); i++){
-        if (i == probabilities.length){break;}
-            probabilities2 = probabilities.slice();
+        probabilities2 = probabilities.slice();
     }
     for (i = 0; i < (oddslist.length-1); i++){
-        if (i == oddslist.length){break;}
-            oddslist2 = oddslist.slice();
+        oddslist2 = oddslist.slice();
     }
     
+}
+
+function parlayCalc() {
+    probabilities.push(probabilities.shift());
+    oddslist.push(oddslist.shift());
+    selections.push(selections.shift());
+    
+    probarray = probabilities.map(function(x, index){
+        return (x * probabilities2[index])/100});
+
+    oddsarray = oddslist.map(function(x, index){
+        return Math.round(100*(x * oddslist2[index]))/100});
+
+    resultsarray = probarray.map(function(x, index){
+        return Math.floor(((x*oddsarray[index]-100)*bankroll*aggro)/(100*oddsarray[index]-100))
+    });
+
+    for (i = 0; i < selections.length; i++){
+        for (i = 0; i < selections.length; i++){
+            for (i = 0; i < resultsarray.length; i++) {
+                document.getElementById("parlays").innerHTML += (selections2[i] + " - " + selections[i] + " => " + resultsarray[i] + "<br>");
+            }    
+        }
+    }
 }
 
 function parlaySelector() {// not implemented //
@@ -134,12 +127,4 @@ function parlaySelector() {// not implemented //
     } else {
         parlayCalc3();
     }
-}
-
-function Null() {// not implemented //
-    count++;
-    let newrow = '<input id="selection' +count+ '" placeholder="Selection"/>' +
-          '<input id="prob' +count+ '" placeholder="Win %"/>' +
-          '<input id="odds' +count+ '" placeholder="Odds Offered"/><br>';
-    document.getElementById("pickform").append(newrow);
 }
