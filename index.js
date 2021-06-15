@@ -6,8 +6,9 @@ let indarray, resultsarray;
 let probarray, oddsarray, selarray;
 let probabilities2, oddslist2, selections2;
 let count = 1;
+let tempselba = [];
 
-document.getElementById("parlaybutton").addEventListener("click", Test);
+document.getElementById("parlaybutton").addEventListener("click", parlayCalc);
 document.getElementById("calc").addEventListener("click", kellyCalc);
 document.getElementById("addpick").addEventListener("click", addRow);
 
@@ -46,9 +47,10 @@ function oddsRow() {
 }
 
 function Test() {
-    for (i = 0, i < (selection.length-2); i++)
-        if (i = (selection.length-1)) {break;}
-        
+    for (i = 0, i < selections.length; i++;){
+        newselarray 
+    }
+    
 }
 
 function parlayCalc() {
@@ -73,19 +75,18 @@ function parlayCalc() {
             }    
         }
     }
-
     console.log(probarray);
     console.log(oddsarray);
-    console.log(probabilities2);
-    console.log(selections2);
+    console.log(resultsarray);
 }
 
 function kellyCalc() {
     bankroll = document.getElementById("bankroll").value;
     aggro = document.getElementById("aggro").value;       
-    let inputs = document.getElementsByTagName("input"); 
+    let inputs = document.getElementsByTagName("input");
+    let split = (count-2); 
         
-    for (i = 0 ; i < inputs.length ; i++) {
+    for (i = 0 ; i < inputs.length; i++) {
         if (inputs[i].getAttribute("class") == "sel")
             selections.push(inputs[i].value);
     }    
@@ -108,8 +109,21 @@ function kellyCalc() {
         for (i = 0; i < indarray.length; i++){
             document.getElementById("indbets").innerHTML += (selections[i] + " - " + indarray[i] + "<br>")
         }
+    }   
+    
+    for (i = 0; i < (selections.length-1); i++){
+        if (i == selections.length){break;}
+            selections2 = selections.slice();
     }
-             
+    for (i = 0; i < (probabilities.length-1); i++){
+        if (i == probabilities.length){break;}
+            probabilities2 = probabilities.slice();
+    }
+    for (i = 0; i < (oddslist.length-1); i++){
+        if (i == oddslist.length){break;}
+            oddslist2 = oddslist.slice();
+    }
+    
 }
 
 function parlaySelector() {// not implemented //
