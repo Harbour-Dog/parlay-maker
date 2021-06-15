@@ -46,33 +46,38 @@ function oddsRow() {
 }
 
 function parlayCalc() {
-    probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());
-    selections.push(selections.shift());
+    probabilities2 = probabilities.push(probabilities.shift());
+    oddslist2 = oddslist.push(oddslist.shift());
+    selections2 = selections.push(selections.shift());
     
-    probarray = probabilities2.map(function(x, index){
-        return (x * probabilities[index])/100});
+    probarray = probabilities.map(function(x, index){
+        return (x * probabilities2[index])/100});
 
-    oddsarray = oddslist2.map(function(x, index){
-        return Math.round(100*(x * oddslist[index]))/100});
+    oddsarray = oddslist.map(function(x, index){
+        return Math.round(100*(x * oddslist2[index]))/100});
 
     resultsarray = probarray.map(function(x, index){
         return Math.floor(((x*oddsarray[index]-100)*bankroll*aggro)/(100*oddsarray[index]-100))
     });
 
-    for (i = 0; i < selections2.length; i++){
+    for (i = 0; i < selections.length; i++){
         for (i = 0; i < selections.length; i++){
             for (i = 0; i < resultsarray.length; i++) {
                 document.getElementById("parlays").innerHTML += (selections2[i] + " - " + selections[i] + " => " + resultsarray[i] + "<br>");
             }    
         }
     }
+
+    console.log(probarray);
+    console.log(oddsarray);
+    console.log(probabilities2);
+    console.log(selections2);
 }
 
 function kellyCalc() {
     bankroll = document.getElementById("bankroll").value;
-    aggro = document.getElementById("aggro").value;     
-    let inputs = document.getElementsByTagName("input")        
+    aggro = document.getElementById("aggro").value;       
+    let inputs = document.getElementsByTagName("input"); 
         
     for (i = 0 ; i < inputs.length ; i++) {
         if (inputs[i].getAttribute("class") == "sel")
