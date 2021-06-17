@@ -2,12 +2,16 @@ let bankroll, aggro;
 let probabilities = [];
 let oddslist = [];
 let selections = [];
-let indarray, resultsarray;
-let probarray, oddsarray, selarray;
+let parlaylist = [];
+let indarray, resultsarray, selarray;
+let probtemp = [];
+let oddstemp = [];
+let seltemp = [];
 let probabilities2, oddslist2, selections2;
 let count = 1;
+let loop;
 
-document.getElementById("parlaybutton").addEventListener("click", parlayCalc);
+document.getElementById("parlaybutton").addEventListener("click", Test);
 document.getElementById("calc").addEventListener("click", kellyCalc);
 document.getElementById("addpick").addEventListener("click", addRow);
 
@@ -46,17 +50,41 @@ function oddsRow() {
 }
 
 function Test() { // not targetted //
-    for (i = 0, i < selections.length; i++;){
-        newselarray 
+    probabilities.push(probabilities.shift());
+    oddslist.push(oddslist.shift());
+    selections.push(selections.shift());
+   
+    probarray = probabilities.map(function(x, index){
+        return (x * probabilities2[index])/100});
+
+    for (i = 0; i < probarray.length; i++){
+        probtemp.push(probarray[i]);
+    }
+
+    oddsarray = oddslist.map(function(x, index){
+        return Math.round(100*(x * oddslist2[index]))/100});
+
+    for (i = 0; i < oddsarray.length; i++){
+        oddstemp.push(oddsarray[i]);
+    }
+
+    for (i = 0; i < selections2.length; i++){
+        seltemp.push(selections2[i] + " - " + selections[i] + " => ");
     }
     
+    resultsarray = probarray.map(function(x, index){
+        return Math.floor(((x*oddsarray[index]-100)*bankroll*aggro)/(100*oddsarray[index]-100))
+    });
+
+    for (i = 0; i < selections.length; i++){
+            document.getElementById("parlays").innerHTML += (selections2[i] + " - " + selections[i] + " => " + resultsarray[i] + "<br>");        
+    }
 }
 
 function kellyCalc() {
     bankroll = document.getElementById("bankroll").value;
     aggro = document.getElementById("aggro").value;       
-    let inputs = document.getElementsByTagName("input");
-    let split = (count-2); 
+    let inputs = document.getElementsByTagName("input");    
         
     for (i = 0 ; i < inputs.length; i++) {
         if (inputs[i].getAttribute("class") == "sel")
@@ -91,8 +119,7 @@ function kellyCalc() {
     }
     for (i = 0; i < (oddslist.length-1); i++){
         oddslist2 = oddslist.slice();
-    }
-    
+    }    
 }
 
 function parlayCalc() {
