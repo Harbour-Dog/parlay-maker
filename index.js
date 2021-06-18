@@ -53,7 +53,7 @@ function parlayCalc1() {
     probabilities.push(probabilities.shift());
     oddslist.push(oddslist.shift());
     selections.push(selections.shift());
-    parnum = (seltemp.length - (count/2));
+    parnum = (seltemp.length - (count/2));// probably has to be moved dwn next to parpos? //
     loop++;
    
     probarray = probabilities.map(function(x, index){
