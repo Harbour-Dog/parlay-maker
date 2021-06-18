@@ -9,9 +9,9 @@ let oddstemp = [];
 let seltemp = [];
 let probabilities2, oddslist2, selections2;
 let count = 1;
-let loop;
+let loop = 0;
 
-document.getElementById("parlaybutton").addEventListener("click", Test);
+document.getElementById("parlaybutton").addEventListener("click", parlayCalc1);
 document.getElementById("calc").addEventListener("click", kellyCalc);
 document.getElementById("addpick").addEventListener("click", addRow);
 
@@ -49,10 +49,11 @@ function oddsRow() {
     pickform.append(input);
 }
 
-function Test() { // not targetted //
+function parlayCalc1() {
     probabilities.push(probabilities.shift());
     oddslist.push(oddslist.shift());
     selections.push(selections.shift());
+    loop++;
    
     probarray = probabilities.map(function(x, index){
         return (x * probabilities2[index])/100});
@@ -71,14 +72,16 @@ function Test() { // not targetted //
     for (i = 0; i < selections2.length; i++){
         seltemp.push(selections2[i] + " - " + selections[i] + " => ");
     }
-    
-    resultsarray = probarray.map(function(x, index){
-        return Math.floor(((x*oddsarray[index]-100)*bankroll*aggro)/(100*oddsarray[index]-100))
-    });
 
-    for (i = 0; i < selections.length; i++){
-            document.getElementById("parlays").innerHTML += (selections2[i] + " - " + selections[i] + " => " + resultsarray[i] + "<br>");        
-    }
+    resultsarray = probtemp.map(function(x, index){
+        return Math.floor(((x*oddstemp[index]-100)*bankroll*aggro)/(100*oddstemp[index]-100))
+    });
+    
+    if (loop == Math.floor(count/2)) {
+        for (i = 0; i < seltemp.length; i++){
+            document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};        
+    } else {parlayCalc1()};
+    
 }
 
 function kellyCalc() {
@@ -87,19 +90,19 @@ function kellyCalc() {
     let inputs = document.getElementsByTagName("input");    
         
     for (i = 0 ; i < inputs.length; i++) {
-        if (inputs[i].getAttribute("class") == "sel")
-            selections.push(inputs[i].value);
+        if (inputs[i].getAttribute("class") == "sel"){
+            selections.push(inputs[i].value)};
     }    
 
     for (i = 0 ; i < inputs.length ; i++) {
-        if (inputs[i].getAttribute("class") == "prob")
-            probabilities.push(inputs[i].value);
+        if (inputs[i].getAttribute("class") == "prob"){
+            probabilities.push(inputs[i].value)};
     }         
     
     for (i = 0 ; i < inputs.length ; i++) {
-        if (inputs[i].getAttribute("class") == "odds")
-            oddslist.push(inputs[i].value);
-    }
+        if (inputs[i].getAttribute("class") == "odds"){
+            oddslist.push(inputs[i].value)};
+    };
     
     indarray = probabilities.map(function(x, index){
     return Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100))
@@ -109,49 +112,49 @@ function kellyCalc() {
         for (i = 0; i < indarray.length; i++){
             document.getElementById("indbets").innerHTML += (selections[i] + " - " + indarray[i] + "<br>")
         }
-    }   
+    };   
     
     for (i = 0; i < (selections.length-1); i++){
         selections2 = selections.slice();
-    }
+    };
     for (i = 0; i < (probabilities.length-1); i++){
         probabilities2 = probabilities.slice();
-    }
+    };
     for (i = 0; i < (oddslist.length-1); i++){
-        oddslist2 = oddslist.slice();
-    }    
+        oddslist2 = oddslist.slice()
+    };
 }
 
-function parlayCalc() {
+function parlayCalc2() {
     probabilities.push(probabilities.shift());
     oddslist.push(oddslist.shift());
     selections.push(selections.shift());
-    
+    loop++;
+   
     probarray = probabilities.map(function(x, index){
         return (x * probabilities2[index])/100});
+
+    for (i = 0; i < probarray.length; i++){
+        probtemp.push(probarray[i]);
+    }
 
     oddsarray = oddslist.map(function(x, index){
         return Math.round(100*(x * oddslist2[index]))/100});
 
-    resultsarray = probarray.map(function(x, index){
-        return Math.floor(((x*oddsarray[index]-100)*bankroll*aggro)/(100*oddsarray[index]-100))
+    for (i = 0; i < oddsarray.length; i++){
+        oddstemp.push(oddsarray[i]);
+    }
+
+    for (i = 0; i < selections2.length; i++){
+        seltemp.push(selections2[i] + " - " + selections[i] + " => ");
+    }
+
+    resultsarray = probtemp.map(function(x, index){
+        return Math.floor(((x*oddstemp[index]-100)*bankroll*aggro)/(100*oddstemp[index]-100))
     });
-
-    for (i = 0; i < selections.length; i++){
-        for (i = 0; i < selections.length; i++){
-            for (i = 0; i < resultsarray.length; i++) {
-                document.getElementById("parlays").innerHTML += (selections2[i] + " - " + selections[i] + " => " + resultsarray[i] + "<br>");
-            }    
-        }
-    }
-}
-
-function parlaySelector() {// not implemented //
-    let parlaysize=document.getElementById("parlaysize").value
-
-    if (parlaysize == 2) {
-        parlayCalc2();
-    } else {
-        parlayCalc3();
-    }
+    
+    if (loop == Math.floor(count/2)) {
+        for (i = 0; i < seltemp.length; i++){
+            document.getElementById("parlays").innerHTML += (seltemp + resultsarray[i] + "<br>")};        
+    } else {parlayCalc1};
 }
