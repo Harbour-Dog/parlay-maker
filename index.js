@@ -1,4 +1,4 @@
-let bankroll, aggro;
+let bankroll, aggro, parnum, parpos;
 let probabilities = [];
 let oddslist = [];
 let selections = [];
@@ -53,6 +53,7 @@ function parlayCalc1() {
     probabilities.push(probabilities.shift());
     oddslist.push(oddslist.shift());
     selections.push(selections.shift());
+    parnum = (seltemp.length - (count/2));
     loop++;
    
     probarray = probabilities.map(function(x, index){
@@ -78,15 +79,15 @@ function parlayCalc1() {
     });
     
     if (loop == Math.floor(count/2)) {
-        for (i = 0; i < seltemp.length; i++){
-            document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};        
+        parpos = (count * loop - parnum);
+        parlayCalc2();        
     } else {parlayCalc1()};
     
 }
 
 function kellyCalc() {
     bankroll = document.getElementById("bankroll").value;
-    aggro = document.getElementById("aggro").value;       
+    aggro = document.getElementById("aggro").value;      
     let inputs = document.getElementsByTagName("input");    
         
     for (i = 0 ; i < inputs.length; i++) {
@@ -125,36 +126,14 @@ function kellyCalc() {
     };
 }
 
-function parlayCalc2() {
-    probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());
-    selections.push(selections.shift());
-    loop++;
-   
-    probarray = probabilities.map(function(x, index){
-        return (x * probabilities2[index])/100});
-
-    for (i = 0; i < probarray.length; i++){
-        probtemp.push(probarray[i]);
-    }
-
-    oddsarray = oddslist.map(function(x, index){
-        return Math.round(100*(x * oddslist2[index]))/100});
-
-    for (i = 0; i < oddsarray.length; i++){
-        oddstemp.push(oddsarray[i]);
-    }
-
-    for (i = 0; i < selections2.length; i++){
-        seltemp.push(selections2[i] + " - " + selections[i] + " => ");
-    }
-
-    resultsarray = probtemp.map(function(x, index){
-        return Math.floor(((x*oddstemp[index]-100)*bankroll*aggro)/(100*oddstemp[index]-100))
-    });
-    
-    if (loop == Math.floor(count/2)) {
+function parlayCalc2() {    
+    if (count % 2 === 0){
+        seltemp.splice(parpos,parnum);
+        resultsarray.splice(parpos,parnum);
         for (i = 0; i < seltemp.length; i++){
-            document.getElementById("parlays").innerHTML += (seltemp + resultsarray[i] + "<br>")};        
-    } else {parlayCalc1};
+            document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};
+    } else {
+        for (i = 0; i < seltemp.length; i++){
+            document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};
+    }
 }
