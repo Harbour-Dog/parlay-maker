@@ -75,7 +75,7 @@ function kellyCalc() {// creates arrays from the input cells, and outputs the ke
 
     for (i = 0; i < selections.length; i++){// output for the individual kelly values //
         for (i = 0; i < indarray.length; i++){
-            document.getElementById("indbets").innerHTML += (selections[i] + " - " + indarray[i] + "<br>")
+            document.getElementById("indbets").innerHTML += (selections[i] + " => " + indarray[i] + "<br>")
         }
     };   
     

@@ -9,18 +9,19 @@
         <h1>Kelly Criterion Parlay Maker</h1>
         <div id="bankrolldiv" class="float" style="background-color:rgb(216, 218, 216);">
             <h2>Bankroll and Betting Strategy</h2>
-                <label for="bankroll">Bankroll: $</label>
-                <input type="number" id="bankroll" name="bankroll" min="100" step="0.01"><br>
-                <label for="aggro"><a href=https://en.wikipedia.org/wiki/Kelly_criterion target="_blank">Kelly Criterion</a> Multiplier:</label>
-                <input type="number" id="aggro" name="aggro" min="0.1" max="1" step="0.01"><br>
-                <label for="parlaysize">Picks per Parlay (2 or 3):</label>
-                <input type="number" id="parlaysize" name="parlaysize" min="2" max="3" step="1"><br>
-                <label for="maxbet" style="text-decoration: line-through;">Maximum Wager:</label>
-                <input type="text" id="maxbet" name="maxbet" value="not yet functional"><br>
+                <label for="bankroll">What is your <b>Bankroll</b>?: $</label>
+                <input type="number" id="bankroll" name="bankroll" min="100" step="0.01" style="text-align:center;"><br>
+                <label for="aggro"><b>Kelly Criterion</b></a> Multiplier:</label>
+                <input type="number" id="aggro" name="aggro" min="0.1" max="1" step="0.01" style="text-align:center;"><br>
+                <label for="parlaysize">Picks per Parlay:</label>
+                <input type="number" id="parlaysize" name="parlaysize" min="2" max="3" step="1" value="2" style="text-align:center;" disabled><br>
+                <label for="maxbet" style="text-decoration:line-through">Maximum Wager:</label>
+                <input type="text" id="maxbet" name="maxbet" value="not yet functional" style="text-align:center;" disabled><br>
                 <label for="calc">First :</label>
                 <input type="submit" value="INDIVIDUAL KELLY VALUES" id="calc"><br>                                    
                 <label for="parlaybutton">Second :</label>
-                <input type="submit" value="PARLAYS with KELLY VALUES" id="parlaybutton">            
+                <input type="submit" value="PARLAYS with KELLY VALUES" id="parlaybutton">
+                <p>Don't know what the Kelly Criterion is? Check it out <a href=https://en.wikipedia.org/wiki/Kelly_criterion target="_blank">here!</a></p>            
         </div>
         <div id="resultsdiv" class="row" style="background-color:rgb(0, 0, 0); float:right;">
             <h3>RESULTS</h3>
