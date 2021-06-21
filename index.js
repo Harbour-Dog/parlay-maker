@@ -1,4 +1,4 @@
-let bankroll, aggro;
+let bankroll, aggro, maxbet;
 let probabilities2, oddslist2, selections2;
 let indarray, resultsarray, selarray;
 let probabilities = [];
@@ -12,7 +12,7 @@ let count = 1;
 let loop = 0;
 
 document.getElementById("parlaybutton").addEventListener("click", parlayCalc1);
-document.getElementById("calc").addEventListener("click", kellyCalc);
+document.getElementById("calc").addEventListener("click", TestKC);
 document.getElementById("addpick").addEventListener("click", addRow);
 
 function addRow() {// Keeps the count and starts the three cell function //
@@ -51,7 +51,7 @@ function oddsRow() {// create and label new Odds Offered cell //
 
 function kellyCalc() {// creates arrays from the input cells, and outputs the kelly individual kelly values//
     bankroll = document.getElementById("bankroll").value;
-    aggro = document.getElementById("aggro").value;      
+    aggro = document.getElementById("aggro").value;           
     let inputs = document.getElementsByTagName("input");// allows a search of input boxes to form arrays //   
         
     for (i = 0 ; i < inputs.length; i++) {
@@ -136,4 +136,51 @@ function parlayCalc2() {// final output of parlay results //
         for (i = 0; i < seltemp.length; i++){
             document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};
     }
+}
+
+function TestKC() {// copy of kellyCalc.. attempt to integrate Maximum Wager //
+    bankroll = document.getElementById("bankroll").value;
+    aggro = document.getElementById("aggro").value;       
+    let maxcalc = document.getElementById("maxbet").value;
+    maxbet = maxcalc*bankroll/100;
+
+    let inputs = document.getElementsByTagName("input");// allows a search of input boxes to form arrays //   
+        
+    for (i = 0 ; i < inputs.length; i++) {
+        if (inputs[i].getAttribute("class") == "sel"){//"sel" is the class set for all Selection input cells //
+            selections.push(inputs[i].value)};
+    }    
+
+    for (i = 0 ; i < inputs.length ; i++) {
+        if (inputs[i].getAttribute("class") == "prob"){//"prob" is the class set for all Win% input cells //
+            probabilities.push(inputs[i].value)};
+    }         
+    
+    for (i = 0 ; i < inputs.length ; i++) {
+        if (inputs[i].getAttribute("class") == "odds"){//"odds" is the class set for all Odds Offered input cells //
+            oddslist.push(inputs[i].value)};
+    };
+    
+    indarray = probabilities.map(function(x, index){
+        if (Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100)) < maxbet){
+            return Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100))
+        } else {return maxbet};
+    
+    });
+
+    for (i = 0; i < selections.length; i++){// output for the individual kelly values //
+        for (i = 0; i < indarray.length; i++){
+            document.getElementById("indbets").innerHTML += (selections[i] + " => " + indarray[i] + "<br>")
+        }
+    };   
+    
+    for (i = 0; i < (selections.length-1); i++){// creates a duplicate of selections array, to use in parlayCalc1 //
+        selections2 = selections.slice();
+    };
+    for (i = 0; i < (probabilities.length-1); i++){// creates a duplicate of probabilities array, to use in parlayCalc1 //
+        probabilities2 = probabilities.slice();
+    };
+    for (i = 0; i < (oddslist.length-1); i++){// creates a duplicate of oddslist array, to use in parlayCalc1 //
+        oddslist2 = oddslist.slice()
+    };
 }
