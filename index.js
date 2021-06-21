@@ -1,6 +1,7 @@
 let bankroll, aggro, maxbet;
 let probabilities2, oddslist2, selections2;
-let indarray, resultsarray, selarray;
+let probabilities3, oddslist3, selections3;
+let indarray, resultsarray, selarray, probarray, oddsarray;
 let probabilities = [];
 let oddslist = [];
 let selections = [];
@@ -11,7 +12,7 @@ let seltemp = [];
 let count = 1;
 let loop = 0;
 
-document.getElementById("parlaybutton").addEventListener("click", parlayCalc1);
+document.getElementById("parlaybutton").addEventListener("click", Test);
 document.getElementById("calc").addEventListener("click", kellyCalc);
 document.getElementById("addpick").addEventListener("click", addRow);
 
@@ -86,13 +87,16 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
     };   
     
     for (i = 0; i < (selections.length-1); i++){// creates a duplicate of selections array, to use in parlayCalc1 //
-        selections2 = selections.slice();
+        selections2 = selections.slice();// used for 2+ picks parlays //
+        selections3 = selections.slice();// used for 3+ pick parlays //
     };
     for (i = 0; i < (probabilities.length-1); i++){// creates a duplicate of probabilities array, to use in parlayCalc1 //
         probabilities2 = probabilities.slice();
+        probabilities3 = probabilities.slice();
     };
     for (i = 0; i < (oddslist.length-1); i++){// creates a duplicate of oddslist array, to use in parlayCalc1 //
         oddslist2 = oddslist.slice()
+        oddslist3 = oddslist.slice()
     };
 }
 
@@ -145,4 +149,71 @@ function parlayCalc2() {// final output of parlay results //
         for (i = 0; i < seltemp.length; i++){
             document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};
     }
+}
+
+function TestP3C1(){// parlay button will direct here for 3-pick parlays //
+    probabilities.push(probabilities.shift());
+    probabilities2.push(probabilities2.shift());
+    oddslist.push(oddslist.shift());
+    oddslist2.push(oddslist2.shift());
+    selections.push(selections.shift());
+    selections2.push(selections2.shift());
+
+    TestP3C2A();
+}
+
+function TestP3C2A() {//
+    probabilities.push(probabilities.shift());
+    oddslist.push(oddslist.shift());
+    selections.push(selections.shift());
+    loop++;
+
+    probarray = probabilities3.map(function(x, index){
+        return (x * probabilities2[index] * probabilities[index])/10000});
+
+    for (i = 0; i < probarray.length; i++){
+        probtemp.push(probarray[i]);
+    }
+
+    oddsarray = oddslist3.map(function(x, index){
+        return Math.round(100*(x * oddslist2[index] * oddslist[index]))/100});
+
+    for (i = 0; i < oddsarray.length; i++){
+        oddstemp.push(oddsarray[i]);
+    }
+
+    for (i = 0; i < selections3.length; i++){
+        seltemp.push(selections3[i] + " - " + selections2[i] + " - " + selections[i] + " => ");
+    }
+        
+}
+
+function Test(){// not targetted - attempt at 3-pick parlays //
+    probabilities.push(probabilities.shift());
+    oddslist.push(oddslist.shift());
+    selections.push(selections.shift());
+    loop++;
+   
+    probarray = probabilities.map(function(x, index){
+        return (x * probabilities2[index])/100});
+
+    for (i = 0; i < probarray.length; i++){
+        probtemp.push(probarray[i]);
+    }
+
+    oddsarray = oddslist.map(function(x, index){
+        return Math.round(100*(x * oddslist2[index]))/100});
+
+    for (i = 0; i < oddsarray.length; i++){
+        oddstemp.push(oddsarray[i]);
+    }
+
+    for (i = 0; i < selections2.length; i++){
+        seltemp.push(selections2[i] + " - " + selections[i] + " => ");
+    }
+    
+    if (loop == Math.floor(count/2)) {
+        parlayCalc2();        
+    } else {parlayCalc1()};
+    
 }
