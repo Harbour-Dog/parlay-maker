@@ -185,7 +185,9 @@ function TestP3C2A() {//
     for (i = 0; i < selections3.length; i++){
         seltemp.push(selections3[i] + " - " + selections2[i] + " - " + selections[i] + " => ");
     }
-        
+    // # of needed 3-pick combos = the sigma value of [(count-2)^2 + (count-2)]/2 //
+    // # of current 3-pick combos = selections.length * loop //
+    // selections.length * loop = the sigma value of [(count-2)^2 + (count-2)]/2 //
 }
 
 function Test(){// not targetted - attempt at 3-pick parlays //
