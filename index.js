@@ -167,15 +167,22 @@ function parlay3Calc1(){// parlay button will direct here for 3-pick parlays //
     selections.push(selections.shift());
     selections.push(selections.shift());
 
-    parlay3Calc2A();
+    parlay3Calc2();
 }
 
-function parlay3Calc2A() {// first of two functions which target one another to do the 3 pick parlays //
-    probabilities2.push(probabilities2.shift());
-    oddslist2.push(oddslist2.shift());// these 2A and 2B functions go back and forth between each other, changing the original and second arrays of the triplicates that we've made, in order to perform the desired operations on them //
-    selections2.push(selections2.shift());
+function parlay3Calc2() {// first of two functions which target one another to do the 3 pick parlays //
     r = (selections.length - 3);// needed to determine when the functions have looped enough//
     loop++;
+    
+    if (loop % 2 !== 0){
+        probabilities2.push(probabilities2.shift());
+        oddslist2.push(oddslist2.shift());// these 2A and 2B functions go back and forth between each other, changing the original and second arrays of the triplicates that we've made, in order to perform the desired operations on them //
+        selections2.push(selections2.shift());
+    } else {
+        probabilities.push(probabilities.shift());
+        oddslist.push(oddslist.shift());// these 2A and 2B functions go back and forth between each other, changing the original and second arrays of the triplicates that we've made, in order to perform the desired operations on them //
+        selections.push(selections.shift());
+    }
 
     probarray = probabilities3.map(function(x, index){
         return (x * probabilities2[index] * probabilities[index])/10000});
@@ -198,39 +205,7 @@ function parlay3Calc2A() {// first of two functions which target one another to 
     if (loop >= ((Math.pow(r,2))/6)+(r/2)+(1/3)){
         parlay3Calc3();
     } else {
-        parlay3Calc2B();
-    }
-}
-
-function parlay3Calc2B() {// second of two functions which target one another to do 3-parlay picks //
-    probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());// 2B changes the original arrays //
-    selections.push(selections.shift());
-    r = (selections.length - 3);
-    loop++;
-
-    probarray = probabilities3.map(function(x, index){
-        return (x * probabilities2[index] * probabilities[index])/10000});
-
-    for (i = 0; i < probarray.length; i++){
-        probtemp.push(probarray[i]);
-    }
-
-    oddsarray = oddslist3.map(function(x, index){
-        return Math.round(100*(x * oddslist2[index] * oddslist[index]))/100});
-
-    for (i = 0; i < oddsarray.length; i++){
-        oddstemp.push(oddsarray[i]);
-    }
-
-    for (i = 0; i < selections3.length; i++){
-        seltemp.push(selections3[i] + " - " + selections2[i] + " - " + selections[i] + " => ");
-    }
-
-    if (loop >= ((Math.pow(r,2))/6)+(r/2)+(1/3)){
-        parlay3Calc3();
-    } else {
-        parlay3Calc2A();
+        parlay3Calc2();
     }
 }
 
