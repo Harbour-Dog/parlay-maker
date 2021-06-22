@@ -12,7 +12,7 @@ let seltemp = [];
 let count = 1;
 let loop = 0;
 
-document.getElementById("parlaybutton").addEventListener("click", Test);
+document.getElementById("parlaybutton").addEventListener("click", parlaySize);
 document.getElementById("calc").addEventListener("click", kellyCalc);
 document.getElementById("addpick").addEventListener("click", addRow);
 
@@ -100,6 +100,14 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
     };
 }
 
+function parlaySize() {// directs to the appropriate function for the requested size of parlay //
+    let parlaysize = document.getElementById("parlaysize").value;
+
+    if (parlaysize == 2){
+        parlayCalc1();
+    } else {parlay3Calc1()};
+}
+
 function parlayCalc1() {// creates the parlay selections and results arrays, and directs to parlayCalc2 //
     probabilities.push(probabilities.shift());
     oddslist.push(oddslist.shift());// these three push/shifts alter the arrays in order to map them with their duplicates //
@@ -130,9 +138,9 @@ function parlayCalc1() {// creates the parlay selections and results arrays, and
     
 }
 
-function parlayCalc2() {// final output of parlay results //    
+function parlayCalc2() {// final output of 2-pick parlay results //    
     let parnum = (seltemp.length - (count/2));
-    let parpos = (count * loop - parnum);
+    let parpos = (count/2);
 
     resultsarray = probtemp.map(function(x, index){// creates array of kelly values for the parlays//
         if (Math.floor(((x*oddstemp[index]-100)*bankroll*aggro)/(100*oddstemp[index]-100)) < maxbet){
@@ -151,21 +159,22 @@ function parlayCalc2() {// final output of parlay results //
     }
 }
 
-function TestP3C1(){// parlay button will direct here for 3-pick parlays //
+function parlay3Calc1(){// parlay button will direct here for 3-pick parlays //
     probabilities.push(probabilities.shift());
-    probabilities2.push(probabilities2.shift());
+    probabilities.push(probabilities.shift());
     oddslist.push(oddslist.shift());
-    oddslist2.push(oddslist2.shift());
+    oddslist.push(oddslist.shift());
     selections.push(selections.shift());
-    selections2.push(selections2.shift());
+    selections.push(selections.shift());
 
-    TestP3C2A();
+    parlay3Calc2A();
 }
 
-function TestP3C2A() {//
-    probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());
-    selections.push(selections.shift());
+function parlay3Calc2A() {// first of two functions which target one another to do the 3 pick parlays //
+    probabilities2.push(probabilities2.shift());
+    oddslist2.push(oddslist2.shift());// these 2A and 2B functions go back and forth between each other, changing the original and second arrays of the triplicates that we've made, in order to perform the desired operations on them //
+    selections2.push(selections2.shift());
+    r = (selections.length - 3);// needed to determine when the functions have looped enough//
     loop++;
 
     probarray = probabilities3.map(function(x, index){
@@ -185,37 +194,63 @@ function TestP3C2A() {//
     for (i = 0; i < selections3.length; i++){
         seltemp.push(selections3[i] + " - " + selections2[i] + " - " + selections[i] + " => ");
     }
-    // # of needed 3-pick combos = the sigma value of [(count-2)^2 + (count-2)]/2 //
-    // # of current 3-pick combos = selections.length * loop //
-    // selections.length * loop = the sigma value of [(count-2)^2 + (count-2)]/2 //
+
+    if (loop >= ((Math.pow(r,2))/6)+(r/2)+(1/3)){
+        parlay3Calc3();
+    } else {
+        parlay3Calc2B();
+    }
 }
 
-function Test(){// not targetted - attempt at 3-pick parlays //
+function parlay3Calc2B() {// second of two functions which target one another to do 3-parlay picks //
     probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());
+    oddslist.push(oddslist.shift());// 2B changes the original arrays //
     selections.push(selections.shift());
+    r = (selections.length - 3);
     loop++;
-   
-    probarray = probabilities.map(function(x, index){
-        return (x * probabilities2[index])/100});
+
+    probarray = probabilities3.map(function(x, index){
+        return (x * probabilities2[index] * probabilities[index])/10000});
 
     for (i = 0; i < probarray.length; i++){
         probtemp.push(probarray[i]);
     }
 
-    oddsarray = oddslist.map(function(x, index){
-        return Math.round(100*(x * oddslist2[index]))/100});
+    oddsarray = oddslist3.map(function(x, index){
+        return Math.round(100*(x * oddslist2[index] * oddslist[index]))/100});
 
     for (i = 0; i < oddsarray.length; i++){
         oddstemp.push(oddsarray[i]);
     }
 
-    for (i = 0; i < selections2.length; i++){
-        seltemp.push(selections2[i] + " - " + selections[i] + " => ");
+    for (i = 0; i < selections3.length; i++){
+        seltemp.push(selections3[i] + " - " + selections2[i] + " - " + selections[i] + " => ");
     }
-    
-    if (loop == Math.floor(count/2)) {
-        parlayCalc2();        
-    } else {parlayCalc1()};
-    
+
+    if (loop >= ((Math.pow(r,2))/6)+(r/2)+(1/3)){
+        parlay3Calc3();
+    } else {
+        parlay3Calc2A();
+    }
+}
+
+function parlay3Calc3(){// final output of 3-pick parlay results //
+    let parnum = (seltemp.length - (2*count/3));
+    let parpos = (2* count/3);
+
+    resultsarray = probtemp.map(function(x, index){// creates array of kelly values for the parlays//
+        if (Math.floor(((x*oddstemp[index]-100)*bankroll*aggro)/(100*oddstemp[index]-100)) < maxbet){
+            return Math.floor(((x*oddstemp[index]-100)*bankroll*aggro)/(100*oddstemp[index]-100));
+        } else {return maxbet}; 
+    });
+
+    if (count % 3 === 0){// when count is a multiple of three, this removes extraneous parlays (2/3 of the count worth) //
+        seltemp.splice(parnum,parpos);
+        resultsarray.splice(parnum,parpos);
+        for (i = 0; i < seltemp.length; i++){
+            document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};
+    } else {
+        for (i = 0; i < seltemp.length; i++){
+            document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};
+    }
 }
