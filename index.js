@@ -73,7 +73,7 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
             oddslist.push(inputs[i].value)};
     };
     
-    indarray = probabilities.map(function(x, index){
+    indarray = probabilities.map(function(x, index){// creates array of calculated kelly values for each selection //
         if (Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100)) < maxbet){
             return Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100))
         } else {return maxbet};
@@ -176,11 +176,11 @@ function parlay3Calc2() {// this function creates the arrays for 3-pick parlays 
     
     if (loop % 2 !== 0){// this if-else statement determines which array to push-shift, depending on if the loop is odd or even //
         probabilities2.push(probabilities2.shift());
-        oddslist2.push(oddslist2.shift());// these 2A and 2B functions go back and forth between each other, changing the original and second arrays of the triplicates that we've made, in order to perform the desired operations on them //
+        oddslist2.push(oddslist2.shift());
         selections2.push(selections2.shift());
     } else {
         probabilities.push(probabilities.shift());
-        oddslist.push(oddslist.shift());// these 2A and 2B functions go back and forth between each other, changing the original and second arrays of the triplicates that we've made, in order to perform the desired operations on them //
+        oddslist.push(oddslist.shift());
         selections.push(selections.shift());
     }
 
@@ -211,7 +211,7 @@ function parlay3Calc2() {// this function creates the arrays for 3-pick parlays 
 
 function parlay3Calc3(){// final output of 3-pick parlay results //
     let parnum = (seltemp.length - (2*count/3));
-    let parpos = (2* count/3);
+    let parpos = (2*count/3);
 
     resultsarray = probtemp.map(function(x, index){// creates array of kelly values for the parlays//
         if (Math.floor(((x*oddstemp[index]-100)*bankroll*aggro)/(100*oddstemp[index]-100)) < maxbet){

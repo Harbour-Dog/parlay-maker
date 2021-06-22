@@ -13,7 +13,7 @@ h1 {
     text-decoration-style: double;
     text-decoration-color:rgb(255, 187, 0);
     height: 65px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 h2 {
@@ -142,3 +142,8 @@ a {
     clear: both;
 }
 
+@media only screen and (max-width: 600px){
+    body {
+        background-color: tomato;
+    }
+}
