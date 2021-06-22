@@ -28,9 +28,9 @@ h4 {
     text-align: center;
     font-size: 150%;
     margin-top: 0px;
-    color: rgb(3, 0, 190);
+    color: #2f2fa2;
     text-decoration: underline;
-    text-decoration-color: rgb(3, 0, 190);
+    text-decoration-color: #2f2fa2;
 }
 
 h3 {
@@ -55,8 +55,8 @@ a {
     padding-top: 10px;
     height: 180px;
     background-color:rgb(255, 187, 0);
-    color:rgb(3, 0, 190);
-    border:rgb(3, 0, 190);
+    color:#2f2fa2;
+    border:#2f2fa2;
     border-width: 2px;
     border-style: solid;
     width: 40.5%;
@@ -68,7 +68,7 @@ a {
     height: 645px;
     text-align: center;
     padding-top: 5px;
-    background-color:rgb(3, 0, 190);
+    background-color:#2f2fa2;
     color:rgb(255, 187, 0);
     border:rgb(255, 187, 0);
     border-width: 1.5px;
@@ -90,7 +90,7 @@ a {
     text-align: center;
     padding-top: 5px;
     background-color:rgb(255, 187, 0);
-    border:rgb(3, 0, 190);
+    border:#2f2fa2;
     border-width: 2px;
     border-top-width: 0px;
     border-style: solid;
