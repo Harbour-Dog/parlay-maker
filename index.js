@@ -27,8 +27,8 @@ function selRow() {// create and label new Selection cell //
     input.setAttribute("id", "selection"+count);
     input.setAttribute("placeholder", "Selection"+count);
     input.setAttribute("class", "sel");
-    let pickform = document.getElementById("pickform");
-    pickform.append(input);
+    let picklist = document.getElementById("picklist");
+    picklist.append(input);
 }
 
 function probRow() {// create and label new Win% cell //
@@ -36,8 +36,8 @@ function probRow() {// create and label new Win% cell //
     input.setAttribute("id", "prob"+count);
     input.setAttribute("placeholder", "Win %");
     input.setAttribute("class", "prob");
-    let pickform = document.getElementById("pickform");
-    pickform.append(input);
+    let picklist = document.getElementById("picklist");
+    picklist.append(input);
 }
 
 function oddsRow() {// create and label new Odds Offered cell //
@@ -45,11 +45,11 @@ function oddsRow() {// create and label new Odds Offered cell //
     input.setAttribute("id", "odds"+count);
     input.setAttribute("placeholder", "Odds Offered");
     input.setAttribute("class", "odds");
-    let pickform = document.getElementById("pickform");
-    pickform.append(input);
+    let picklist = document.getElementById("picklist");
+    picklist.append(input);
 }
 
-function validator(){
+function validator() {// checks for valid inputs in bankrolldiv, then directs to kellyCalc //
     bankroll = document.getElementById("bankroll").value;
     aggro = document.getElementById("aggro").value;       
     let maxcalc = document.getElementById("maxbet").value;
@@ -60,6 +60,8 @@ function validator(){
         return alert("Bankroll must be greater than 0.")
     } else if (aggro > 1){
         return alert("Betting greater than the Kelly Criterion is a long term losing proposition!\nMost professional bettors choose in the 0.25-0.5 range.");
+    } else if (aggro <= 0){
+        return alert("Kelly Criterion multipler cannot be 0 or less.")
     } else if (parlaysize > 3){
         return alert("We're currently set up only for parlays of 2 or 3 picks each");
     } else if (maxcalc < 0.5){
@@ -112,6 +114,8 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
         oddslist2 = oddslist.slice()
         oddslist3 = oddslist.slice()
     };
+
+    window.scrollBy(0,900);
 
     if (parlaysize == 2){
         parlayCalc1();
@@ -169,7 +173,7 @@ function parlayCalc2() {// final output of 2-pick parlay results //
     }
 }
 
-function parlay3Calc1(){// parlay button will direct here for 3-pick parlays //
+function parlay3Calc1() {// parlay button will direct here for 3-pick parlays //
     probabilities.push(probabilities.shift());
     probabilities.push(probabilities.shift());
     oddslist.push(oddslist.shift());// these push-shifts all set up one of our three arrays as being two iterations from the original //
@@ -219,7 +223,7 @@ function parlay3Calc2() {// this function creates the arrays for 3-pick parlays 
     }
 }
 
-function parlay3Calc3(){// final output of 3-pick parlay results //
+function parlay3Calc3() {// final output of 3-pick parlay results //
     let parnum = (seltemp.length - (2*count/3));
     let parpos = (2*count/3);
 
