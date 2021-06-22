@@ -1,4 +1,4 @@
-let bankroll, aggro, maxbet;
+let bankroll, aggro, maxbet, parlaysize;
 let probabilities2, oddslist2, selections2;
 let probabilities3, oddslist3, selections3;
 let indarray, resultsarray, selarray, probarray, oddsarray;
@@ -12,8 +12,7 @@ let seltemp = [];
 let count = 1;
 let loop = 0;
 
-document.getElementById("parlaybutton").addEventListener("click", parlaySize);
-document.getElementById("calc").addEventListener("click", kellyCalc);
+document.getElementById("calc").addEventListener("click", validator);
 document.getElementById("addpick").addEventListener("click", addRow);
 
 function addRow() {// Keeps the count and starts the three cell function //
@@ -50,12 +49,27 @@ function oddsRow() {// create and label new Odds Offered cell //
     pickform.append(input);
 }
 
-function kellyCalc() {// creates arrays from input cells, and outputs the individual kelly values //
+function validator(){
     bankroll = document.getElementById("bankroll").value;
     aggro = document.getElementById("aggro").value;       
     let maxcalc = document.getElementById("maxbet").value;
     maxbet = maxcalc*bankroll/100;
+    parlaysize = document.getElementById("parlaysize").value;
 
+    if (bankroll <= 0){
+        return alert("Bankroll must be greater than 0.")
+    } else if (aggro > 1){
+        return alert("Betting greater than the Kelly Criterion is a long term losing proposition!\nMost professional bettors choose in the 0.25-0.5 range.");
+    } else if (parlaysize > 3){
+        return alert("We're currently set up only for parlays of 2 or 3 picks each");
+    } else if (maxcalc < 0.5){
+        return alert("Our current maximum bet can be set no lower than 0.1% of your bankroll");
+    } else if (maxcalc > 3){
+        return alert("Our current maximum bet can be set no higher than 3% of your bankroll");
+    } else (kellyCalc());
+}
+
+function kellyCalc() {// creates arrays from input cells, and outputs the individual kelly values //
     let inputs = document.getElementsByTagName("input");// allows a search of input boxes to form arrays //   
         
     for (i = 0 ; i < inputs.length; i++) {
@@ -98,10 +112,6 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
         oddslist2 = oddslist.slice()
         oddslist3 = oddslist.slice()
     };
-}
-
-function parlaySize() {// directs to the appropriate function for the requested size of parlay //
-    let parlaysize = document.getElementById("parlaysize").value;
 
     if (parlaysize == 2){
         parlayCalc1();
