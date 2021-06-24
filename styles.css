@@ -99,6 +99,17 @@ a {
     border-bottom-right-radius: 10px;
 }
 
+.sel {
+    float: left;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.prob, .odds {
+    float: left;
+    text-align: center;
+}
+
 .scrollbox {
     width: 250px;
     height: 500px;

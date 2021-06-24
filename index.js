@@ -245,9 +245,6 @@ function parlay3Calc3() {// final output of 3-pick parlay results //
 }
 
 function Test(){// attempt at a function which incorporates individual kelly values into total output of parlays //
-    for (i = 0; i < selections.length; i++){
-        if (selections[i].substring(0,(selections.length - 1)) == selections[i])
-    }
 
     var index, value, result;
 for (index = 0; index < windowArray.length; ++index) {
