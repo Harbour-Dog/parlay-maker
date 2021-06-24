@@ -245,17 +245,24 @@ function parlay3Calc3() {// final output of 3-pick parlay results //
 }
 
 function Test(){// attempt at a function which incorporates individual kelly values into total output of parlays //
+    let indexes = [];
 
-    var index, value, result;
-for (index = 0; index < windowArray.length; ++index) {
-    value = windowArray[index];
-    if (value.substring(0, 3) === "id-") {
-        // You've found it, the full text is in `value`.
-        // So you might grab it and break the loop, although
-        // really what you do having found it depends on
-        // what you need.
-        result = value;
-        break;
+
+
+    for (i = 0; i < selections.length; i++){
+
     }
-}
+
+    for (i = 0; i < seltemp.length; i++){
+        if (seltemp[i] ===)//seltemp[i] has to equal a for loop that runs through selections?//
+            indexes.push(i);
+    }
+
+
+        var indexes = [], i;
+        for(i = 0; i < arr.length; i++)
+            if (arr[i] === val)
+                indexes.push(i);
+        return indexes;
+    
 }
