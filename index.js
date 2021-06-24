@@ -102,15 +102,15 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
         }
     };   
     
-    for (i = 0; i < (selections.length-1); i++){// creates a duplicate of selections array, to use in parlayCalc1 //
+    for (i = 0; i < (selections.length-1); i++){// creates duplicates of the selections array to be used in parlay calculations //
         selections2 = selections.slice();// used for 2+ picks parlays //
         selections3 = selections.slice();// used for 3+ pick parlays //
     };
-    for (i = 0; i < (probabilities.length-1); i++){// creates a duplicate of probabilities array, to use in parlayCalc1 //
+    for (i = 0; i < (probabilities.length-1); i++){
         probabilities2 = probabilities.slice();
         probabilities3 = probabilities.slice();
     };
-    for (i = 0; i < (oddslist.length-1); i++){// creates a duplicate of oddslist array, to use in parlayCalc1 //
+    for (i = 0; i < (oddslist.length-1); i++){
         oddslist2 = oddslist.slice()
         oddslist3 = oddslist.slice()
     };
@@ -123,9 +123,9 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
 }
 
 function parlayCalc1() {// creates the parlay selections and results arrays, and directs to parlayCalc2 //
-    probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());// these three push/shifts alter the arrays in order to map them with their duplicates //
-    selections.push(selections.shift());
+    probabilities2.push(probabilities2.shift());
+    oddslist2.push(oddslist2.shift());// these three push/shifts alter the arrays in order to map them with their duplicates //
+    selections2.push(selections2.shift());
     loop++;// determines how many times this function will loop//
    
     probarray = probabilities.map(function(x, index){
@@ -143,7 +143,7 @@ function parlayCalc1() {// creates the parlay selections and results arrays, and
     }
 
     for (i = 0; i < selections2.length; i++){
-        seltemp.push(selections2[i] + " - " + selections[i] + " => ");
+        seltemp.push(selections[i] + " - " + selections2[i] + " => ");
     }// pushes the desired output of parlay selections into seltemp //
     
     if (loop == Math.floor(count/2)) {// determines if the function has looped enough to make all possible parlays //
@@ -174,12 +174,12 @@ function parlayCalc2() {// final output of 2-pick parlay results //
 }
 
 function parlay3Calc1() {// parlay button will direct here for 3-pick parlays //
-    probabilities.push(probabilities.shift());
-    probabilities.push(probabilities.shift());
-    oddslist.push(oddslist.shift());// these push-shifts all set up one of our three arrays as being two iterations from the original //
-    oddslist.push(oddslist.shift());
-    selections.push(selections.shift());
-    selections.push(selections.shift());
+    probabilities3.push(probabilities3.shift());
+    probabilities3.push(probabilities3.shift());
+    oddslist3.push(oddslist3.shift());// these push-shifts all set up one of our three arrays as being two iterations from the original //
+    oddslist3.push(oddslist3.shift());
+    selections3.push(selections3.shift());
+    selections3.push(selections3.shift());
 
     parlay3Calc2();
 }
@@ -193,27 +193,27 @@ function parlay3Calc2() {// this function creates the arrays for 3-pick parlays 
         oddslist2.push(oddslist2.shift());
         selections2.push(selections2.shift());
     } else {
-        probabilities.push(probabilities.shift());
-        oddslist.push(oddslist.shift());
-        selections.push(selections.shift());
+        probabilities3.push(probabilities3.shift());
+        oddslist3.push(oddslist3.shift());
+        selections3.push(selections3.shift());
     }
 
-    probarray = probabilities3.map(function(x, index){// calculates probabilites for current array iterations, and pushes them into probtemp //
-        return (x * probabilities2[index] * probabilities[index])/10000});
+    probarray = probabilities.map(function(x, index){// calculates probabilites for current array iterations, and pushes them into probtemp //
+        return (x * probabilities2[index] * probabilities3[index])/10000});
 
     for (i = 0; i < probarray.length; i++){
         probtemp.push(probarray[i]);
     }
 
-    oddsarray = oddslist3.map(function(x, index){// calculates odds offered for current array iterations, and pushes them into oddstemp //
-        return Math.round(100*(x * oddslist2[index] * oddslist[index]))/100});
+    oddsarray = oddslist.map(function(x, index){// calculates odds offered for current array iterations, and pushes them into oddstemp //
+        return Math.round(100*(x * oddslist2[index] * oddslist3[index]))/100});
 
     for (i = 0; i < oddsarray.length; i++){
         oddstemp.push(oddsarray[i]);
     }
 
-    for (i = 0; i < selections3.length; i++){// pushes desired corresponding selections outputs for parlays into seltemp//
-        seltemp.push(selections3[i] + " - " + selections2[i] + " - " + selections[i] + " => ");
+    for (i = 0; i < selections.length; i++){// pushes desired corresponding selections outputs for parlays into seltemp//
+        seltemp.push(selections[i] + " - " + selections2[i] + " - " + selections3[i] + " => ");
     }
 
     if (loop >= ((Math.pow(r,2))/6)+(r/2)+(1/3)){// determines if enough parlays have been made to cover all possible combinations //
@@ -242,4 +242,23 @@ function parlay3Calc3() {// final output of 3-pick parlay results //
         for (i = 0; i < seltemp.length; i++){
             document.getElementById("parlays").innerHTML += (seltemp[i] + resultsarray[i] + "<br>")};
     }
+}
+
+function Test(){// attempt at a function which incorporates individual kelly values into total output of parlays //
+    for (i = 0; i < selections.length; i++){
+        if (selections[i].substring(0,(selections.length - 1)) == selections[i])
+    }
+
+    var index, value, result;
+for (index = 0; index < windowArray.length; ++index) {
+    value = windowArray[index];
+    if (value.substring(0, 3) === "id-") {
+        // You've found it, the full text is in `value`.
+        // So you might grab it and break the loop, although
+        // really what you do having found it depends on
+        // what you need.
+        result = value;
+        break;
+    }
+}
 }
