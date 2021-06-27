@@ -22,6 +22,7 @@ h2 {
     font-size: 150%;
     margin-top: 0px;
     text-decoration: underline;
+    color:#2f2fa2;
 }
 
 h4 {
@@ -99,6 +100,12 @@ a {
     border-bottom-right-radius: 10px;
 }
 
+.inputs {
+    text-align: center;
+    border-style: groove;
+    border-color:rgb(2, 0, 129);
+}
+
 .sel {
     float: left;
     text-align: center;
@@ -124,7 +131,12 @@ a {
 
 .button {
     color: rgb(255, 187, 0);
-    background-color: rgb(2, 0, 129);
+    background-color:rgb(2, 0, 129);
+}
+
+.button:hover {
+    background-color: rgb(146, 145, 214);
+    color:rgb(2, 0, 129);
 }
 
 .column {

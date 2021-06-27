@@ -244,8 +244,9 @@ function parlay3Calc3() {// final output of 3-pick parlay results //
     }
 }
 
-function Test(){// attempt at a function which incorporates individual kelly values into total output of parlays //
+function Test(){// not tragetted. Attempt at a function which incorporates individual kelly values into total output of parlays //
     let indexes = [];
+    let variable = variable;
 
 
 
@@ -254,15 +255,8 @@ function Test(){// attempt at a function which incorporates individual kelly val
     }
 
     for (i = 0; i < seltemp.length; i++){
-        if (seltemp[i] ===)//seltemp[i] has to equal a for loop that runs through selections?//
+        if (seltemp[i] === variable)//seltemp[i] has to equal a for loop that runs through selections?//
             indexes.push(i);
     }
-
-
-        var indexes = [], i;
-        for(i = 0; i < arr.length; i++)
-            if (arr[i] === val)
-                indexes.push(i);
-        return indexes;
     
 }
