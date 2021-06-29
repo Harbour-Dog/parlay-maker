@@ -3,7 +3,7 @@ body {
 }
 
 div {
-    width: 50%;
+    width: 67.04%;
     margin: auto;
 }
 
@@ -51,6 +51,18 @@ a {
     color:rgb(0, 0, 0);
 }
 
+#leftside {
+    border: white;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#centre {
+    border: white;
+    border-style: dotted;
+    border-width: 1px;
+}
+
 #bankrolldiv {
     text-align: center;
     padding-top: 10px;
@@ -60,7 +72,6 @@ a {
     border:#2f2fa2;
     border-width: 2px;
     border-style: solid;
-    width: 40.5%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -74,8 +85,8 @@ a {
     border:rgb(255, 187, 0);
     border-width: 1.5px;
     border-style: solid;
-    width: 58.9%;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #indbetdiv {
@@ -95,9 +106,6 @@ a {
     border-width: 2px;
     border-top-width: 0px;
     border-style: solid;
-    width: 40.5%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .inputs {
@@ -121,7 +129,7 @@ a {
     width: 250px;
     height: 500px;
     margin: auto;    
-    background-color: rgb(0, 0, 0);
+    background-color:black;
     color:rgb(255, 187, 0);
     margin-top: 0px;
     border:rgb(255, 187, 0);
@@ -140,6 +148,16 @@ a {
 }
 
 .column {
+    float: left;
+    width: 90%;
+}
+
+.columna {
+    float: left;
+    width: fit-content;
+}
+
+.columnb {
     float: left;
     width: 50%;
 }

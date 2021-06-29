@@ -7,6 +7,11 @@
     </head>
     <body>
         <h1>Kelly Criterion Parlay Maker</h1>
+        <div id="container" class="row">
+        <div id="leftside" class="columna">
+            <p>words.</p>
+        </div>
+        <div id="centre" class="column">
         <div id="bankrolldiv">
             <h2>Bankroll and Betting Strategy</h2>
                 <label for="bankroll">What is your <b>Bankroll</b>?: $</label>
@@ -31,15 +36,17 @@
         </div>
         <div id="resultsdiv" class="row">
             <h3>RESULTS</h3>
-            <div id="indbetdiv" class="column">
+            <div id="indbetdiv" class="columnb">
                 <h5>Individual Kelly Values</h5>
                 <p id="indbets" class="scrollbox" style="overflow:scroll;"></p>
             </div>
-            <div class="column">
+            <div class="columnb">
                 <h6>Parlay Kelly Values</h6>
                 <p id="parlays" class="scrollbox" style="overflow:scroll;"></p>            
             </div>
-        </div>        
+        </div>
+        </div>       
+        </div> 
         <script src="index.js"></script>
     </body>
 </html>
