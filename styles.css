@@ -2,11 +2,6 @@ body {
     background-image: linear-gradient(#2f2fa2, rgb(255, 187, 0))
 }
 
-div {
-    width: 67.04%;
-    margin: auto;
-}
-
 h1 {
     color: rgb(255, 187, 0);
     text-align: center;
@@ -51,33 +46,37 @@ a {
     color:rgb(0, 0, 0);
 }
 
-#leftside {
-    border: white;
-    border-style: dotted;
-    border-width: 1px;
-}
-
-#centre {
-    border: white;
-    border-style: dotted;
-    border-width: 1px;
-}
-
 #bankrolldiv {
     text-align: center;
     padding-top: 10px;
-    height: 180px;
+    height: 190px;
+    width: 40%;
     background-color:rgb(255, 187, 0);
     color:#2f2fa2;
     border:#2f2fa2;
     border-width: 2px;
     border-style: solid;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+#pickform {
+    height: 500px;
+    width: 45%;
+    text-align: center;
+    padding-top: 5px;
+    background-color:rgb(255, 187, 0);
+    border:#2f2fa2;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    float: right;
+    margin-right: 80px;
 }
 
 #resultsdiv {
     height: 645px;
+    width: 40.5%;
     text-align: center;
     padding-top: 5px;
     background-color:#2f2fa2;
@@ -89,6 +88,18 @@ a {
     border-bottom-right-radius: 10px;
 }
 
+#picklist {
+    margin-left: 25px;
+}
+
+#inputsdiv {
+    float: left;
+}
+
+#bankboxes {
+    margin: auto;
+}
+
 #indbetdiv {
     margin-top: 0px;
 }
@@ -97,21 +108,12 @@ a {
     margin-top: 58px;
 }
 
-#pickform {
-    height: 500px;
-    text-align: center;
-    padding-top: 5px;
-    background-color:rgb(255, 187, 0);
-    border:#2f2fa2;
-    border-width: 2px;
-    border-top-width: 0px;
-    border-style: solid;
-}
-
 .inputs {
     text-align: center;
     border-style: groove;
     border-color:rgb(2, 0, 129);
+    width: 50px;
+    
 }
 
 .sel {
@@ -149,17 +151,11 @@ a {
 
 .column {
     float: left;
-    width: 90%;
+    width: 50%;
 }
 
 .columna {
     float: left;
-    width: fit-content;
-}
-
-.columnb {
-    float: left;
-    width: 50%;
 }
   
 .row:after {
