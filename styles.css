@@ -47,9 +47,10 @@ a {
 }
 
 #bankrolldiv {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     padding-top: 10px;
-    height: 190px;
+    height: 195px;
     width: 38%;
     background-color:rgb(255, 187, 0);
     color:#2f2fa2;
@@ -61,8 +62,9 @@ a {
 }
 
 #pickform {
-    height:fit-content;
-    width: 38%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: fit-content;
+    width: 25%;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -71,14 +73,15 @@ a {
     border-width: 2px;
     border-radius: 10px;
     border-style: solid;
-    margin-left: 100px;
+    margin-left: 250px;
 }
 
 #resultsdiv {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 645px;
     width: 40.5%;
     text-align: center;
-    margin-top: 500px;
+    margin-top: 650px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5px;
@@ -89,10 +92,6 @@ a {
     border-style: solid;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-}
-
-#picklist {
-    margin-left: 90px;
 }
 
 #inputsdiv {
@@ -121,12 +120,14 @@ a {
 }
 
 .sel, .prob, .odds {
-    float: left;
     text-align: center;
     border-width: 2px;
     border-style: groove;
     border-color:rgb(2, 0, 129);
-    width: 100px;
+    width: 130px;
+    display: inline;
+    margin-left: 15px;
+    float: left;
 }
 
 .scrollbox {
