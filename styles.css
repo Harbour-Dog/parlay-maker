@@ -8,13 +8,13 @@ h1 {
     text-decoration: underline;
     text-decoration-style: double;
     text-decoration-color:rgb(255, 187, 0);
-    height: 65px;
+    height: 6vh;
     padding-top: 5px;
 }
 
 h2 {
     text-align: center;
-    font-size: 150%;
+    font-size: 1.45vw;
     margin-top: 0px;
     text-decoration: underline;
     color:#2f2fa2;
@@ -22,7 +22,7 @@ h2 {
 
 h4 {
     text-align: center;
-    font-size: 150%;
+    font-size: 1.45vw;
     margin-top: 0px;
     color: #2f2fa2;
     text-decoration: underline;
@@ -31,15 +31,16 @@ h4 {
 
 h3 {
     text-align: center;
-    font-size: 150%;
+    font-size: 1.45vw;
     text-decoration: underline;
     margin-top: 0px;
 }
 
 h5, h6 {
     text-align: center;
-    font-size: 150%;
+    font-size: 1.3vw;
     margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 a {
@@ -49,39 +50,40 @@ a {
 #bankrolldiv {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    padding-top: 10px;
-    height: 195px;
-    width: 38%;
+    font-size: 1vw;
+    padding-top: 5px;
+    height: fit-content;
+    width: 37vw;
     background-color:rgb(255, 187, 0);
     color:#2f2fa2;
     border:#2f2fa2;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
-    margin-left: 80px;
+    margin-left: 9vw;
 }
 
 #pickform {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: fit-content;
-    width: 25%;
+    width: 28vw;
     text-align: center;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     background-color:rgb(255, 187, 0);
     border:#2f2fa2;
     border-width: 2px;
     border-radius: 10px;
     border-style: solid;
-    margin-left: 250px;
+    margin-left: 12vw;
 }
 
 #resultsdiv {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 645px;
+    height: 33vw;
     width: 40.5%;
     text-align: center;
-    margin-top: 650px;
+    margin-top: 85vh;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5px;
@@ -90,8 +92,7 @@ a {
     border:rgb(255, 187, 0);
     border-width: 1.5px;
     border-style: solid;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
 
 #inputsdiv {
@@ -106,33 +107,40 @@ a {
     margin-top: 0px;
 }
 
+#pardiv {
+    margin-top: 0px;
+}
+
 #indbets {
-    margin-top: 58px;
+    font-size: 1.1vw;
 }
 
 .inputs {
     text-align: center;
+    font-size: 1vw;
     border-width: 2px;
     border-style: groove;
     border-color:rgb(2, 0, 129);
-    width: 75px;
+    width: 6vw;
     
 }
 
 .sel, .prob, .odds {
     text-align: center;
-    border-width: 2px;
+    font-size: 1vw;
+    border-width: 0.1vw;
     border-style: groove;
     border-color:rgb(2, 0, 129);
-    width: 130px;
+    width: 6.5vw;
     display: inline;
-    margin-left: 15px;
+    margin-left: 1.83vw;
+    margin-bottom: 10px;
     float: left;
 }
 
 .scrollbox {
-    width: 250px;
-    height: 500px;
+    width: 13.1vw;
+    height: 26.2vw;
     margin: auto;    
     background-color:black;
     color:rgb(255, 187, 0);
@@ -165,7 +173,4 @@ a {
     content: "";
     display: table;
     clear: both;
-}
-
-@media only screen and (max-width: 600px){
 }
