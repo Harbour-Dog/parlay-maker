@@ -72,7 +72,7 @@ function validator() {// checks for valid inputs in bankrolldiv, then directs to
 }
 
 function kellyCalc() {// creates arrays from input cells, and outputs the individual kelly values //
-    let inputs = document.getElementsByTagName("input");// allows a search of input boxes to form arrays //   
+    let inputs = document.getElementsByTagName("input");// allows a search of input boxes to form arrays // 
         
     for (i = 0 ; i < inputs.length; i++) {
         if (inputs[i].getAttribute("class") == "sel"){//"sel" is the class set for all Selection input cells //
@@ -106,10 +106,12 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
         selections2 = selections.slice();// used for 2+ picks parlays //
         selections3 = selections.slice();// used for 3+ pick parlays //
     };
+
     for (i = 0; i < (probabilities.length-1); i++){
         probabilities2 = probabilities.slice();
         probabilities3 = probabilities.slice();
     };
+
     for (i = 0; i < (oddslist.length-1); i++){
         oddslist2 = oddslist.slice()
         oddslist3 = oddslist.slice()
