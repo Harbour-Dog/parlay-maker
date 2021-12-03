@@ -92,8 +92,7 @@ function kellyCalc() {// creates arrays from input cells, and outputs the indivi
     indarray = probabilities.map(function(x, index){// creates array of calculated kelly values for each selection //
         if (Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100)) < maxbet){
             return Math.floor(((x*oddslist[index]-100)*bankroll*aggro)/(100*oddslist[index]-100))
-        } else {return maxbet};
-    
+        } else {return maxbet};    
     });
 
     for (i = 0; i < selections.length; i++){// output for the individual kelly values //
