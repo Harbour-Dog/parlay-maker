@@ -12,6 +12,17 @@
     that allows the bettor to control their ROI and amount of
     risk taken. (https://en.wikipedia.org/wiki/Kelly_criterion)
     
+ This app was built with:
+ HTML  -  CSS  -  JS
+    
+ WHAT WAS MY MOTIVATION IN BUILDING THIS APP?
+    I love me some sports betting! I've managed several bankrolls
+    that myself and friends have set up over the last 15 years, and
+    this is exactly the type of tool that I had always wanted to have
+    at my fingertips.
+    
+ 
+    
  WHAT IS THE BANKROLL AND BETTING STRATEGY SECTION FOR?
     This section sets up the variable that are required to
     determine what your optimal bet sizes are.
